@@ -61,6 +61,7 @@ DEFAULTSESSION=startfluxbox
 # start specified session or safe default
 case "$SESSION" in
   "FLUXBOX")
+  fbpanel &
   exec startfluxbox
   ;;
   "AWESOME")

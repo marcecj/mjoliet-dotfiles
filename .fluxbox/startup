@@ -12,7 +12,6 @@
 # wmnd &
 # wmsmixer -w &
 # idesk &
-fbpanel &
 
 # start fluxbox
 exec /usr/bin/fluxbox
