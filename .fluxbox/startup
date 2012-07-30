@@ -12,6 +12,8 @@
 # wmnd &
 # wmsmixer -w &
 # idesk &
+fbpanel &
 
-# or if you want to keep a log:
+# start fluxbox
+exec /usr/bin/fluxbox
 # exec /usr/bin/fluxbox -log ~/.fluxbox/log
