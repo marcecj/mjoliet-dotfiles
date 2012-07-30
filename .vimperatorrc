@@ -1,0 +1,22 @@
+" vim:ft=vim
+" 0.5.3 (created: 2007/12/21 19:26:07)
+set gui+=nomenu,nonavigation
+set nofocuscontent
+set hlsearch
+set complete=slf
+set defsearch=duckduckgo
+
+" support Zotero
+
+javascript <<EOF
+(function(){
+    var zoteroPanel = document.createElement("statusbarpanel");
+    zoteroPanel.setAttribute("id", "zotero-panel-clone");
+    zoteroPanel.appendChild(document.getElementById("zotero-status-image"));
+    zoteroPanel.firstChild.setAttribute("style", "padding: 0;");
+    document.getElementById("status-bar")
+            .insertBefore(zoteroPanel, document.getElementById("security-button"));
+})();
+EOF
+
+command zscrape js Zotero_Browser.scrapeThisPage(".")

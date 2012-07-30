@@ -1,0 +1,378 @@
+; vim:ft=scheme
+;                                                         -*-Scheme-*-
+; 
+; Init file for gschem
+;
+
+;  ;'s are comments
+;  keywords are case sensitive (guile feature)
+;  mode strings are case sensitive
+;  colors are not case sensitive 
+;  
+
+; gschem-version string
+;
+; Specifies the version of this file.  This number is used to make sure 
+; that the rc file is compatible with the version of gschem that is 
+; being run. The end user should *not* change this value.
+;
+; (gschem-version "20091004")
+
+;
+; Start of color section 
+;
+
+;; Make the gschem color maps more user-friendly
+; (color-map-make-friendly display-color-map)
+; (color-map-make-friendly display-outline-color-map)
+
+; Load up a color scheme which has a dark (black) background.
+; Comment out the first line and comment in the second line for a
+; light (almost white) background.  The dark background is the
+; original look.
+;
+; (load (build-path geda-rc-path "gschem-colormap-darkbg")) ; dark background
+;(load (build-path geda-rc-path "gschem-colormap-lightbg")) ; light background
+
+;
+; End of color section
+;
+
+;
+; Start of mode related keywords
+;
+
+; toolbars string
+;
+; Controls if the toolbars are visible or not.
+;
+; (toolbars "enabled")
+;(toolbars "disabled")
+
+; handleboxes string
+;
+; Controls if the handleboxes (which contain the menu and toolbar) are 
+; visible or not.
+;
+; (handleboxes "enabled")
+;(handleboxes "disabled")
+
+; undo-control string
+;
+; Controls if the undo is enabled or not
+;
+; (undo-control "enabled")
+;(undo-control "disabled")
+
+; undo-levels number
+;
+; Determines the number of levels of undo.  Basically this number decides 
+; how many backup schematics are saved on disk.
+;
+; (undo-levels 10)
+
+; undo-type string
+;
+; Controls which kind of undo is used.  The default is to use the disk as 
+; the storing medium (ie after every action the undo information is stored
+; to disk).  The other mechanism uses only memory.  The disk mechanism is
+; nice because you get undo-level number of backups of the schematic written
+; to disk as backups so you should never lose a schematic due to a crash.
+;
+; (undo-type "disk")
+;(undo-type "memory")
+
+; undo-panzoom string
+;
+; Controls if pan or zoom commands are saved in the undo list.  If this 
+; is enabled then a pan or zoom command will be considered a command and
+; can be undone.  If this is false, then panning and zooming is not saved
+; in the undo list and cannot be undone.  Note, the current viewport 
+; information is saved for every command, so the display will change to the
+; viewport before a command is executed.
+;
+; (undo-panzoom "enabled")
+;(undo-panzoom "disabled")
+
+; autosave interval
+;
+; Controls if a backup copy is made every "interval" seconds.
+; Note that the backup copy is made when you make some change to the schematic,
+; and there were more than "interval" seconds from the last autosave.
+; Autosaving will not be allowed if setting it to zero.
+; (auto-save-interval 120)
+
+; embed-components string
+;
+; Determines if the newly placed components are embedded in the schematic 
+; or if only the filename is specified and the component is searched for 
+; instead.  If it is enabled, then all new components will be embedded 
+; othewise they are not embedded.  This can be controlled on the fly during
+; runtime with the "Embed Component" checkbox on the select component dialog
+; box
+;
+;(embed-components "enabled")
+; (embed-components "disabled")
+
+; world-size width height border
+;
+; Specifies the size of the world and a border (in world space units)
+; Be sure all inputs are reals (floats/doubles) and don't try to reverse
+; the values: to get a portrait mode.  Code to support that needs to be added
+; The code that implements this automatically transforms the dimensions into
+; the proper aspect ratio.  All units are in inches.
+; This is not the paper size.  That is specified elsewhere.  End users should
+; not change this at all.
+;
+; (world-size 120.0 90.0 1.0)
+;(world-size 60.0 45.0 1.0)
+
+; output-type string
+;
+; Controls what is actually printed
+;	string is either "extents" or "extents no margins" or 
+;       "current window"
+;
+; (output-type "extents")
+;(output-type "extents no margins")
+;(output-type "current window")
+;;; (output-type "limits")  "limits" is considered deprecated and should 
+;;;                         not be used.
+
+; output-orientation string
+;
+; Controls which way the output page is layed out (landscape or portrait)
+;
+;(output-orientation "portrait")
+; (output-orientation "landscape")
+
+; output-color string
+;
+; Controls if output (postscript) is color (enabled) or black/white (disabled)
+;
+; (output-color "disabled")
+;(output-color "enabled")
+
+; setpagedevice-orientation string
+;
+; If enabled, puts a << /Orientation x >> setpagedevice into the postscript
+; output.  x is either 1 for landscape or 0 for portrait.
+;
+; (setpagedevice-orientation "disabled")
+;(setpagedevice-orientation "enabled")
+
+
+; setpagedevice-pagesize string
+;
+; If enabled, puts a << /PageSize XxY >> setpagedevice into the postscript
+; output.  XxY is the size of the paper in points.
+;
+; (setpagedevice-pagesize "disabled")
+;(setpagedevice-pagesize "enabled")
+
+;
+; Start of hooks
+;
+
+;
+; Comment in this scheme code if you want automatic numbering when
+; placing new component and copying components
+;
+;(load-from-path "auto-uref.scm")
+;(add-hook! add-component-hook auto-uref)
+;(add-hook! copy-component-hook auto-uref)
+
+; Autoplace component/net/buses text attributes hook. 
+; Comment in these if you want the component attributes to be 
+; automatically placed.
+; There are different hooks for situations like adding a new pin, rotating
+; or mirroring an existing one, adding a new attribute or a new component.
+; The #t at the end means that function is appended to the end of the hook.
+;(add-hook! add-component-object-hook (lambda (object)
+;	(autoplace-object-attributes object)) #t)
+;(add-hook! rotate-component-object-hook (lambda (object)
+;	(autoplace-object-attributes object)) #t)
+;(add-hook! mirror-component-object-hook (lambda (object)
+;	(autoplace-object-attributes object)) #t)
+;(add-hook! add-attribute-hook (lambda (object)
+;	(autoplace-object-attributes object)) #t)
+;(add-hook! complex-place-list-changed-hook (lambda (object)
+;         (autoplace-object-attributes object)) #t)
+
+; Automatically place a titleblock (or other components) when creating
+; a new page.
+; Comment in these lines if you want gschem to automatically place a titleblock
+; when you create a new _empty_ page.
+; Users can customize the default titleblock by adding the following line
+; (without the semi-colons at the beginning) to the gschemrc file:
+;; (define default-titleblock "title-A4.sym")
+;; Change "title-A4.sym" by the name of your prefered titleblock!
+;
+; If you don't want a titleblock to be added automatically, then add one of 
+; the following lines to your gschemrc file (without the semicolon).
+; There are several ways, so just choose one:
+;   (define default-titleblock "")
+;   (define default-titleblock '())
+;   (define default-titleblock #f)
+;
+; (define default-titleblock "title-B.sym")
+
+;
+; End of hooks
+;
+
+;
+; Start of keymapping related keywords
+;
+
+; Keymapping rules:
+;
+;	- Everything is case sensitive
+; 	- For a         --  "a"
+; 	- For Shift-A   --  "Shift A"
+; 	- For Control-a --  "Control a"
+; 	- For Alt-a     --  "Alt a"
+; 	- At this point in time you can only have one modifier 
+;	  (shift, control, alt) at a time.
+; 	- Keys must be unique in each keymap, especially the global one
+;	- Strings (without any modifers) are the same strings specified
+; 	  for the keys in the file /usr/lib/X11/XKeysymDB (at least on 
+; 	  a linux box)
+;
+
+; All keys in the global-keymap *must* be unique
+;(define global-keymap
+;  '(("Escape" . cancel)
+;    ("a" . add-keymap)
+;    ("b" . add-box-hotkey)
+;    ("c" . edit-copy-hotkey)
+;    ("d" . edit-delete)
+;    ("e" . edit-keymap)
+;    ("f" . file-keymap)
+;    ("h" . help-keymap)
+;    ("i" . add-component)
+;    ("l" . add-line-hotkey) 
+;    ("m" . edit-move-hotkey)
+;    ("n" . add-net-hotkey)
+;    ("o" . options-keymap)
+;    ("bracketright" . options-scale-up-snap-size)
+;    ("bracketleft" . options-scale-down-snap-size)
+;    ("p" . page-keymap)
+;    ("r" . view-redraw)
+;    ("s" . edit-select)
+;    ("t" . attributes-keymap)
+;    ("u" . edit-undo)
+;    ("v" . view-keymap)
+;    ("w" . view-zoom-box-hotkey)
+;    ("x" . view-pan-hotkey)
+;    ("Left" . view-pan-left)
+;    ("Right" . view-pan-right)
+;    ("Up" . view-pan-up)
+;    ("Down" . view-pan-down)
+;    ("y" . buffer-keymap)
+;    ("z" . view-zoom-in-hotkey)
+;    ("period" . repeat-last-command)
+;    ("Shift colon" . edit-invoke-macro)
+;    ("comma" . misc-misc)
+;    ("equal" . misc-misc2)
+;    ("Shift plus" . misc-misc3)
+;    ("Delete" . edit-delete)
+;    ("Shift greater" . page-next) ; Deprecated; preserved for backward compat
+;    ("Page_Down" . page-next)
+;    ("Shift less" . page-prev) ; Deprecated; preserved for backward compat
+;    ("Page_Up" . page-prev)
+;    ("Alt q" . file-quit)
+;    ("Shift B" . add-bus-hotkey)
+;    ("Shift H" . hierarchy-keymap)
+;    ("Shift U" . edit-undo)
+;    ("Shift R" . edit-redo)
+;    ("Shift Z" . view-zoom-out-hotkey)
+;    ("Control x" . clipboard-cut)
+;    ("Control c" . clipboard-copy)
+;    ("Control v" . clipboard-paste-hotkey)
+;    ("Control z" . edit-undo)
+;    ("Control y" . edit-redo)))
+;
+;; finally set the keymap point to the newly created datastructure 
+;(define current-keymap global-keymap)
+
+;
+; Here are the definitions for the top pull down menu bar
+;
+; The "menu item name" is the name of the item as it will appear in the menu
+; The "menu action" is the scheme function which is executed when the item
+; is selected off of the menu.  And "menu hotkey function" is the scheme
+; function which is executed when the hotkey is pressed.  
+; "menu hotkey function" has no real functionality in the menuing scheme other
+; than providing the information as to what hotkey to display in the menu.
+; "menu hotkey function" is not executed when you select an item off of the
+; list.  The hotkeys which are displayed are defined by the global-keymap.
+; Actions can have several hotkeys, but the displayed keys are the last
+; ones found.
+;
+; The SEPARATOR keyword is case sensitive and puts a seperator into the menu.
+;
+
+; A small scheme routine for generating netlists.  This is based off the scheme
+; program generate_netlist.scm.
+(define make-netlist
+  (lambda (netlist-type)
+    (let* ((source-file (get-selected-filename)) ; get current full filename
+           (source-file-length (string-length source-file))
+           ; position of last "/"
+           (last-dir-separator (string-rindex source-file #\/ 0 
+                                                       source-file-length))
+           (target-file (string-append
+                          (substring source-file 
+                                     ; + start of char after last "/", else 1
+                                     (+ last-dir-separator 1)
+                                     (- source-file-length 4))
+                          ".net"))
+           (command (string-append "gnetlist -g "
+                                   netlist-type " "
+                                   (substring source-file
+                                              (+ last-dir-separator 1)
+                                              source-file-length) 
+                                   " -o " target-file)))
+      (display command)
+      (newline)
+      (system  command))))
+
+; wrappers for the netlist menu
+(define (make-netlist-spice-sdb)
+  (make-netlist "spice-sdb"))
+(define (make-netlist-spice)
+  (make-netlist "spice"))
+
+; A menu containing entries for generating netlists.
+(define netlist-menu-items 
+;;
+;;          menu item name                menu action               menu hotkey action        menu stock icon
+;;
+        '(
+           ("Make spice-sdb netlist"      make-netlist-spice-sdb    make-netlist-spice-sdb    #f)
+           ("Make spice netlist"          make-netlist-spice        make-netlist-spice        #f)))
+
+;
+; Now actually add the menus.  The order here defines the order in which
+; the menus appear in the top menu bar.
+;
+(add-menu "Netlist" netlist-menu-items)
+
+;
+; End of keymapping related keywords
+;
+
+
+;;
+;; Major modes
+;;
+
+;; Comment in this scheme code if you want to link with pcb
+;;
+;; Please note that the code in pcb.scm is still highly experimental
+;; and there are known (and easy) ways to crash pcb and/or gschem with this code.
+;; The short answer is neither program likes a pipe to break.
+;;
+; (load-from-path "pcb.scm")
+

@@ -1,0 +1,7 @@
+[user]
+	name = Marc Joliet
+	email = marcec@gmx.de
+[color]
+	diff = auto
+	status = auto
+	branch = auto

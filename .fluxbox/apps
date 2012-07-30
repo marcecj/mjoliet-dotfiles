@@ -1,0 +1,86 @@
+[app] (name=gajim.py) (class=Gajim.py) (role=roster)
+  [Dimensions]	{232 911}
+  [Position]	(UPPERLEFT)	{738 40}
+  [Tab]		{no}
+  [Sticky]	{yes}
+  [Layer]	{6}
+  [Close]	{yes}
+[end]
+[group]  (workspace=[current])
+ [app] (name=gajim.py) (class=Gajim.py)
+  [Tab]		{yes}
+[end]
+[app] (name=amarokapp) (class=Amarokapp) (role=PlaylistWindow)
+  [Workspace]	{6}
+  [Dimensions]	{1280 992}
+  [Position]	(UPPERLEFT)	{0 0}
+  [Tab]		{yes}
+  [Sticky]	{yes}
+  [Close]	{yes}
+[end]
+[group]  (workspace=[current])
+ [app] (name=urxvt)
+  [Tab]		{yes}
+[end]
+[group]  (workspace=[current])
+ [app] (name=gvim)
+  [Tab]		{yes}
+[end]
+[group]  (workspace=[current])
+ [app] (name=xterm)
+  [Tab]		{yes}
+[end]
+[app] (name=qmpdclient) (class=Qmpdclient) (role=MainWindow)
+  [Position]	(UPPERLEFT)	{0 0}
+  [Sticky]	{yes}
+  [Close]	{yes}
+[end]
+[group]  (workspace=[current])
+ [app] (name=sun-awt-X11-XFramePeer) (class=com-mathworks-util-PostVMInit)
+  [Dimensions]	{1280 992}
+  [Position]	(UPPERLEFT)	{0 0}
+  [Tab]		{yes}
+[end]
+[app] (name=claws-mail) (class=Claws-mail) (role=mainwindow)
+  [Workspace]	{6}
+  [Position]	(UPPERLEFT)	{0 0}
+[end]
+[group]  (workspace=[current])
+ [app] (name=claws-mail) (role=compose)
+  [Tab]		{yes}
+[end]
+[group]  (workspace=[current])
+ [app] (name=kpdf)
+ [app] (name=kdvi)
+ [app] (name=kghostview)
+  [Position]	(UPPERLEFT)	{0 0}
+  [Tab]		{yes}
+[end]
+[app] (name=gimp-.*) (class=Gimp-.*) (role=gimp-toolbox)
+  [Position]	(UPPERLEFT)	{0 26}
+  [Layer]	{6}
+[end]
+[app] (name=gimp-.*) (class=Gimp-.*) (role=gimp-dock)
+  [Position]	(UPPERRIGHT)	{0 26}
+  [Layer]	{6}
+[end]
+[group]  (workspace=[current])
+ [app] (name=gimp-.*) (class=Gimp-.*) (role=gimp-image-window)
+  [Dimensions]	{784 849}
+  [Position]	(UPPERLEFT)	{242 26}
+  [Tab]		{yes}
+  [Layer]	{8}
+  [Close]	{yes}
+[end]
+[group]  (workspace=[current])
+ [app] (name=inkscape)
+  [Dimensions]	{1152 832}
+  [Position]	(UPPERLEFT)	{0 0}
+  [Tab]		{yes}
+  [Layer]	{8}
+[end]
+[app] (name=VirtualBox) (class=VirtualBox)
+  [Dimensions]	{800 675}
+  [Position]	(UPPERLEFT)	{0 0}
+  [Close]	{yes}
+[end]

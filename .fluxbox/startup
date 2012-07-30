@@ -1,0 +1,17 @@
+# fluxbox startup-script:
+#
+# Lines starting with a '#' are ignored.
+
+# This shows the fluxbox-splash-screen
+# fbsetbg -C /usr/share/fluxbox/splash.jpg
+
+# Applications you want to run with fluxbox.
+# MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
+#
+# unclutter -idle 2 &
+# wmnd &
+# wmsmixer -w &
+# idesk &
+
+# or if you want to keep a log:
+# exec /usr/bin/fluxbox -log ~/.fluxbox/log

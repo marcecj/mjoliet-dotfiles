@@ -1,0 +1,12 @@
+edit editor "gvim %s &";
+edit mode async;
+edit license bsd;
+edit author "Marc Joliet";
+edit email "marcec@web.de";
+
+% customize prompt
+PS1("(\\s) \\w :\\#\\n>")
+
+history_size(8192);
+
+path(path, '~/octave');

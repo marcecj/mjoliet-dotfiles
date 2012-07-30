@@ -1,0 +1,3 @@
+# Set to vi editing mode and movement
+set editing-mode vi
+set keymap vi-move

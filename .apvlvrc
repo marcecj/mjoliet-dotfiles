@@ -1,0 +1,33 @@
+" some map
+
+" map n to <C-f> to goto next page
+"map n <C-f>
+
+" and p to prepage
+"map p <C-b>
+
+" map I to zi, and O to zo
+"map I zi
+"map O zo
+
+" default fullscreen
+"set fullscreen=no
+
+" default zoom
+" zoom has 4 styles
+" a float type number
+" fitwidth
+" fitheight
+" normal
+set zoom=normal
+
+" set window size
+" set to something small so that it doesn't waste space!
+set width=320
+set height=256
+
+" set command timeout between two key press 
+"set commandtimeout=1000
+
+" set default dir
+"set defaultdir=C:\
