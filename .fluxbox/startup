@@ -13,6 +13,7 @@
 # wmsmixer -w &
 # idesk &
 
-# start fluxbox
-exec /usr/bin/fluxbox
-# exec /usr/bin/fluxbox -log ~/.fluxbox/log
+# this script is 'exec'ed from the startfluxbox script, so fluxbox needs to be
+# started from here
+exec fluxbox
+# exec fluxbox -log ~/.fluxbox/log
