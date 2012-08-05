@@ -14,7 +14,7 @@
 .bugz_cookie
 .esd_auth
 .pulse-cookie
-.xsession-errors
+.xsession-errors*
 .ncmpcpp/*.log
 .ncmpcpp/config.*
 .gEDA/logs/
