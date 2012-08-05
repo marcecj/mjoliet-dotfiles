@@ -1,9 +1,68 @@
+#!/usr/bin/env sh
+#
+# this file is called by most display managers, including lightdm
+
 #  ivman-laubch --exit-with-session xinit &
 #  exec pidgin &
 #  ~/bin/awesome-clock &
 #  exec awesome
 
 export LANG="de_DE.UTF-8"
-export LC_ALL="de_DE.UTF-8"
+#export LC_ALL="de_DE.UTF-8"
 
-# . .xinitrc
+#. .xinitrc
+
+#  Start whatever program I want at X startup (via startx or slim)
+$HOME/.monicarc   #monitor calibration
+
+# uncomment when starting via "startx" in an ssh session 
+xrdb -merge .Xresources
+
+# required by uzbl
+export XDG_DATA_HOME="$HOME/.config"
+
+# binds keys to shell commands
+xbindkeys &
+
+# start a urxvt daemon, will quit with the X server
+urxvtd -q -o -f
+
+# udisks based automounter
+pgrep udisks-glue || udisks-glue &
+
+# misc
+pulseaudio --check || pulseaudio --start &
+mpd &
+#fbsetbg -l &   # set the background wallpaper
+#conky &		# an alternative system monitor to gkrellm
+
+# who can live without a screensaver?
+#xscreensaver &
+xautolock &  # configuration in .Xresources
+
+# sets monitor color temp according to daytime
+redshift &
+
+# chat program
+#gajim &
+pidgin &
+
+# some terminals to always start
+urxvtc -name "multitail-syslog" -e zsh -c "sudo multitail -n 300 --retry -f /var/log/messages" &
+urxvtc -name "htop-sys" -e zsh -c "htop" &
+
+# start specified session or safe default
+case "$DESKTOPSESSION" in
+  "fluxbox")
+  fbpanel &
+  ;;
+  "awesome")
+  export AWT_TOOLKIT="MToolkit" # fixes Java applications
+  export wpsetters=xsri # set wallpaper setter for awsetbg
+  ;;
+  "KDE-Awesome")
+  export KDEWM=awesome
+  ;;
+esac
+
+# vim:nospell
