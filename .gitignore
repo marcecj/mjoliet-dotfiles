@@ -27,6 +27,9 @@
 # contains a socket and extensions downloaded via git
 .urxvt/
 
+# security relevant, don't share
+.kdb
+
 # system dependent or auto-generated files
 .dbus/
 .cddbslave/
