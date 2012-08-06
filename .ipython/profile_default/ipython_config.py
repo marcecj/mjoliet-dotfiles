@@ -225,7 +225,7 @@ c.TerminalIPythonApp.ignore_old_config = True
 # c.TerminalInteractiveShell.multiline_history = True
 
 #
-# c.TerminalInteractiveShell.readline_use = True
+c.TerminalInteractiveShell.readline_use = True
 
 # Start logging to the given file in append mode.
 # c.TerminalInteractiveShell.logappend = ''
