@@ -14,14 +14,21 @@
 .bugz_cookie
 .esd_auth
 .pulse-cookie
-.xsession-errors
+.xsession-errors*
 .ncmpcpp/*.log
 .ncmpcpp/config.*
 .gEDA/logs/
 .log/
+.ipython/db/
+.ipython/profile_*/db/
+.ipython/profile_*/log/
+.ipython/profile_*/security/
 
 # contains a socket and extensions downloaded via git
 .urxvt/
+
+# security relevant, don't share
+.kdb
 
 # system dependent or auto-generated files
 .dbus/
@@ -97,7 +104,6 @@
 .codered/
 .q3a/
 .doom3/
-.crack-attack/
 .PySolFC/
 .foobillardrc
 .kobodlrc
@@ -165,6 +171,7 @@
 .links/
 
 # only contain history or state
+.ipython/**/*history*
 .apvlvinfo
 .fluxbox/fbrun_history
 .vim/.netrwhist
