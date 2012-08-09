@@ -45,8 +45,8 @@ redshift &
 pidgin &
 
 # some terminals to always start
-urxvtc -name "multitail-syslog" -e zsh -c "sudo multitail -n 300 --retry -f /var/log/messages" &
-urxvtc -name "htop-sys" -e zsh -c "htop" &
+urxvtc -name "multitail-syslog" -e sh -c "sudo multitail -n 300 --retry -f /var/log/messages" &
+urxvtc -name "htop-sys" -e sh -c "htop" &
 
 # take care of input argument and SESSION variable
 if [ -z $1 ]; then
