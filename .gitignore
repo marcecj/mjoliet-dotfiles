@@ -6,6 +6,9 @@
 *~
 *.swp
 
+# ignore pre-compiled python programs
+*.py[co]
+
 # lock/auth/etc. files
 .ICEauthority
 .XSM-Default
