@@ -30,6 +30,12 @@
 # security relevant, don't share
 .kdb
 
+# cache files
+.cache/
+.dmenu_cache
+.matplotlib/*.cache
+.zcompcache/
+
 # system dependent or auto-generated files
 .aeolus-presets
 .alsoftrc
@@ -39,14 +45,12 @@
 .asoundrc_dmix
 .asoundrc_pulse
 .bash_completion.d/
-.cache/
 .cddbslave/
 .color/
 .config/Trash/
 .config/smplayer/
 .conkyrc
 .dbus/
-.dmenu_cache
 .drirc
 .dropbox/
 .dvdcss/
@@ -71,7 +75,6 @@
 .lpoptions
 .mailcap
 .matlab/
-.matplotlib/*.cache
 .mime.types
 .moc/
 .monicarc
@@ -95,7 +98,6 @@
 .vim/tags/
 .vimperator/
 .xbindkeysrc
-.zcompcache/
 .zcompdump
 
 # games, don't care
