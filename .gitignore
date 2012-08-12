@@ -34,6 +34,7 @@
 .cache/
 .dmenu_cache
 .matplotlib/*.cache
+.newsbeuter/cache.db
 .zcompcache/
 
 # system dependent or auto-generated files
@@ -181,6 +182,8 @@
 .ipython/**/*history*
 .lesshst
 .mtab.fuseiso
+.newsbeuter/queue
+.newsbeuter/history.*
 .octave_hist
 .pyxplot_history
 .reinteract/
@@ -226,7 +229,6 @@
 .ssh/*
 !.ssh/config
 .spamassassin/
-.newsbeuter/
 .canto/
 
 # misc
