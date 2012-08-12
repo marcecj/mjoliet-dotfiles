@@ -71,7 +71,7 @@
 .lpoptions
 .mailcap
 .matlab/
-.matplotlib/
+.matplotlib/*.cache
 .mime.types
 .moc/
 .monicarc
