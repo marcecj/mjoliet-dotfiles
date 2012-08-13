@@ -50,7 +50,7 @@ if address :is "Reply-To" "psycle-devel@lists.sourceforge.net"
 
 # Gentoo bugs
 if address :matches "From" "bugzilla*@gentoo.org" {
-    fileinto "INBOX.Gentoo.BugZilla";
+    fileinto "Gentoo.BugZilla";
     stop;
 }
 
