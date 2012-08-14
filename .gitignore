@@ -49,6 +49,7 @@
 .cddbslave/
 .color/
 .config/Trash/
+.config/laditools/ladi-system-log.conf
 .config/smplayer/
 .conkyrc
 .dbus/
