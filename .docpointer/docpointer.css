@@ -1,0 +1,51 @@
+div.nav_menu {
+  color:             #000000;
+  background-color:  #b4dade;
+  font-weight:       bold;
+  font-family:       monospace;
+  top:               1px;
+  left:              1px;
+  border-style:      groove;
+  padding:           0;
+}
+
+td.tab_cell {
+  background-color:  #b4dade;
+  background-image:  url(tabimage.gif);
+  background-repeat: no-repeat;
+  font-family:       "Courier New","Courier",monospace;
+}
+
+pre.listing {
+  font-size:         larger;
+}
+
+.bluelight {
+  color:             #000000;
+  background-color:  #c0d0ff;
+}
+
+.highlight {
+  color:             #000000;
+  background-color:  #b4ffb4;
+  font-weight:       bold;
+  text-align:        left;
+  border-style:      none;
+}
+
+table.t1 {
+  border-style:      ridge;
+  border-color:      #0000c0;
+  border-spacing:    9px;
+  border-width:      8px;
+  color:             #000000;
+  background-color:  #f0f0f0;
+}
+
+table.t1 td {
+  border-style:      solid;
+  border-color:      #0000c0;
+  border-width:      1px;
+  color:             #000000;
+  background-color:  #f0f0f0;
+}

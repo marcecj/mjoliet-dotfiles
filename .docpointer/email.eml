@@ -1,0 +1,298 @@
+From waltdnes@waltdnes.org Thu Jul  5 01:49:05 2007
+Return-Path: <gentoo-user+bounces-66181-marcec=gmx.de@gentoo.org>
+X-Flags: 1001
+Delivered-To: GMX delivery to marcec@gmx.de
+Received: (qmail invoked by alias); 05 Jul 2007 01:49:05 -0000
+Received: from lists.gentoo.org (EHLO robin.gentoo.org) [140.105.134.102]
+	by mx0.gmx.net (mx027) with SMTP; 05 Jul 2007 03:49:05 +0200
+Received: from robin.gentoo.org (localhost [127.0.0.1]) by robin.gentoo.org
+	(8.14.0/8.14.0) with SMTP id l651kDK2018218; Thu, 5 Jul 2007 01:46:13 GMT
+Delivered-To: <gentoo-user@lists.gentoo.org>
+Received: from mail.295.ca (mail.295.ca [66.38.192.228]) by
+	robin.gentoo.org (8.14.0/8.14.0) with ESMTP id l651f4Sl011104 for
+	<gentoo-user@lists.gentoo.org>; Thu, 5 Jul 2007 01:41:04 GMT
+Received: from offload1.295.ca (offload1.295.ca [66.38.192.138]) by
+	mail.295.ca (Postfix) with ESMTP id 3CCFE28D36DF for
+	<gentoo-user@lists.gentoo.org>; Wed,  4 Jul 2007 21:41:04 -0400 (EDT)
+X-Virus-Scanned: amavisd-new at 295.ca
+Received: from mail.295.ca ([66.38.192.228]) by offload1.295.ca
+	(offload1.295.ca [66.38.192.138]) (amavisd-new, port 10024) with ESMTP id
+	ugCNG2iHCzju for <gentoo-user@lists.gentoo.org>; Wed,  4 Jul 2007 21:41:01
+	-0400 (EDT)
+Received: from waltdnes.org (host-208-65-244-236.dyn.295.ca
+	[208.65.244.236]) by mail.295.ca (Postfix) with SMTP id 4074A28D326A for
+	<gentoo-user@lists.gentoo.org>; Wed,  4 Jul 2007 21:40:59 -0400 (EDT)
+Received: by waltdnes.org (sSMTP sendmail emulation); Wed,  4 Jul 2007
+	21:40:51 -0400
+From: "Walter Dnes" <waltdnes@waltdnes.org>
+Date: Wed, 4 Jul 2007 21:40:51 -0400
+To: gentoo-user@lists.gentoo.org
+Subject: Re: [gentoo-user] Index to /usr/share/doc/...html... a reinvented
+	wheel?
+Message-ID: <20070705014051.GB26335@waltdnes.org>
+References: <9acccfe50707031519w73abc638qb001cc5e9bb64d88@mail.gmail.com>
+Precedence: bulk
+List-Post: <mailto:gentoo-user@lists.gentoo.org>
+List-Help: <mailto:gentoo-user+help@gentoo.org>
+List-Unsubscribe: <mailto:gentoo-user+unsubscribe@gentoo.org>
+List-Subscribe: <mailto:gentoo-user+subscribe@gentoo.org>
+List-Id: Gentoo Linux mail <gentoo-user.gentoo.org>
+X-BeenThere: gentoo-user@gentoo.org
+Reply-to: gentoo-user@lists.gentoo.org
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="WYTEVAkct0FjGQmd"
+Content-Disposition: inline
+In-Reply-To: <9acccfe50707031519w73abc638qb001cc5e9bb64d88@mail.gmail.com>
+User-Agent: Mutt/1.5.13 (2006-08-11)
+X-GMX-Antivirus: -1 (not scanned, may not use virus scanner)
+X-GMX-Antispam: -2 (not scanned, spam filter disabled)
+X-GMX-UID: QjrpNhBNZCEWRV3uIW4hVOBwIGhpZcb1
+X-Evolution-Source: pop://marcec%40gmx.de;auth=LOGIN@pop.gmx.net/
+
+
+--WYTEVAkct0FjGQmd
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+
+On Tue, Jul 03, 2007 at 03:19:14PM -0700, Kevin O'Gorman wrote
+> I emerge with the doc USE flag and generally have a bunch of stuff in
+> /usr/share/doc.  Most of the time it's the HTML stuff I want to read, but
+> it's a annoyingly laborious to wade through unindexed directgories and get a
+> browser pointing to the right thing.  So I wrote a little Perl script to
+> create a top-level "index.html", organized by package and with a bit of
+> rudimentary pruning.  I bookmarked it in Firefox, and can get to things a
+> lot faster now.  I like the result, and will continue to tweak it here and
+> there.
+> 
+> Did I just reinvent a wheel? If not, is there any point it trying to make
+> this part of gentoo?  If so, how would one do that?
+> 
+> Current script attached.
+
+  Here's mine.  It uses strictly bash; no perl at all.  The setup...
+  - following files sit in the ~/.docpointer/  directory
+    - docpointer (executable script)
+    - docpointer.css
+    - header
+    - footer
+
+  - from a console execute...
+    ~/.docpointer/docpointer n
+    where "n" is an integer specifying the number of columns across you
+    want in the output.  You *MUST* specify a number.  I use between 1
+    and 3, depending on my mood.  It only takes a couple of seconds on
+    an old 450 mhz PIII
+
+  - I point browser to file:///home/waltdnes/.docpointer/docpointer.html
+    and get a list of html docs.  The pathname will obviously be
+    different om your system
+
+  The files are attached...
+
+-- 
+Walter Dnes <waltdnes@waltdnes.org> In linux /sbin/init is Job #1
+Q. Mr. Ghandi, what do you think of Microsoft security?
+A. I think it would be a good idea.
+
+--WYTEVAkct0FjGQmd
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: attachment; filename=docpointer
+Content-Transfer-Encoding: 8bit
+
+#!/bin/bash
+
+makelinktext() {
+
+# Search for matches
+find ${1} -iname ${2} > workfile.000
+
+# Generate text for link and append it and the match to workfile.001
+while read
+do
+# Strip the prefix off the filespec
+  xoffset=$(( ${#1} + 1 ))
+  commenttext=${REPLY:${xoffset}}
+
+# If the stripped filespec contains the string "/html/", get rid of that
+  commenttext=`echo ${commenttext} | sed "s/\/html\//\//g"`
+
+# Get rid of the string "/HTML/" too
+  commenttext=`echo ${commenttext} | sed "s/\/HTML\//\//g"`
+
+# Get rid of the string "/doc/" too
+  commenttext=`echo ${commenttext} | sed "s/\/doc\//\//g"`
+
+# Get rid of the string "/DOC/" too
+  commenttext=`echo ${commenttext} | sed "s/\/DOC\//\//g"`
+
+# Get rid of the string "/doc/" too
+  commenttext=`echo ${commenttext} | sed "s/\/docs\//\//g"`
+
+# Get rid of the string "/doc/" too
+  commenttext=`echo ${commenttext} | sed "s/\/DOCS\//\//g"`
+
+# Strip the suffix off the filespec
+  xlength=$(( ${#commenttext} - ${#2} - 1 ))
+  commenttext=${commenttext:0:${xlength}}
+
+# Send the stripped filespec, along with the original, to workfile.001
+  echo ${commenttext} ${REPLY} >> workfile.001
+done < workfile.000
+
+}
+
+# Get parameter which specifies how many columns across
+columncount=${1}
+
+# Change to ~/.docpointer directory
+cd ~/.docpointer
+
+# Get rid of workfile.001 if it exists.
+if [[ -a workfile.001 ]]; then
+  rm workfile.001
+fi
+
+# Get raw search results
+makelinktext "/usr/share/doc" "index.html"
+makelinktext "/usr/share/doc" "index.htm"
+# Repeat the above lines for any additional searches you want to throw in.
+
+# Generate a sorted workfile
+sort -u workfile.001 > workfile.002
+
+# Create the beginning of the docpointer.html file
+cp header docpointer.html
+
+# Put creation date into the link page
+date >> docpointer.html
+
+# Open the table
+echo '<table class="t1" cellspacing="4">' >> docpointer.html
+
+# Initialize column pointer
+columnpointer=0
+
+# Read each line in workfile.002 and generate a link
+while read commenttext urltext
+do
+
+# Increment column pointer
+  columnpointer=$(( ${columnpointer} + 1 ))
+
+# If this is the first cell of a row, open the row first
+  if [[ ${columnpointer} -eq 1 ]]; then
+    echo '<tr>' >> docpointer.html
+    rowstatus="open"
+  fi
+
+# Do the cell
+  echo "<td><a href=\"${urltext}\">" "${commenttext}" '</a></td>' >> docpointer.html
+
+# If this is the  last cell of a row, close the row, and reset the
+# column pointer to zero
+  if [[ ${columnpointer} -eq ${columncount} ]]; then
+    echo '</tr>' >> docpointer.html
+    rowstatus="closed"
+    columnpointer=0
+  fi
+
+done < workfile.002
+
+# If the last row hasn't been closed, close it now
+if [[ "${rowstatus}" = "open" ]]; then
+  echo '</tr>' >> docpointer.html
+fi
+
+# Close the table
+echo '</table>' >> docpointer.html
+
+# Append the footer to docpointer.html
+cat footer >> docpointer.html
+
+--WYTEVAkct0FjGQmd
+Content-Type: text/css; charset=us-ascii
+Content-Disposition: attachment; filename="docpointer.css"
+Content-Transfer-Encoding: 8bit
+
+div.nav_menu {
+  color:             #000000;
+  background-color:  #b4dade;
+  font-weight:       bold;
+  font-family:       monospace;
+  top:               1px;
+  left:              1px;
+  border-style:      groove;
+  padding:           0;
+}
+
+td.tab_cell {
+  background-color:  #b4dade;
+  background-image:  url(tabimage.gif);
+  background-repeat: no-repeat;
+  font-family:       "Courier New","Courier",monospace;
+}
+
+pre.listing {
+  font-size:         larger;
+}
+
+.bluelight {
+  color:             #000000;
+  background-color:  #c0d0ff;
+}
+
+.highlight {
+  color:             #000000;
+  background-color:  #b4ffb4;
+  font-weight:       bold;
+  text-align:        left;
+  border-style:      none;
+}
+
+table.t1 {
+  border-style:      ridge;
+  border-color:      #0000c0;
+  border-spacing:    9px;
+  border-width:      8px;
+  color:             #000000;
+  background-color:  #f0f0f0;
+}
+
+table.t1 td {
+  border-style:      solid;
+  border-color:      #0000c0;
+  border-width:      1px;
+  color:             #000000;
+  background-color:  #f0f0f0;
+}
+
+--WYTEVAkct0FjGQmd
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: attachment; filename=header
+Content-Transfer-Encoding: 8bit
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+<link rel="stylesheet" href="docpointer.css" type="text/css" />
+<title>The docpointer linkpage to html documentation on your system</title>
+</head>
+<body>
+<div class="nav_menu">
+This page created 
+
+--WYTEVAkct0FjGQmd
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: attachment; filename=footer
+Content-Transfer-Encoding: 8bit
+
+</div>
+</body>
+</html>
+
+--WYTEVAkct0FjGQmd--
+-- 
+gentoo-user@gentoo.org mailing list

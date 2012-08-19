@@ -1,0 +1,109 @@
+#!/bin/bash
+
+makelinktext() {
+
+# Search for matches
+find ${1} -iname ${2} > workfile.000
+
+# Generate text for link and append it and the match to workfile.001
+while read
+do
+# Strip the prefix off the filespec
+  xoffset=$(( ${#1} + 1 ))
+  commenttext=${REPLY:${xoffset}}
+
+# If the stripped filespec contains the string "/html/", get rid of that
+  commenttext=`echo ${commenttext} | sed "s/\/html\//\//g"`
+
+# Get rid of the string "/HTML/" too
+  commenttext=`echo ${commenttext} | sed "s/\/HTML\//\//g"`
+
+# Get rid of the string "/doc/" too
+  commenttext=`echo ${commenttext} | sed "s/\/doc\//\//g"`
+
+# Get rid of the string "/DOC/" too
+  commenttext=`echo ${commenttext} | sed "s/\/DOC\//\//g"`
+
+# Get rid of the string "/doc/" too
+  commenttext=`echo ${commenttext} | sed "s/\/docs\//\//g"`
+
+# Get rid of the string "/doc/" too
+  commenttext=`echo ${commenttext} | sed "s/\/DOCS\//\//g"`
+
+# Strip the suffix off the filespec
+  xlength=$(( ${#commenttext} - ${#2} - 1 ))
+  commenttext=${commenttext:0:${xlength}}
+
+# Send the stripped filespec, along with the original, to workfile.001
+  echo ${commenttext} ${REPLY} >> workfile.001
+done < workfile.000
+
+}
+
+# Get parameter which specifies how many columns across
+columncount=${1}
+
+# Change to ~/.docpointer directory
+cd ~/.docpointer
+
+# Get rid of workfile.001 if it exists.
+if [[ -a workfile.001 ]]; then
+  rm workfile.001
+fi
+
+# Get raw search results
+makelinktext "/usr/share/doc" "index.html"
+makelinktext "/usr/share/doc" "index.htm"
+# Repeat the above lines for any additional searches you want to throw in.
+
+# Generate a sorted workfile
+sort -u workfile.001 > workfile.002
+
+# Create the beginning of the docpointer.html file
+cp header docpointer.html
+
+# Put creation date into the link page
+date >> docpointer.html
+
+# Open the table
+echo '<table class="t1" cellspacing="4">' >> docpointer.html
+
+# Initialize column pointer
+columnpointer=0
+
+# Read each line in workfile.002 and generate a link
+while read commenttext urltext
+do
+
+# Increment column pointer
+  columnpointer=$(( ${columnpointer} + 1 ))
+
+# If this is the first cell of a row, open the row first
+  if [[ ${columnpointer} -eq 1 ]]; then
+    echo '<tr>' >> docpointer.html
+    rowstatus="open"
+  fi
+
+# Do the cell
+  echo "<td><a href=\"${urltext}\">" "${commenttext}" '</a></td>' >> docpointer.html
+
+# If this is the  last cell of a row, close the row, and reset the
+# column pointer to zero
+  if [[ ${columnpointer} -eq ${columncount} ]]; then
+    echo '</tr>' >> docpointer.html
+    rowstatus="closed"
+    columnpointer=0
+  fi
+
+done < workfile.002
+
+# If the last row hasn't been closed, close it now
+if [[ "${rowstatus}" = "open" ]]; then
+  echo '</tr>' >> docpointer.html
+fi
+
+# Close the table
+echo '</table>' >> docpointer.html
+
+# Append the footer to docpointer.html
+cat footer >> docpointer.html

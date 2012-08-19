@@ -53,6 +53,7 @@
 .config/smplayer/
 .conkyrc
 .dbus/
+.docpointer/workfile.*
 .drirc
 .dropbox/
 .dvdcss/
