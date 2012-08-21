@@ -246,7 +246,6 @@
 .config/applications/
 .config/autojump/
 .config/autostart/
-.config/comix/
 .config/desktop-directories/
 .config/gajim/
 .config/geeqie/
@@ -258,6 +257,7 @@
 .config/icons/
 .config/inkscape/
 .config/jack/
+.config/mcomix/
 .config/kde.org/
 .config/linuxsampler.org/
 .config/menus/
