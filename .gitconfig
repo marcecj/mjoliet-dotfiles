@@ -1,6 +1,7 @@
 [user]
 	name = Marc Joliet
 	email = marcec@gmx.de
+	signingkey = 72FCF963
 [color]
 	diff = auto
 	status = auto
