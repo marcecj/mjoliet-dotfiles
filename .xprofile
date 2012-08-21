@@ -41,6 +41,7 @@ mpd &
 xautolock &  # configuration in .Xresources
 
 # sets monitor color temp according to daytime
+pgrep redshift && killall -TERM redshift
 redshift &
 
 # chat program
