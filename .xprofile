@@ -53,7 +53,7 @@ urxvtc -name "multitail-syslog" -e sh -c "sudo multitail -n 300 --retry -f /var/
 urxvtc -name "htop-sys" -e sh -c "htop" &
 
 # start specified session or safe default
-case "$DESKTOPSESSION" in
+case "$DESKTOP_SESSION" in
   "fluxbox")
   fbpanel &
   ;;
