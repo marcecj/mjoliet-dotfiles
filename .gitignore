@@ -230,7 +230,7 @@
 .wine/
 
 # my email/RSS
-.maildir/
+.mdbox/
 .ssh/*
 !.ssh/config
 .spamassassin/
