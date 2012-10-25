@@ -322,6 +322,8 @@ let g:NERDSpaceDelims       = 1  " Add a space to the comment delim
 let g:NERDRemoveExtraSpaces = 1  " Remove the space after the comment delim
 let g:NERDShutUp            = 1  " Suppress unknown filtype warnings
 let g:NERDMapleader         = '\c'  " set keymap leader
+" inoremap <C-c> <plug>NERDCommenterInInsert
+inoremap <C-c> <SPACE><BS><ESC>:call NERDComment(0, "insert")<CR>
 
 " for NERDTree
 let NERDTreeHijackNetrw=1 " use NERDTree instead of Netrw with :edit
