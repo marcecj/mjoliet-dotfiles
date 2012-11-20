@@ -5,6 +5,15 @@
 require
 ["fileinto","reject","comparator-i;ascii-numeric","regex","envelope","vacation"];
 
+if allof(
+        address :is ["From", "Sender"] "mailings@gmx.net",
+        header :matches ["Subject"] "Automatischer Spam-Report"
+        )
+{
+    fileinto "INBOX";
+    stop;
+}
+
 # delete Spam, and Web.de and GMX mails
 if anyof(
         address :is ["From", "Sender"] "keineantwortadresse@web.de",
