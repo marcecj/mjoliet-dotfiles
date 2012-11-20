@@ -109,6 +109,12 @@ elsif header :contains "List-Id" "linux-audio-announce" {
     stop;
 }
 
+# SCons MLs
+if header :contains "List-Id" "scons-users.scons.org" {
+    fileinto "SCons/User";
+    stop;
+}
+
 # VST IHA ML
 if address :is ["To", "Sender"] "vst_iha@googlegroups.com" {
     fileinto "VST IHA";
