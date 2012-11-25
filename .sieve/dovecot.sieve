@@ -34,7 +34,7 @@ if header :contains ["From", "Sender"] "newsletter@listserv.heise.de" {
     stop;
 }
 
-if address :domain ["From", "Sender"] ["sourceforge.net", "newsletters.sourceforge.net>"] {
+if address :domain ["From", "Sender"] ["sourceforge.net", "newsletters.sourceforge.net"] {
     fileinto "Newsletters/SourceForge";
     stop;
 }
