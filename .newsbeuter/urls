@@ -282,7 +282,7 @@ http://feeds.feedburner.com/Inscight?format=xml "misc" "podcast"
 # http://thefutureandyou.libsyn.com/rss "misc"
 http://chaosradio.ccc.de/chaosradio_express-latest.rss "misc" "podcast"
 # http://feeds.feedburner.com/ChangesurferRadio "misc"
-http://www.sciencefriday.com/audio/scifriaudio.xml "misc" "podcast"
+# http://www.sciencefriday.com/audio/scifriaudio.xml "misc" "podcast"
 http://asp.eurasipjournals.com/latest/rss "science"
 
 https://sourceforge.net/apps/wordpress/sourceforge/feed/ "misc"
