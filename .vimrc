@@ -269,7 +269,6 @@ nnoremap <Leader>Fb :FufBuffer<CR>
 nnoremap <Leader>Fl :FufLine<CR>
 
 " Pyclewn Mappings
-" TODO: see if you can think of any
 " NOTE: This is not quite the same as the defaul <C-b> mapping. For some reason
 " it behaves differently when the compiled source file is located in a different
 " location or is a symlink to the original (open) source file.
@@ -406,15 +405,8 @@ let g:Tex_ViewRuleComplete_dvi = 'okular $*.dvi &>/dev/null &'
 let g:Tex_ViewRuleComplete_ps  = 'okular $*.ps  &>/dev/null &'
 " let g:Tex_ViewRuleComplete_pdf = 'okular $*.pdf &>/dev/null &'
 let g:Tex_ViewRuleComplete_pdf = 'zathura $*.pdf --fork &>/dev/null &'
-" TODO: define compile rule for pstricks! (latex -> dvips -> ps2pdf)
-" let g:Tex_CompileRule_pdf = ''
-" let g:Tex_CompileRule_pdf = 'rubber --pdf $*'
 let g:Tex_MultipleCompileFormats = 'pdf'
 
-" let g:Tex_ViewRule_pdf = 'kpdf'
-" apvlv is nice, but a bit 'immature' (but pretty stable!)
-" let g:Tex_ViewRule_pdf = 'apvlv'
-" let g:Tex_ViewRule_pdf = 'epdfview'
 let g:Tex_DefaultTargetFormat = 'pdf'
 
 let g:tex_flavor='latex'
