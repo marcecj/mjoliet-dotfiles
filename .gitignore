@@ -22,6 +22,7 @@
 .ipython/profile_*/log/
 .ipython/profile_*/security/
 .log/
+.xsel.log
 .ncmpcpp/*.log
 .ncmpcpp/config.*
 .pulse-cookie
@@ -180,6 +181,8 @@
 # only contain history or state
 .apvlvinfo
 .bash_history
+.config/Skype/
+.enthought/
 .fluxbox/fbrun_history
 .gEDA/gschem-recent-files
 .gnuplot_history
@@ -194,6 +197,7 @@
 .reinteract/
 .tclsh-history
 .vim/.netrwhist
+.vim/yankring_history_v2.txt
 .viminfo
 
 # don't make sense to centralise for various reasons
@@ -241,6 +245,7 @@
 .config/Kitware/
 .config/LyX/
 .config/MOLspaces/
+.config/Nokia/
 .config/PianoBooster/
 .config/Psycledelics/
 .config/QMPDClient/
