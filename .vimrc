@@ -269,7 +269,7 @@ nnoremap <Leader>Fb :FufBuffer<CR>
 nnoremap <Leader>Fl :FufLine<CR>
 
 " Pyclewn Mappings
-" NOTE: This is not quite the same as the defaul <C-b> mapping. For some reason
+" NOTE: This is not quite the same as the default <C-b> mapping. For some reason
 " it behaves differently when the compiled source file is located in a different
 " location or is a symlink to the original (open) source file.
 nnoremap <Leader>Db :exe ":Cbreak " . line('.')
