@@ -388,6 +388,9 @@ let g:clang_library_path = '/usr/lib/llvm'
 " for Mex programming
 let g:clang_user_options = '-I/usr/local/matlab/extern/include'
 
+" please don't pollute $HOME
+let g:yankring_history_dir = '~/.vim'
+
 "}}}
 
 " {{{ LaTeX
