@@ -44,7 +44,9 @@ set autoread             " re-read unedited files that are modified outside Vim
 set undofile             " save undo history to file for persistent undo
 set showcmd              " show current command in last line
 " set listchars+=tab:\|\ 
-set display+=lastline     " show as much of the last line in the window as possible
+set display+=lastline    " show as much of the last line in the window as possible
+set shiftround           " round shifts to multiples of shiftwidth
+
 
 set statusline=%<%f%=\ [%1*%M%*%{','.&fileformat}%{&fileencoding!=''?','.&fileencoding:''}%R%Y][%6l,%4c%V]\ %3b=0x%02B\ %P
 set laststatus=2                  " always show status line
