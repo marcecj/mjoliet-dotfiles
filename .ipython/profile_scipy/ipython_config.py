@@ -177,7 +177,7 @@ c.TerminalIPythonApp.extensions = [
 # c.TerminalInteractiveShell.screen_length = 0
 
 # Set the editor used by IPython (default to $EDITOR/vi/notepad).
-# c.TerminalInteractiveShell.editor = '/usr/bin/vim'
+c.TerminalInteractiveShell.editor = '/usr/bin/gvim --servername scipy --remote-tab-silent'
 
 # Deprecated, use PromptManager.justify
 # c.TerminalInteractiveShell.prompts_pad_left = True
