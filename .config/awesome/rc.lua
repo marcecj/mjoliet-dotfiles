@@ -104,7 +104,6 @@ editor = os.getenv("EDITOR") or "vi"
 editor_cmd = terminal .. " -e " .. editor
 -- helper variable to give appropriate messages on activation/deactivation
 screensaver_active = true
-german_keymap      = true
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -417,26 +416,6 @@ globalkeys = awful.util.table.join(
             else
                 naughty.notify({text = "import failed with error " .. ret .. ".",
                                 title = "Couldn't save screenshot!"})
-            end
-        end),
-    awful.key({ modkey, "Shift" }, "b",
-        function ()
-            if german_keymap then
-                ret = os.execute("setxkbmap us")
-                if ret == 0 then
-                    naughty.notify({text = "Keyboard Layout changed to US.",
-                                    title = "Keymap changed."})
-                    german_keymap = false
-                end
-            else
-                ret = os.execute("setxkbmap de -variant nodeadkeys")
-                naughty.notify({text = "Keyboard Layout changed to DE.",
-                                title = "Keymap changed."})
-                german_keymap = true
-            end
-            if ret ~= 0 then
-                naughty.notify({title = "Couldn't change keymap!",
-                                text = "setxkbmap failed with error " .. ret .. "."})
             end
         end)
 )
