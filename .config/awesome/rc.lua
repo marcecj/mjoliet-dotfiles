@@ -215,14 +215,14 @@ mynetgraph:set_gradient_colors({ "#285577", "#285577", "#AEC6D8" })
 mynetgraph:set_gradient_angle(180)
 mynetgraph:set_scale(true)
 mynetgraph:set_stack(false)
--- mynetgraph:set_stack_colors({ '{eth0 down_kb}'="red", '{eth0 up_kb}'="blue" })
+-- mynetgraph:set_stack_colors({ '{wan0 down_kb}'="red", '{wan0 up_kb}'="blue" })
 
 vicious.register(mymembar, vicious.widgets.mem, "$1", 1)
 vicious.register(mycpugraph, vicious.widgets.cpu, '$1', 1)
 -- TODO: in awesome git HEAD there is a "stacked" version allowing multiple
 -- graphs in a single widget
-vicious.register(mynetgraph, vicious.widgets.net, '${eth0 down_kb}', 1)
--- vicious.register(mynetgraph, vicious.widgets.net, '${eth0 down_kb} ${eth0 up_kb}', 1)
+vicious.register(mynetgraph, vicious.widgets.net, '${wan0 down_kb}', 1)
+-- vicious.register(mynetgraph, vicious.widgets.net, '${wan0 down_kb} ${wan0 up_kb}', 1)
 
 -- Create a systray
 mysystray = widget({ type = "systray" })
