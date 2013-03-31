@@ -2,13 +2,7 @@
 #
 # this file is called by most display managers, including lightdm
 
-#  ivman-laubch --exit-with-session xinit &
-#  exec pidgin &
-#  ~/bin/awesome-clock &
-#  exec awesome
-
 export LANG="de_DE.UTF-8"
-#export LC_ALL="de_DE.UTF-8"
 
 # Workaround until https://bugs.launchpad.net/ubuntu/+source/lightdm/+bug/919200
 # is fixed.  This appears to retain all other settings from xorg.conf.d.
@@ -19,7 +13,7 @@ setxkbmap -layout "de, us" -variant "nodeadkeys,"
 #  Start whatever program I want at X startup (via startx or slim)
 $HOME/.monicarc   #monitor calibration
 
-# uncomment when starting via "startx" in an ssh session 
+# uncomment when starting via "startx" in an ssh session
 xrdb -merge .Xresources
 
 # required by uzbl

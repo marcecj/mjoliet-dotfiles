@@ -1,22 +1,16 @@
 #!/usr/bin/env sh
 #
-# vim:nospell
+# this file is called by startx and the slim display manager
 
-# for xorg-server >= 1.6
-# setxkbmap -option terminate:ctrl_alt_bksp
 
 #  Start whatever program I want at X startup (via startx or slim)
 $HOME/.monicarc   #monitor calibration
 
-# uncomment when starting via "startx" in an ssh session 
+# uncomment when starting via "startx" in an ssh session
 xrdb -merge .Xresources
 
 # required by uzbl
 export XDG_DATA_HOME="$HOME/.config"
-
-# makes stuff like printing work, but breaks newer versions of MATLAB
-#export MATLAB_JAVA="/usr/lib/jvm/emul-linux-x86-java-1.6/"
-#export MATLAB_JAVA="/opt/matlab/sys/java/jre/glnx86/jre1.5.0"
 
 # binds keys to shell commands
 xbindkeys &
