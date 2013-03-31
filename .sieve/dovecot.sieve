@@ -115,6 +115,12 @@ if header :contains "List-Id" "scons-users.scons.org" {
     stop;
 }
 
+# FAUST-Users ML
+if header :contains "List-Id" "faudiostream-users.lists.sourceforge.net" {
+    fileinto "FAUST/User";
+    stop;
+}
+
 # VST IHA ML
 if address :is ["To", "Sender"] "vst_iha@googlegroups.com" {
     fileinto "VST IHA";
