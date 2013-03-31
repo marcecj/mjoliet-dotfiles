@@ -2,6 +2,11 @@
 #
 # this file is called by startx and the slim display manager
 
+export LANG="de_DE.UTF-8"
+
+# Workaround until https://bugs.launchpad.net/ubuntu/+source/lightdm/+bug/919200
+# is fixed.  This appears to retain all other settings from xorg.conf.d.
+setxkbmap -layout "de, us" -variant "nodeadkeys,"
 
 #  Start whatever program I want at X startup (via startx or slim)
 $HOME/.monicarc   #monitor calibration
@@ -32,6 +37,7 @@ mpd &
 xautolock &  # configuration in .Xresources
 
 # sets monitor color temp according to daytime
+pgrep redshift && killall -TERM redshift
 redshift &
 
 # chat program
