@@ -103,6 +103,7 @@
 .vim/doc/
 .vim/sessions/
 .vim/tags/
+.vim/vim-addons/
 .vimperator/
 .xbindkeysrc
 .zcompdump

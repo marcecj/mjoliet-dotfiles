@@ -80,6 +80,10 @@ runtime ftplugin/pydoc.vim
 " source ~/.vim/plugins/rever
 "}}}
 
+" {{{ Vim Addons
+source $HOME/.vim/plugins.vim
+"}}}
+"
 " {{{ Terminal specific settings
 set termencoding=utf-8
 "}}}
