@@ -360,8 +360,6 @@ let g:vimsieve_usetls = 1
 " let g:vimsieve_port = 12000
 " let g:vimsieve_usetls = 0
 
-let g:GetLatestVimScripts_allowautoinstall = 1
-
 " showmarks highlighting
 " For marks a-z
 " hi ShowMarksHLl cterm=bold gui=bold ctermbg=Black guibg=Black ctermfg=Blue guifg=Blue
