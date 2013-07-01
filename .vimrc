@@ -380,9 +380,9 @@ let g:indent_guides_guide_size=1
 let g:indent_guides_start_level=2
 let g:indent_guides_enable_on_vim_startup = 0
 
-let g:notes_directory = '~/Documents/Notes'
-let g:notes_indexfile = '~/Documents/Notes/index.sqlite3'
-let g:notes_tagsindex = '~/Documents/Notes/tags.txt'
+let g:notes_directories = ['~/Documents/Notes']
+let g:notes_indexfile   = '~/Documents/Notes/index.sqlite3'
+let g:notes_tagsindex   = '~/Documents/Notes/tags.txt'
 
 " make clang_complete use libclang
 let g:clang_use_library  = 1
@@ -393,6 +393,9 @@ let g:clang_user_options = '-I/usr/local/matlab/extern/include'
 
 " please don't pollute $HOME
 let g:yankring_history_dir = '~/.vim'
+
+" don't autoload sessions
+let g:session_autoload = 'no'
 
 "}}}
 
