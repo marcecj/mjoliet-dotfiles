@@ -12,6 +12,7 @@ ActivateAddons Indent_Guides
 ActivateAddons surround
 ActivateAddons repeat
 ActivateAddons searchfold
+ActivateAddons NrrwRgn
 
 " Various python stuff for vim
 ActivateAddons python_pydoc
