@@ -78,9 +78,11 @@ runtime macros/matchit.vim
 runtime ftplugin/pydoc.vim
 " source my own swap_lines() function
 " source ~/.vim/plugins/rever
+
 "}}}
 
 " {{{ Vim Addons
+
 call vam#ActivateAddons([])
 ActivateAddons Align%294
 ActivateAddons a               " alternate.vim
@@ -106,13 +108,17 @@ ActivateAddons python%790       " different python syntax script
 ActivateAddons xptemplate
 ActivateAddons The_NERD_Commenter
 ActivateAddons fugitive
+
 "}}}
-"
+
 " {{{ Terminal specific settings
+
 set termencoding=utf-8
+
 "}}}
 
 " {{{ Misc. AutoCmds
+
 " Open an error window if there are compiler errors (help quickfix for info).
 " Implement as an autocommand group
 augroup quickfix
@@ -152,7 +158,6 @@ au BufRead,BufNewFile *.e{build,class} set ts=4 sw=4 noexpandtab
 au BufWrite * if &ft == '' | filetype detect | endif
 
 " matlab specific stuff
-
 let g:mlint_path_to_mlint="/usr/local/matlab/bin/glnx86/mlint"
 " augroup matlab
 "     au!
@@ -208,6 +213,7 @@ nmap <Leader>qq :cwindow<CR>
 nmap <Leader>qc :cclose<CR>
 nmap <Leader>pp :lwindow<CR>
 nmap <Leader>pc :lclose<CR>
+
 " search in current file for special notes
 nmap <Leader>ff :lvimgrep /\CTODO\\|FIXME/j %<CR>:lopen<CR>
 nmap <Leader>nn :lvimgrep /\CNOTE\\|TEST/j %<CR>:lopen<CR>
@@ -217,6 +223,7 @@ nmap <silent> <Leader>cd :lcd %:p:h<CR>
 
 " Remap omnicompletion to CTRL-Space
 inoremap <C-@> <C-x><C-o>
+
 " Easier search and replace, one each for normal and visual mode.
 nnoremap <Leader>, :%s:::g<Left><Left><Left>
 vnoremap <Leader>, :s:::g<Left><Left><Left>
@@ -351,6 +358,7 @@ command -nargs=1 Cmlab Crun -nosplash -nodesktop -nojvm -r \"<args>\"
 "}}}
 
 " {{{ Various Plugin Settings
+
 " for enhanced commentify
 " let g:EnhCommentifyMultiPartBlocks = 'yes'
 " let g:EnhCommentifyRespectIndent   = 'yes'
@@ -373,6 +381,7 @@ let g:netrw_liststyle=3
 
 " more python highlighting
 let python_highlight_all = 1
+
 " fixes incorrect highlighting in large files
 " let python_slow_sync = 1
 
@@ -454,9 +463,11 @@ let g:tex_flavor='latex'
 " let g:Tex_CompileRule_dvi = 'latex -interaction=nonstopmode $*'
 " let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
 " let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
+
 "}}}
 
 " {{{ Taglist
+
 " extend taglist to support latex
 " let tlist_tex_settings       = 'latex;s:sections;g:graphics;l:labels'
 let tlist_make_settings      = 'make;m:makros;t:targets'
@@ -471,9 +482,11 @@ let Tlist_Auto_Update         = 1
 let Tlist_Show_Menu           = 1
 let Tlist_Exit_OnlyWindow     = 1
 let Tlist_Use_SingleClick     = 1
+
 "}}}
 
 " {{{ cscope + ctags
+
 " set up cscope (searches cscope *and* ctags database)
 if has("cscope")
     set csprg=/usr/bin/cscope
@@ -511,9 +524,11 @@ nnoremap <silent> cs? :cs show<CR>
 " Keybinding for regenerating tag file in current directory
 " TODO: must get around to sanitizing this, perhaps with a function and/or autocmd
 " nmap ,t :!(cd %:p:h;ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .*)&
+
 "}}}
 
 " {{{ Misc. Stuff
+
 function! IsPreviewWinOpen()
     let winnum=winnr('$')
     while winnum > 0
@@ -606,6 +621,7 @@ endfunc
 
 " highlight extra whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+
 " prevent match from getting deleted
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
