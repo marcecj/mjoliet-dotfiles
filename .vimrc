@@ -40,6 +40,7 @@ set scrolloff=4			 " 4 lines between cursor and edge when scrolling
 set tagbsearch                  " use binary search for finding tags
 set autoread             " re-read unedited files that are modified outside Vim
 set undofile             " save undo history to file for persistent undo
+set undodir=~/.vim/undofiles       " save undo history to to a specific directory
 set showcmd              " show current command in last line
 " set listchars+=tab:\|\ 
 set display+=lastline    " show as much of the last line in the window as possible

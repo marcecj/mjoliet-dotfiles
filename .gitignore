@@ -102,6 +102,9 @@
 .vim/sessions/
 .vim/tags/
 .vim/vim-addons/
+.vim/undofiles/
+# vim does not automatically create the undodir
+!.vim/undofiles/.keep
 .vimperator/
 .xbindkeysrc
 .zcompdump
