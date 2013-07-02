@@ -250,7 +250,7 @@ if !exists('*s:Cleanup')
         " NOTE: ClearLint should already have been called from BufWinLeave
 
         let l:mlintTempDir = a:mlintTempDir
-            
+
         " for some reason, rmdir doesn't work with '/' characters on mswin,
         " so convert to '\' characters
         if has("win16") || has("win32") || has("win64")
