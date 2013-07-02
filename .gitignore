@@ -49,11 +49,16 @@
 .bash_completion.d/
 .cddbslave/
 .color/
+# TODO: I'm not sure I want to ignore this completely
+.config/QtProject/
 .config/Trash/
+.config/data/
 .config/laditools/ladi-system-log.conf
 .config/smplayer/
 .conkyrc
 .dbus/
+# NOTE: I think this is from the Qt Designer
+.designer/
 .docpointer/workfile.*
 .drirc
 .dropbox/
@@ -101,6 +106,9 @@
 .xbindkeysrc
 .zcompdump
 
+# local browser storage
+.config/unity3d/
+
 # auto-generated configuration of FAUST programs
 .mbstereophony*rc
 .rmfb*rc
@@ -147,6 +155,7 @@
 .gimp-2.6/
 .gitk
 .gsview.ini
+.gtklickrc
 .gtkrc-2.0
 .hplip/
 .hydrogen/
@@ -197,6 +206,7 @@
 .vim/.netrwhist
 .vim/yankring_history_v2.txt
 .viminfo
+.w3m/
 
 # don't make sense to centralise for various reasons
 .asunder
