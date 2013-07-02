@@ -46,9 +46,6 @@
 .alsoftrc
 .ardour2/
 .asoundrc
-.asoundrc.old
-.asoundrc_dmix
-.asoundrc_pulse
 .bash_completion.d/
 .cddbslave/
 .color/
@@ -82,7 +79,6 @@
 .lpoptions
 .mailcap
 .matlab/
-.mime.types
 .moc/
 .monicarc
 .octave_packages
@@ -90,12 +86,10 @@
 .praat-dir
 .pulse/
 .pylint.d/
-.pyxbld/
 .recently-used
 .rednotebook/
 .renpy/
 .scons/
-.strigi/
 .thumbnails/
 .vim-fuf-data/
 .vim/.VimballRecord
@@ -118,7 +112,6 @@
 .codered/
 .dboxfe/
 .dgen/
-.doom3/
 .dosbox/
 .foobillardrc
 .frozen-bubble/
@@ -228,7 +221,6 @@
 .aqemu/
 .dovecot.sieve
 .dovecot.sieve.log
-.dovecot.sievec
 .dovecot.svbin
 .mpd/
 .mpdconf
