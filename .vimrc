@@ -108,6 +108,7 @@ ActivateAddons python%30        " vimpython
 ActivateAddons python_pydoc
 ActivateAddons indentpython%974 " python indentation according to PEP 8
 ActivateAddons python%790       " different python syntax script
+ActivateAddons vim-ipython
 
 " misc add-ons
 ActivateAddons The_NERD_Commenter
