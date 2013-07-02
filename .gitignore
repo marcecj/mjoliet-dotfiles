@@ -107,6 +107,12 @@
 .xbindkeysrc
 .zcompdump
 
+# auto-generated configuration of FAUST programs
+.mbstereophony*rc
+.rmfb*rc
+.dattorro_*rc
+.stream_looperrc
+
 # games, don't care
 .PySolFC/
 .codered/
