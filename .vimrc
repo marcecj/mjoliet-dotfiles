@@ -189,6 +189,12 @@ if v:version >= 700
     au BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
 endif
 
+" don't write undo files for certain directories
+augroup noundofiles
+    au BufWritePre /tmp/* setlocal noundofile
+    au BufWritePre /var/tmp/* setlocal noundofile
+augroup END
+
 "}}}
 
 " {{{ Misc. Keymaps
