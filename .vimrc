@@ -374,14 +374,6 @@ let python_highlight_all = 1
 " fixes incorrect highlighting in large files
 " let python_slow_sync = 1
 
-" managesieve settings
-let g:vimsieve_host = 'mail.huntemann.uni-oldenburg.de'
-let g:vimsieve_port = 2000
-let g:vimsieve_usetls = 1
-" let g:vimsieve_host = 'localhost'
-" let g:vimsieve_port = 12000
-" let g:vimsieve_usetls = 0
-
 " showmarks highlighting
 " For marks a-z
 " hi ShowMarksHLl cterm=bold gui=bold ctermbg=Black guibg=Black ctermfg=Blue guifg=Blue
