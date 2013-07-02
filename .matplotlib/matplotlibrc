@@ -1,4 +1,5 @@
 # backend      : GTKAgg
+# backend      : Gtk3Cairo
 backend      : Qt4Agg
 # backend      : TkAgg
 #backend      : PS
