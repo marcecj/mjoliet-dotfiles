@@ -16,7 +16,6 @@ set wildmenu
 
 set timeoutlen=500
 set ttimeoutlen=200
-" set foldopen-=search             " only search in open folds
 " NOTE: alternative would be ":folddoopen s/.../.../...
 " TODO: Should I just omit textwidth, or set it to something higher?
 set textwidth=80                 " set the max line length to 80 chars
@@ -30,7 +29,6 @@ set formatoptions=tcrqnl         " formatting options
 set cpoptions+=J                 " Make sentences start with >=2 spaces
 set number                       " Display line numbers
 set printoptions=syntax:y,number:y,wrap:y " print line numbers and wrap lines
-" set printfont=DejaVu\ Sans\ Mono\ 12
 set ignorecase smartcase         " ignores case when search pattern contains lower case only
 set spell spelllang=en,de        " activate spell checking and check English, then German
 " set smartindent                  " Smart indenting (ignored if cindent is on).
@@ -51,7 +49,6 @@ set shiftround           " round shifts to multiples of shiftwidth
 set statusline=%<%f%=\ [%1*%M%*%{','.&fileformat}%{&fileencoding!=''?','.&fileencoding:''}%R%Y][%6l,%4c%V]\ %3b=0x%02B\ %P
 set laststatus=2                  " always show status line
 set viminfo+=%			  " save buffer list after closing vim
-" set cedit=<Esc>			 " enter cmdwin from command line via <Esc>
 " set tildeop
 
 " stop reindenting when '#' is typed
@@ -163,10 +160,6 @@ au BufWrite * if &ft == '' | filetype detect | endif
 
 " matlab specific stuff
 let g:mlint_path_to_mlint="/usr/local/matlab/bin/glnx86/mlint"
-" augroup matlab
-"     au!
-"     autocmd BufAdd *.m compiler mlint
-" augroup END
 
 augroup scons
     au!
@@ -266,8 +259,6 @@ nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 " <M-,> and <M-.> in their raw forms using Ctrl-V
 nnoremap , :call MoveToPrevTab()<CR>
 nnoremap . :call MoveToNextTab()<CR>
-" nnoremap <Leader>h :call MoveToPrevTab()<CR>
-" nnoremap <Leader>l :call MoveToNextTab()<CR>
 
 " search across multiple lines (*,#) regardless of whitespace (g*,g#)
 " vnoremap <silent> * :<C-U>
@@ -294,8 +285,6 @@ nnoremap . :call MoveToNextTab()<CR>
 " \gvy?<C-R><C-R>=substitute(
 " \escape(@", '\\/.*$^~[]'), '\_s\+', '\\_s\\+', 'g')<cr><cr>
 " \:call setreg('"', old_reg, old_regmode)<cr>
-
-" cmap E e <C-R>=GetFilePath()<CR>
 
 " From http://vim.wikia.com/wiki/Selecting_your_pasted_text; gp normally puts
 " the cursor right after the pasted text, instead of at the end
@@ -347,10 +336,6 @@ command -nargs=1 Cmlab Crun -nosplash -nodesktop -nojvm -r \"<args>\"
 "}}}
 
 " {{{ Omnicompletion (c++)
-" for omnicppcomplete
-" let OmniCpp_NamespaceSearch = 1
-" let OmniCpp_DefaultNamespaces   = ["std", "_GLIBCXX_STD"]
-
 " " If no other omnicompletion function was defined, revert to completion by
 " " syntax (uses the file types syntax keywords).
 " if has("autocmd") && exists("+omnifunc")
@@ -363,18 +348,11 @@ command -nargs=1 Cmlab Crun -nosplash -nodesktop -nojvm -r \"<args>\"
 
 " {{{ Various Plugin Settings
 
-" for enhanced commentify
-" let g:EnhCommentifyMultiPartBlocks = 'yes'
-" let g:EnhCommentifyRespectIndent   = 'yes'
-" let g:EnhCommentifyPretty          = 'yes'
-" let g:EnhCommentifyAlignRight      = 'yes'
-
 " for NERDcommenter
 let g:NERDSpaceDelims       = 1  " Add a space to the comment delim
 let g:NERDRemoveExtraSpaces = 1  " Remove the space after the comment delim
 let g:NERDShutUp            = 1  " Suppress unknown filtype warnings
 let g:NERDMapleader         = '\c'  " set keymap leader
-" inoremap <C-c> <plug>NERDCommenterInInsert
 inoremap <C-c> <SPACE><BS><ESC>:call NERDComment(0, "insert")<CR>
 
 " for NERDTree
@@ -435,7 +413,6 @@ let g:session_autoload = 'no'
 "}}}
 
 " {{{ LaTeX
-" for latexsuite
 
 " set quoting right for german
 let g:Tex_SmartQuoteOpen="\"`"
@@ -454,14 +431,6 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 let g:tex_flavor='latex'
 " let g:Tex_TaglistSupport=0
 " let g:Tex_Menus=0
-
-" NOTE: this fixes the <F9> mapping coming from vim-latex, because the autoclose
-" was doing fishy stuff (or maybe vim-latex does fishy stuff that autoclose
-" uncovered).  Uninstalling autoclose also fixed other broken latex mappings,
-" like parantheses and quotes mappings.
-" inoremap l <Esc>:call Tex_Complete("default","text")<CR>
-" Interestingly, this does *not* fix it!
-" inoremap <M-l> <Esc>:call Tex_Complete("default","text")<CR>
 
 " This can be changed to adapt to new latex compilers
 " let g:Tex_CompileRule_dvi = 'latex -interaction=nonstopmode $*'
