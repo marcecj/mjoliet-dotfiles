@@ -4,4 +4,4 @@ backend      : Qt4Agg
 # backend      : TkAgg
 #backend      : PS
 # needed to avoid bad fonts with internal tex interpreter
-mathtext.fontset : stix
+# mathtext.fontset : stix
