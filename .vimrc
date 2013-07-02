@@ -100,6 +100,9 @@ ActivateAddons NrrwRgn
 ActivateAddons a                " alternate.vim
 ActivateAddons xptemplate
 
+" matlab related add-ons
+ActivateAddons mlint%2378
+
 " python related add-ons
 ActivateAddons python%30        " vimpython
 ActivateAddons python_pydoc
