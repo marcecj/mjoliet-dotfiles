@@ -63,6 +63,8 @@
 .drirc
 .dropbox/
 .dvdcss/
+.emacs.d/elpa/
+.emacs.d/url/
 .fltk/
 .fluxbox/backgrounds/
 .fluxbox/icons/
