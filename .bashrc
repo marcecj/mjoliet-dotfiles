@@ -10,6 +10,5 @@ fi
 source $HOME/.env_vars
 
 # activate bash-completion
-# TODO: figure out how to check for login shell
 [[ -f /etc/profile.d/bash-completion ]] \
 && source /etc/profile.d/bash-completion

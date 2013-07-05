@@ -24,29 +24,6 @@ bindkey -M vicmd v edit-command-line
 # Enable completion cache
 zstyle ':completion::complete:*' use-cache 1
 
-# improve online help
-# TODO: requires help directory
-# unalias run-help
-# autoload run-help
-# HELPDIR=
-
-# Colorize stderr
-# NOTE: creates problems with su
-# exec 2>>(while read line; do
-#   print '\e[91m'${(q)line}'\e[0m' > /dev/tty; done &)
-
-# Change term title
-# chpwd() {
-#   [[ -t 1 ]] || return
-#   case $TERM in
-#     sun-cmd) print -Pn "\e]l%~\e\\"
-#       ;;
-#     *xterm*|rxvt(|-unicode)|(dt|k|E)term) print -Pn "\e]2;%~\a"
-#       ;;
-#   esac
-# }
-
-
 # Misc style features
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
@@ -59,7 +36,6 @@ export SAVEHIST=$HISTSIZE
 setopt correctall           # Autocorrect
 setopt hist_ignore_all_dups # Ignore duplicates
 setopt autocd               # Automatically change directory
-#  setopt extendedglob         # Set extended globbing (regexps)
 
 #set prompt
 # TODO: get a decent multiline prompt working, see
@@ -71,10 +47,8 @@ dusort ()
     du -sch $@ | sort -hr
 }
 
-# export PS1="%* %n@%M %~ %% "
 export PROMPT='%B%F{green}>> (%F{yellow}%n@%m%F{green})-%B(%f%F{yellow}%*%f%F{green})-(%F{blue}%10~%F{green})
 %F{green}>> (%F{red}%?%F{green}) %F{blue}%# %b%f'
-# export RPROMPT='%B%F{red}[%f%F{yellow}%*%f%F{red}]%f%b'
 
 # automatically create a cgroup for each TTY; see
 # http://www.webupd8.org/2010/11/alternative-to-200-lines-kernel-patch.html and
