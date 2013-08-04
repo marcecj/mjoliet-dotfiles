@@ -85,5 +85,5 @@ download-path "~/Podcasts"
 max-downloads 3
 
 # Specifies the player that shall be used for playback of downloaded files.
-player "mplayer"
+player "mplayer2"
 
