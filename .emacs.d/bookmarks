@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-((".emacs"
+(("paper_notizen.org"
+ (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
+ (front-context-string . "\n\n4. [ ] Bach, J")
+ (rear-context-string . ", Japan).\n\n   - ")
+ (position . 15044))
+(".emacs"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)
  (rear-context-string . "kmark-save-flag ")
