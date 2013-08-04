@@ -23,6 +23,7 @@
 ; must be after (package-initialize)
 (require 'undo-tree)
 (global-undo-tree-mode)
+(require 'org-journal)
 
 ; set up go mode
 (require 'go-mode-load)
