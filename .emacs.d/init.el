@@ -4,6 +4,7 @@
 ; minor modes I want on by default
 (column-number-mode)
 (size-indication-mode)
+; FIXME: for some reason, this doesn't work as-is
 (auto-fill-mode)
 
 ; prefer UTF-8 encoding
