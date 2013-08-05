@@ -36,7 +36,6 @@
 (require 'rw-language-and-country-codes)
 (require 'rw-ispell)
 (require 'rw-hunspell)
-(setq ispell-dictionary "de_DE_myspell")
 
 ; custom variables
 (custom-set-variables
@@ -46,6 +45,11 @@
  '(rw-hunspell-dicpath-list (quote ("/usr/share/myspell")))
  '(rw-hunspell-make-dictionary-menu t)
  '(rw-hunspell-use-rw-ispell t)
+ '(rw-ispell-language-pdict-alist
+    (quote
+      (("^en" . "~/.emacs.d/pdict_english")
+       ("^de" . "~/.emacs.d/pdict_deutsch")
+       ("" . "~/.emacs.d/pdict_default"))))
  ; in addition to the clipboard (used by default), also use the primary selection
  '(x-select-enable-primary t))
 (custom-set-faces
@@ -54,3 +58,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+; set the *global* dictionary to de_DE (NOTE: using this function ensures that
+; the personal dictionary is correctly set according to
+; rw-ispell-language-pdict-alist)
+(rw-ispell-change-dictionary "de_DE_myspell" 1)
