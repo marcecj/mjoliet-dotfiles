@@ -42,6 +42,7 @@
 .zcompcache/
 
 # system dependent or auto-generated files
+.adobe/
 .aeolus-presets
 .alsoftrc
 .ardour2/
