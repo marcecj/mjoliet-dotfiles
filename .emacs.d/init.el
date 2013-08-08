@@ -62,4 +62,7 @@
 ; set the *global* dictionary to de_DE (NOTE: using this function ensures that
 ; the personal dictionary is correctly set according to
 ; rw-ispell-language-pdict-alist)
+;
+; TODO it is possible to set multiple dictionaries with hunspell (e.g., "-d
+; en_us,de_DE"), but so far nothing I know of exploits this
 (rw-ispell-change-dictionary "de_DE_myspell" 1)
