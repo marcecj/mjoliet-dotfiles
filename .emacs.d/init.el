@@ -27,6 +27,7 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 (require 'org-journal)
+(require 'ipython)
 
 ; set up go mode
 (require 'go-mode-load)
@@ -44,6 +45,7 @@
 (custom-set-variables
  ; automatically save the bookmarks file when creating bookmarks
  '(bookmark-save-flag 1)
+ '(ein:use-auto-complete t)
  '(rw-hunspell-default-dictionary "de_DE_myspell")
  '(rw-hunspell-dicpath-list (quote ("/usr/share/myspell")))
  '(rw-hunspell-make-dictionary-menu t)
