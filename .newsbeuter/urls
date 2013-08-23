@@ -260,7 +260,7 @@ http://riotclitshave.livejournal.com/data/rss "misc"
 # http://riotclitshave.tumblr.com/rss "misc"
 http://liquidnight.tumblr.com/rss "misc"
 http://analogvisions.tumblr.com/rss "misc"
-http://api.flickr.com/services/feeds/photos_public.gne?id=46498700@N00&lang=de-de&format=rss_200 "misc"
+# http://api.flickr.com/services/feeds/photos_public.gne?id=46498700@N00&lang=de-de&format=rss_200 "misc"
 http://womenfighters.tumblr.com/rss "misc"
 
 http://www.questionsleep.com/mindspill/?feed=rss2 "misc"
