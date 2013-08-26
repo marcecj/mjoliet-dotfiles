@@ -195,6 +195,8 @@
 .apvlvinfo
 .bash_history
 .config/Skype/
+.config/fish/fish_history
+.config/fish/fishd.*
 .enthought/
 .fluxbox/fbrun_history
 .gEDA/gschem-recent-files
