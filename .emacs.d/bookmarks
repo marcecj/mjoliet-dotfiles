@@ -4,9 +4,9 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
- (front-context-string . "\n\n** TODO Ellis,")
- (rear-context-string . "frequenz dar\n\n- ")
- (position . 39981))
+ (front-context-string . " der\n      Blöck")
+ (rear-context-string . "z (8 ms Vorschub")
+ (position . 100211))
 (".emacs"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)
