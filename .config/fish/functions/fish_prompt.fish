@@ -1,8 +1,8 @@
 # define my own fish prompt
 function fish_prompt
     # define some colors
-    set lightblue (set_color A0A0FF)
-    set defcolor (set_color white)
+    set lightblue (set_color --bold A0A0FF)
+    set defcolor (set_color --bold white)
 
     # first line
     printf "$defcolor>> ($lightblue%s@%s$defcolor)" (whoami) (hostname|cut -d. -f1)
