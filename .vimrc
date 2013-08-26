@@ -7,6 +7,11 @@
 
 " {{{ Startup Options
 
+" fix behaviour under fish
+if &shell == "/bin/fish"
+    set shell=bash
+endif
+
 " this example vimrc already does several nice things I don't have to care about
 source $VIMRUNTIME/vimrc_example.vim
 
