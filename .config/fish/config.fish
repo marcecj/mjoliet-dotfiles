@@ -7,6 +7,9 @@ set -x MATLAB_ARCH glnx86
 
 set PATH $PATH "$HOME/bin/"
 
+# set the default MPD host to my desktop machine
+set -x MPD_HOST marcec.marcnet
+
 ## activate colorgcc - colorized gcc output
 #if [[ -z $(echo $PATH | grep colorgcc) && -d "/usr/lib/colorgcc/bin/" ]]; then
 #    set -x PATH "/usr/lib/colorgcc/bin/" $PATH
