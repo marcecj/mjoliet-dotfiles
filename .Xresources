@@ -16,7 +16,7 @@
 ! ===========================================================================
 ! xautolock resources
 Xautolock.time: 5
-Xautolock.locker: xlock
+Xautolock.locker: dm-tool lock
 
 ! ===========================================================================
 ! xlockmore resources
