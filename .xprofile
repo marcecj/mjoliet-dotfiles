@@ -30,7 +30,8 @@ pgrep udisks-glue || udisks-glue &
 
 # misc
 pulseaudio --check || pulseaudio --start &
-mpd &
+wicd-gtk &
+batti &
 #fbsetbg -l &   # set the background wallpaper
 #conky &		# an alternative system monitor to gkrellm
 
@@ -47,7 +48,8 @@ redshift &
 pidgin &
 
 # some terminals to always start
-urxvtc -name "multitail-syslog" -e sh -c "sudo multitail -n 300 --retry -f /var/log/messages" &
+# NOTE: the resolution is too low for multitail
+#urxvtc -name "multitail-syslog" -e sh -c "sudo multitail -n 300 --retry -f /var/log/messages" &
 urxvtc -name "htop-sys" -e sh -c "htop" &
 
 # start specified session or safe default
