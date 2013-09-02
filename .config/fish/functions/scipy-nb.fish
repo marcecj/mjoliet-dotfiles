@@ -1,3 +1,3 @@
 function scipy-nb
-    ipython notebook --profile=scipy $argv
+    ipython notebook --no-browser --profile=scipy $argv
 end
