@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("paper_notizen.org"
+(("arbeit.org"
+ (filename . "~/Dropbox/master/master_arbeit/arbeit.org")
+ (front-context-string . "dem Laptop auch ")
+ (rear-context-string . "geht\n\n- [ ] auf ")
+ (position . 1114))
+("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
  (front-context-string . " der\n      Blöck")
  (rear-context-string . "z (8 ms Vorschub")

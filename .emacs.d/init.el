@@ -16,6 +16,7 @@
 (setq package-list '(undo-tree
 		     org-journal
 		     ipython
+		     ein
 		     go-mode
 		     rw-hunspell
 		     rw-language-and-country-codes))
