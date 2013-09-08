@@ -221,7 +221,7 @@ vicious.register(mymembar, vicious.widgets.mem, "$1", 1)
 vicious.register(mycpugraph, vicious.widgets.cpu, '$1', 1)
 -- TODO: in awesome git HEAD there is a "stacked" version allowing multiple
 -- graphs in a single widget
-vicious.register(mynetgraph, vicious.widgets.net, '${wan0 down_kb}', 1)
+vicious.register(mynetgraph, vicious.widgets.net, '${wlp3s0 down_kb}', 1)
 -- vicious.register(mynetgraph, vicious.widgets.net, '${wan0 down_kb} ${wan0 up_kb}', 1)
 
 -- Create a systray
