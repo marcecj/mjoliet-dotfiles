@@ -54,6 +54,7 @@
 .config/QtProject/
 .config/Trash/
 .config/data/
+.config/fish/generated_completions/
 .config/fontconfig/
 .config/laditools/ladi-system-log.conf
 .config/smplayer/
