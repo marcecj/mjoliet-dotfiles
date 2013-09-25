@@ -54,6 +54,8 @@
 .config/QtProject/
 .config/Trash/
 .config/data/
+.config/fish/generated_completions/
+.config/fontconfig/
 .config/laditools/ladi-system-log.conf
 .config/smplayer/
 .conkyrc
@@ -74,7 +76,6 @@
 .fluxbox/menu.bak
 .fluxbox/styles
 .fontconfig/
-.fonts.conf
 .gconfd/
 .getmail/
 .gstreamer-0.10/
