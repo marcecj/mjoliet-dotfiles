@@ -1,5 +1,8 @@
 # define my own fish prompt
 function fish_prompt
+    # save the status of the command run from the last prompt
+    set last_status $status
+
     # define some colors
     set lightblue (set_color --bold A0A0FF)
     set defcolor (set_color --bold A0A0A0)
@@ -9,5 +12,5 @@ function fish_prompt
     printf "-($lightblue%s$defcolor)" (date "+%R:%S")
     printf "-($lightblue%s$defcolor)\n" (prompt_pwd)
     # second line
-    printf ">> ($status) %% "
+    printf ">> ($last_status) %% "
 end
