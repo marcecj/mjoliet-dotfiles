@@ -30,7 +30,8 @@ pgrep udisks-glue || udisks-glue &
 
 # misc
 pulseaudio --check || pulseaudio --start &
-wicd-gtk &
+# wicd-gtk &
+nm-applet &
 batti &
 #fbsetbg -l &   # set the background wallpaper
 #conky &		# an alternative system monitor to gkrellm
