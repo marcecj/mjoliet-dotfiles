@@ -169,7 +169,7 @@ au BufRead,BufNewFile *.e{build,class} set ts=4 sw=4 noexpandtab
 au BufWrite * if &ft == '' | filetype detect | endif
 
 " matlab specific stuff
-let g:mlint_path_to_mlint="/usr/local/matlab/bin/glnx86/mlint"
+let g:mlint_path_to_mlint="/usr/local/MATLAB/R2013a/bin/glnxa64/mlint"
 
 augroup scons
     au!
