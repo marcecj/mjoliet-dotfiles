@@ -35,6 +35,9 @@
 # contains a socket and extensions downloaded via git
 .urxvt/
 
+# is itself managed via Git
+.password-store/
+
 # security relevant, don't share
 .kdb
 
