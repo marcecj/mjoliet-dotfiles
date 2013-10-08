@@ -25,8 +25,12 @@
 .xsel.log
 .ncmpcpp/*.log
 .ncmpcpp/config.*
-.pulse-cookie
 .xsession-errors*
+
+# Pulseaudio configuration
+.config/pulse/*
+!.config/pulse/*.conf
+!.config/pulse/default.pa
 
 # contains a socket and extensions downloaded via git
 .urxvt/
@@ -93,7 +97,6 @@
 .octave_packages
 .openalrc
 .praat-dir
-.pulse/
 .pylint.d/
 .recently-used
 .rednotebook/
