@@ -66,6 +66,13 @@ load-module module-native-protocol-tcp listen=0.0.0.0 auth-ip-acl=::1;172.16.0.0
 # load-module module-zeroconf-publish
 # .endif
 
+# activate acoustic echo cancellation, with both soundcards as outputs, but only
+# with the microphone of the built-in sound-card
+.ifexists module-echo-cancel.so
+load-module module-echo-cancel sink_master=alsa_output.pci-0000_00_06.1.analog-stereo source_master=alsa_input.pci-0000_00_06.1.analog-stereo
+load-module module-echo-cancel sink_master=alsa_output.pci-0000_01_07.0.analog-stereo source_master=alsa_input.pci-0000_00_06.1.analog-stereo
+.endif
+
 ### Load the RTP receiver module (also configured via paprefs, see above)
 #load-module module-rtp-recv
 
