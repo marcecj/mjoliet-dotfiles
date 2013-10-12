@@ -257,6 +257,7 @@ http://slashdot.org/slashdot.rss "news", "Slashdot"
 # http://feeds.newscientist.com/science-news "news"
 # http://feeds.feedburner.com/EthicalTechnology "news"
 # http://www.meinstudi.de/basti/?feed=rss2 "blog"
+http://www.theguardian.com/world/the-nsa-files/rss "news"
 
 http://homeofthevain.com/index.php?x=rss "misc"
 http://orwelldiaries.wordpress.com/feed/ "misc"
