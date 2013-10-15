@@ -73,6 +73,11 @@ load-module module-echo-cancel sink_master=alsa_output.pci-0000_00_06.1.analog-s
 load-module module-echo-cancel sink_master=alsa_output.pci-0000_01_07.0.analog-stereo source_master=alsa_input.pci-0000_00_06.1.analog-stereo
 .endif
 
+# create a loopback sink, to be able to monitor a sound cards input
+.ifexists module-loopback.so
+load-module module-loopback sink=alsa_output.pci-0000_01_07.0.analog-stereo source=alsa_input.pci-0000_01_07.0.analog-stereo
+.endif
+
 ### Load the RTP receiver module (also configured via paprefs, see above)
 #load-module module-rtp-recv
 
