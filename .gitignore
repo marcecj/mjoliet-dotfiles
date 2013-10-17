@@ -25,11 +25,18 @@
 .xsel.log
 .ncmpcpp/*.log
 .ncmpcpp/config.*
-.pulse-cookie
 .xsession-errors*
+
+# Pulseaudio configuration
+.config/pulse/*
+!.config/pulse/*.conf
+!.config/pulse/default.pa
 
 # contains a socket and extensions downloaded via git
 .urxvt/
+
+# is itself managed via Git
+.password-store/
 
 # security relevant, don't share
 .kdb
@@ -93,7 +100,6 @@
 .octave_packages
 .openalrc
 .praat-dir
-.pulse/
 .pylint.d/
 .recently-used
 .rednotebook/
@@ -150,6 +156,7 @@
 .audacity-data/
 .bristol/
 .claws-mail/
+.config/Mumble/
 .config/keepassx/
 .config/libreoffice/
 .config/marble/
@@ -182,6 +189,7 @@
 .pidgin/
 .purple/
 .seq24rc
+.snes9x/
 .solfege/
 .solfegerc
 .vkeybdmap

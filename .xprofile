@@ -25,6 +25,10 @@ xbindkeys &
 # start a urxvt daemon, will quit with the X server
 urxvtd -q -o -f
 
+# start a terminal that runs keychain, which will set the necessary environment
+# variables for other process to connect to {gpg,ssh}-agent
+urxvtc -e sh -c "eval \$(keychain --nogui --eval --timeout 30 id_rsa C3E99E07 </dev/null)" &
+
 # udisks based automounter
 pgrep udisks-glue || udisks-glue &
 
