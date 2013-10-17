@@ -13,9 +13,7 @@
 
 # allow volume to be set via multimedia keys
 .ifexists module-mmkbd-evdev.so
-# volume_limit is uint32_t, with 1.0 corresponding to 2^16
-load-module module-mmkbd-evdev device=/dev/input/by-id/usb-Logitech_USB_Receiver-if02-event-kbd sink=alsa_output.pci-0000_01_07.0.analog-stereo volume_limit=65536
-# load-module module-mmkbd-evdev device=/dev/input/by-id/usb-Logitech_USB_Receiver-event-mouse sink=alsa_output.pci-0000_01_07.0.analog-stereo
+load-module module-mmkbd-evdev device=/dev/input/by-path/platform-i8042-serio-0-event-kbd
 .endif
 
 ### Automatically augment property information from .desktop files
@@ -54,32 +52,21 @@ load-module module-jackdbus-detect
 .ifexists module-esound-protocol-unix.so
 load-module module-esound-protocol-unix
 .endif
-# auth-anonymous required due to mismatch in 32bit/64bit pulseaudio libs?
-load-module module-native-protocol-unix auth-anonymous=1 auth-group=pulse-access
+load-module module-native-protocol-unix auth-group=pulse-access
 
 ### Network access (may be configured with paprefs, so leave this commented
 ### here if you plan to use paprefs)
 #load-module module-esound-protocol-tcp
-load-module module-native-protocol-tcp listen=0.0.0.0 auth-ip-acl=::1;172.16.0.0/24;2001:470:d138:d909::0/64
 
 # .ifexists module-zeroconf-publish.so
-# load-module module-zeroconf-publish
+# load-module module-zeroconf-discover
 # .endif
 
 # activate acoustic echo cancellation, with both soundcards as outputs, but only
 # with the microphone of the built-in sound-card
 .ifexists module-echo-cancel.so
-load-module module-echo-cancel sink_master=alsa_output.pci-0000_00_06.1.analog-stereo source_master=alsa_input.pci-0000_00_06.1.analog-stereo
-load-module module-echo-cancel sink_master=alsa_output.pci-0000_01_07.0.analog-stereo source_master=alsa_input.pci-0000_00_06.1.analog-stereo
+load-module module-echo-cancel
 .endif
-
-# create a loopback sink, to be able to monitor a sound cards input
-.ifexists module-loopback.so
-load-module module-loopback sink=alsa_output.pci-0000_01_07.0.analog-stereo source=alsa_input.pci-0000_01_07.0.analog-stereo
-.endif
-
-### Load the RTP receiver module (also configured via paprefs, see above)
-#load-module module-rtp-recv
 
 ### Load the RTP sender module (also configured via paprefs, see above)
 #load-module module-null-sink sink_name=rtp format=s16be channels=2 rate=44100 sink_properties="device.description='RTP Multicast Sink'"
