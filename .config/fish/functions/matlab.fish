@@ -9,5 +9,8 @@ function matlab -d "Starts MATLAB sanely."
         set --export MATLAB_JAVA "$JAVA_HOME"/jre/
     end
 
+    # force MATLAB to use the BASH
+    set -lx SHELL /bin/bash
+
     command matlab $argv
 end
