@@ -20,7 +20,7 @@ xrdb -merge .Xresources
 export XDG_DATA_HOME="$HOME/.config"
 
 # binds keys to shell commands
-xbindkeys &
+# xbindkeys &
 
 # start a urxvt daemon, will quit with the X server
 urxvtd -q -o -f
