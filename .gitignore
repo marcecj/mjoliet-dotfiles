@@ -26,6 +26,7 @@
 .ncmpcpp/*.log
 .ncmpcpp/config.*
 .xsession-errors*
+.udisks-glue.pid
 
 # Pulseaudio configuration
 .config/pulse/*
