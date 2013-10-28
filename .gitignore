@@ -43,9 +43,9 @@
 .kdb
 
 # cache files
+.config/matplotlib/*.cache
 .cache/
 .dmenu_cache
-.matplotlib/*.cache
 .newsbeuter/cache.db
 .zcompcache/
 
