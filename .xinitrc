@@ -28,7 +28,7 @@ urxvtd -q -o -f
 urxvtc -e sh -c "eval \$(keychain --nogui --eval id_rsa C3E99E07 </dev/null)" &
 
 # udisks based automounter
-pgrep udisks-glue || udisks-glue &
+udisks-glue -p ~/.udisks-glue.pid &
 
 # misc
 pulseaudio --check || pulseaudio --start &
