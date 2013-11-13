@@ -4,14 +4,14 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("arbeit.org"
  (filename . "~/Dropbox/master/master_arbeit/arbeit.org")
- (front-context-string . "dem Laptop auch ")
- (rear-context-string . "geht\n\n- [ ] auf ")
- (position . 1114))
+ (front-context-string . "Eigentlich ferti")
+ (rear-context-string . "11-12 Di 16:22> ")
+ (position . 10292))
 ("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
- (front-context-string . " der\n      Blöck")
- (rear-context-string . "z (8 ms Vorschub")
- (position . 100211))
+ (front-context-string . "\n\n- [ ] Wegen GM")
+ (rear-context-string . " Wellenform.\n\n- ")
+ (position . 64057))
 (".emacs"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)
