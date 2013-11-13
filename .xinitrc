@@ -18,17 +18,23 @@ xrdb -merge .Xresources
 export XDG_DATA_HOME="$HOME/.config"
 
 # binds keys to shell commands
-xbindkeys &
+# xbindkeys &
 
 # start a urxvt daemon, will quit with the X server
 urxvtd -q -o -f
+
+# start a terminal that runs keychain, which will set the necessary environment
+# variables for other process to connect to {gpg,ssh}-agent
+urxvtc -e sh -c "eval \$(keychain --nogui --eval id_rsa C3E99E07 </dev/null)" &
 
 # udisks based automounter
 pgrep udisks-glue || udisks-glue &
 
 # misc
 pulseaudio --check || pulseaudio --start &
-mpd &
+# wicd-gtk &
+nm-applet &
+batti &
 #fbsetbg -l &   # set the background wallpaper
 #conky &		# an alternative system monitor to gkrellm
 
@@ -45,7 +51,8 @@ redshift &
 pidgin &
 
 # some terminals to always start
-urxvtc -name "multitail-syslog" -e sh -c "sudo multitail -n 300 --retry -f /var/log/messages" &
+# NOTE: the resolution is too low for multitail
+#urxvtc -name "multitail-syslog" -e sh -c "sudo multitail -n 300 --retry -f /var/log/messages" &
 urxvtc -name "htop-sys" -e sh -c "htop" &
 
 # take care of input argument and SESSION variable
