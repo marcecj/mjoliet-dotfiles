@@ -283,7 +283,9 @@
 .config/desktop-directories/
 .config/gajim/
 .config/geeqie/
+# gegl-* only contain Makefiles for some reason
 .config/gegl-0.1/
+.config/gegl-0.2/
 .config/gsmartcontrol/
 .config/gtk-2.0/
 .config/harmonyseq/
