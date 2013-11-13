@@ -24,7 +24,7 @@ xbindkeys &
 urxvtd -q -o -f
 
 # udisks based automounter
-pgrep udisks-glue || udisks-glue &
+udisks-glue -p ~/.udisks-glue.pid &
 
 # misc
 pulseaudio --check || pulseaudio --start &
