@@ -169,6 +169,7 @@
 .gconf/
 .giada/
 .gimp-2.6/
+.gimp-2.8/
 .gitk
 .gsview.ini
 .gtklickrc
