@@ -639,7 +639,8 @@ autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/ containedin=ALL
 " t_Co gets set automatically depending on the terminal used.
 if &t_Co == 256
     " colorscheme inkpot
-    colorscheme solarized
+    " colorscheme solarized
+    colorscheme 256-grayvim
     " colorscheme black_angus " Pretty nice, actually, yeah I like it! Also
     " useful for light backgrounds.
     " colorscheme mustang     " nice low contrast
