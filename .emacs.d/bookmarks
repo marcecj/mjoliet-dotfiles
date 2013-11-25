@@ -4,9 +4,9 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("arbeit.org"
  (filename . "~/Dropbox/master/master_arbeit/arbeit.org")
- (front-context-string . "Eigentlich ferti")
- (rear-context-string . "11-12 Di 16:22> ")
- (position . 10292))
+ (front-context-string . "-11-14 Do 20:46>")
+ (rear-context-string . "ts.\n\n    - <2013")
+ (position . 9150))
 ("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
  (front-context-string . "\n\n- [ ] Wegen GM")
