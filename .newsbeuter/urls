@@ -251,6 +251,7 @@ http://allievi.sssup.it/techblog/?feed=rss2 "tech blog"
 http://dev.tox.im/feed/ "tech blog"
 https://retroshareteam.wordpress.com/feed/ "tech blog"
 http://programmingisterrible.com/rss "tech blog"
+http://what-if.xkcd.com/feed.atom "tech blog" "humor"
 
 # http://osnews.com/files/recent.xml "news"
 http://slashdot.org/slashdot.rss "news", "Slashdot"
