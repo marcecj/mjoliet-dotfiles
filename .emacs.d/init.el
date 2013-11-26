@@ -19,6 +19,7 @@
 		     ipython
 		     ein
 		     go-mode
+		     solarized-theme
 		     rw-hunspell
 		     rw-language-and-country-codes))
 
@@ -89,3 +90,8 @@
 ; TODO it is possible to set multiple dictionaries with hunspell (e.g., "-d
 ; en_us,de_DE"), but so far nothing I know of exploits this
 (rw-ispell-change-dictionary "de_DE_myspell" 1)
+
+; customize the theme
+(load-theme 'solarized t t)
+(enable-theme 'solarized-dark)
+(set-background-color "black")
