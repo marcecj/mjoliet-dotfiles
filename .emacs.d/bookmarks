@@ -10,8 +10,8 @@
 ("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
  (front-context-string . "\n\n** DONE [0/1] ")
- (rear-context-string . "11, 184–192.\n\n- ")
- (position . 73667))
+ (rear-context-string . "ab/rastamat/\n\n- ")
+ (position . 93108))
 (".emacs"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)
