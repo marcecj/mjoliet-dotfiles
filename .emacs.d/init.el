@@ -4,8 +4,9 @@
 ; minor modes I want on by default
 (column-number-mode)
 (size-indication-mode)
-; FIXME: for some reason, this doesn't work as-is
-(auto-fill-mode)
+; for some reason, I can't just start auto-fill mode, I have to add it
+; as a hook
+(add-hook 'text-mode-hook 'auto-fill-mode)
 
 ; prefer UTF-8 encoding
 (prefer-coding-system 'utf-8)
@@ -18,6 +19,7 @@
 		     ipython
 		     ein
 		     go-mode
+		     solarized-theme
 		     rw-hunspell
 		     rw-language-and-country-codes))
 
@@ -88,3 +90,8 @@
 ; TODO it is possible to set multiple dictionaries with hunspell (e.g., "-d
 ; en_us,de_DE"), but so far nothing I know of exploits this
 (rw-ispell-change-dictionary "de_DE_myspell" 1)
+
+; customize the theme
+(load-theme 'solarized t t)
+(enable-theme 'solarized-dark)
+(set-background-color "black")

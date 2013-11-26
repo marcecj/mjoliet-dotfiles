@@ -9,9 +9,9 @@
  (position . 9150))
 ("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
- (front-context-string . "\n\n- [ ] Wegen GM")
- (rear-context-string . " Wellenform.\n\n- ")
- (position . 64057))
+ (front-context-string . "\n\n** DONE [0/1] ")
+ (rear-context-string . "11, 184–192.\n\n- ")
+ (position . 73667))
 (".emacs"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)
