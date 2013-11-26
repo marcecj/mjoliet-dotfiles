@@ -4,8 +4,9 @@
 ; minor modes I want on by default
 (column-number-mode)
 (size-indication-mode)
-; FIXME: for some reason, this doesn't work as-is
-(auto-fill-mode)
+; for some reason, I can't just start auto-fill mode, I have to add it
+; as a hook
+(add-hook 'text-mode-hook 'auto-fill-mode)
 
 ; prefer UTF-8 encoding
 (prefer-coding-system 'utf-8)
