@@ -14,15 +14,6 @@
 ; must find out how to set these
 (set-fill-column '80)
 
-(setq package-list '(undo-tree
-		     org-journal
-		     ipython
-		     ein
-		     go-mode
-		     solarized-theme
-		     rw-hunspell
-		     rw-language-and-country-codes))
-
 ; add various package repositories
 (require 'package)
 (add-to-list 'package-archives 
@@ -33,13 +24,23 @@
       "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
-; fetch the list of packages available 
-(when (not package-archive-contents)
-  (package-refresh-contents))
+(setq package-list '(undo-tree
+		     org-journal
+		     ipython
+		     ein
+		     go-mode
+		     solarized-theme
+		     rw-hunspell
+		     rw-language-and-country-codes))
 
 ; install the missing packages
+(setq refreshed-package-contents? nil)
 (dolist (package package-list)
   (when (not (package-installed-p package))
+    (when (not refreshed-package-contents?)
+      (package-refresh-contents)
+      (setq refreshed-package-contents? t))
+    (message "Installing package \"%s\"" package)
     (package-install package)))
 
 ; must be after (package-initialize)
