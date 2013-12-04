@@ -45,9 +45,9 @@
 
 # cache files
 .config/matplotlib/*.cache
+.config/newsbeuter/cache.db
 .cache/
 .dmenu_cache
-.newsbeuter/cache.db
 .zcompcache/
 
 # system dependent or auto-generated files
@@ -209,6 +209,8 @@
 .config/Skype/
 .config/fish/fish_history
 .config/fish/fishd.*
+.config/newsbeuter/queue
+.config/newsbeuter/history.*
 .enthought/
 .fluxbox/fbrun_history
 .gEDA/gschem-recent-files
@@ -217,8 +219,6 @@
 .ipython/**/*history*
 .lesshst
 .mtab.fuseiso
-.newsbeuter/queue
-.newsbeuter/history.*
 .octave_hist
 .pyxplot_history
 .reinteract/
