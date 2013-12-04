@@ -15,12 +15,12 @@
 .XSMlock-Default
 .Xauthority
 .bugz_cookie
+.config/ipython/db/
+.config/ipython/profile_*/db/
+.config/ipython/profile_*/log/
+.config/ipython/profile_*/security/
 .esd_auth
 .gEDA/logs/
-.ipython/db/
-.ipython/profile_*/db/
-.ipython/profile_*/log/
-.ipython/profile_*/security/
 .log/
 .pip/
 .xsel.log
@@ -209,6 +209,7 @@
 .config/Skype/
 .config/fish/fish_history
 .config/fish/fishd.*
+.config/ipython/**/*history*
 .config/newsbeuter/queue
 .config/newsbeuter/history.*
 .enthought/
@@ -216,7 +217,6 @@
 .gEDA/gschem-recent-files
 .gnuplot_history
 .history
-.ipython/**/*history*
 .lesshst
 .mtab.fuseiso
 .octave_hist
