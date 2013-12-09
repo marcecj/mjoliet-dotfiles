@@ -15,12 +15,12 @@
 .XSMlock-Default
 .Xauthority
 .bugz_cookie
+.config/ipython/db/
+.config/ipython/profile_*/db/
+.config/ipython/profile_*/log/
+.config/ipython/profile_*/security/
 .esd_auth
 .gEDA/logs/
-.ipython/db/
-.ipython/profile_*/db/
-.ipython/profile_*/log/
-.ipython/profile_*/security/
 .log/
 .pip/
 .xsel.log
@@ -45,9 +45,9 @@
 
 # cache files
 .config/matplotlib/*.cache
+.config/newsbeuter/cache.db
 .cache/
 .dmenu_cache
-.newsbeuter/cache.db
 .zcompcache/
 
 # system dependent or auto-generated files
@@ -209,16 +209,16 @@
 .config/Skype/
 .config/fish/fish_history
 .config/fish/fishd.*
+.config/ipython/**/*history*
+.config/newsbeuter/queue
+.config/newsbeuter/history.*
 .enthought/
 .fluxbox/fbrun_history
 .gEDA/gschem-recent-files
 .gnuplot_history
 .history
-.ipython/**/*history*
 .lesshst
 .mtab.fuseiso
-.newsbeuter/queue
-.newsbeuter/history.*
 .octave_hist
 .pyxplot_history
 .reinteract/
