@@ -115,6 +115,7 @@ ActivateAddons python_pydoc
 ActivateAddons indentpython%974 " python indentation according to PEP 8
 ActivateAddons python%790       " different python syntax script
 ActivateAddons vim-ipython
+ActivateAddons vim-flake8
 
 " misc add-ons
 ActivateAddons The_NERD_Commenter
