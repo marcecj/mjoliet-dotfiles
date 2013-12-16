@@ -7,6 +7,7 @@ setlocal smarttab
 setlocal shiftwidth=4
 setlocal foldmethod=indent
 setlocal expandtab " shouldn't this be on by default?
+setlocal textwidth=79 " for PEP 8
 
 " Enable switching to python class libraries via 'gf'
 python << EOF
