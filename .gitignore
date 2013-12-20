@@ -19,6 +19,7 @@
 .config/ipython/profile_*/db/
 .config/ipython/profile_*/log/
 .config/ipython/profile_*/security/
+.config/newsbeuter/cache.db.lock
 .esd_auth
 .gEDA/logs/
 .log/
