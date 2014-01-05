@@ -23,6 +23,8 @@
 .esd_auth
 .gEDA/logs/
 .log/
+.moc/cache/
+.moc/tags_cache
 .pip/
 .xsel.log
 .ncmpcpp/*.log
@@ -98,7 +100,10 @@
 .lpoptions
 .mailcap
 .matlab/
-.moc/
+.moc/equalizer
+.moc/last_directory
+.moc/playlist.m3u
+.moc/softmixer
 .monicarc
 .octave_packages
 .openalrc
