@@ -2,8 +2,6 @@
 set fish_greeting
 
 # TODO: it seems fish is not started as a login shell. Why?
-# if status --is-login
-set -x MATLAB_ARCH glnx86
 
 set PATH $PATH "$HOME/bin/"
 
