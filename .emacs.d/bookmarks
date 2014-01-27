@@ -9,9 +9,9 @@
  (position . 9150))
 ("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
- (front-context-string . "ova.py\n\n  - [ ] ")
- (rear-context-string . "mcs.py\n\n  - [X] ")
- (position . 132089))
+ (front-context-string . "\n\n** TODO [0/1] ")
+ (rear-context-string . "SNR ist bekannt.")
+ (position . 138179))
 (".emacs"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)
