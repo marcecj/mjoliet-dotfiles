@@ -20,4 +20,5 @@ CompilerSet errorformat=%-P%f,%-P==========\ %f\ ==========,L\ %l\ (C\ %c):\ %t%
 || 
 
 " put in parentheses to execute in a subshell, for capturing the entire output
-CompilerSet makeprg=(echo\ %;\ /usr/local/matlab/bin/glnx86/mlint\ -id\ $*\ %)
+" TODO: create a global variable g:matlab_mlint_path
+CompilerSet makeprg=(echo\ %;\ ~/.local/MATLAB/R2013a_Student/bin/glnxa64/mlint\ -id\ $*\ %)
