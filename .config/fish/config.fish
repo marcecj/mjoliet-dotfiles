@@ -2,7 +2,6 @@
 set fish_greeting
 
 # TODO: it seems fish is not started as a login shell. Why?
-# if status --is-login
 
 set PATH $PATH "$HOME/bin/" "$HOME/.local/bin/"
 
