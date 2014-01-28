@@ -4,7 +4,7 @@ set fish_greeting
 # TODO: it seems fish is not started as a login shell. Why?
 # if status --is-login
 
-set PATH $PATH "$HOME/bin/"
+set PATH $PATH "$HOME/bin/" "$HOME/.local/bin/"
 
 # set the default MPD host to my desktop machine
 set -x MPD_HOST marcec.marcnet
