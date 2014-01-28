@@ -5,7 +5,7 @@ set fish_greeting
 # if status --is-login
 set -x MATLAB_ARCH glnx86
 
-set PATH $PATH "$HOME/bin/"
+set PATH $PATH "$HOME/bin/" "$HOME/.local/bin/"
 
 ## activate colorgcc - colorized gcc output
 #if [[ -z $(echo $PATH | grep colorgcc) && -d "/usr/lib/colorgcc/bin/" ]]; then
