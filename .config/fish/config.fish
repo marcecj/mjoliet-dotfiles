@@ -8,6 +8,12 @@ set PATH $PATH "$HOME/bin/" "$HOME/.local/bin/"
 # set the default MPD host to my desktop machine
 set -x MPD_HOST marcec.marcnet
 
+# override $JAVA_HOME if java-config exists (i.e., a Java runtime is installed);
+# this is for MATLAB, so that the GUI can start without crashing
+if test -x (which java-config);
+    set -x JAVA_HOME (java-config -g JAVA_HOME)
+end
+
 ## activate colorgcc - colorized gcc output
 #if [[ -z $(echo $PATH | grep colorgcc) && -d "/usr/lib/colorgcc/bin/" ]]; then
 #    set -x PATH "/usr/lib/colorgcc/bin/" $PATH
