@@ -92,6 +92,30 @@
 ; en_us,de_DE"), but so far nothing I know of exploits this
 (rw-ispell-change-dictionary "de_DE_myspell" 1)
 
+; configure org-mode to use latexmk for compiling LaTeX documents, since latexmk
+; is a somewhat standard tool for compiling LaTeX documents; set
+; org-latex-remove-logfiles to nil to prevent dependency problems
+(setq org-latex-remove-logfiles nil)
+(setq org-latex-pdf-process
+ '("latexmk -pdflatex='pdflatex -shell-escape -interaction nonstopmode' -pdf -f %f"))
+
+; automatically load ox-bibtex when loading org-mode documents; this contains
+; the super-useful command org-reftex-citation, which is a great way for
+; inserting citations from a BibTeX file
+(add-hook 'org-mode-hook
+ (lambda () (load-library "ox-bibtex")))
+
+; define a helper function that calls org-latex-export-to-pdf with a
+; modified process-environment where TMPDIR=., in order to prevent a
+; bibtex2html error; this is because TeXLive is configured to not
+; allow writes (or some such) to /tmp/
+(defun org-latex-export-to-pdf-with-bibtex ()
+  "Runs org-latex-export-to-pdf with TMPDIR=., so that
+bibtex2html does not fail."
+  (interactive)
+  (let ((process-environment (cons "TMPDIR=." process-environment)))
+	 (org-latex-export-to-pdf)))
+
 ; customize the theme
 (load-theme 'solarized t t)
 (enable-theme 'solarized-dark)
