@@ -4,9 +4,9 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("zwischenbericht.org"
  (filename . "~/projects/master-thesis/zwischenbericht.org")
- (front-context-string . "\n\n#+CAPTION: Str")
- (rear-context-string . ":mcs-structure}.")
- (position . 4185))
+ (front-context-string . "\n\n*** Method by ")
+ (rear-context-string . "ation filtering.")
+ (position . 5978))
 ("arbeit.org"
  (filename . "~/Dropbox/master/master_arbeit/arbeit.org")
  (front-context-string . "-11-14 Do 20:46>")
