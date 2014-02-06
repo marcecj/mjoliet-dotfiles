@@ -169,11 +169,15 @@ if anyof(
         address :matches ["To", "Cc"] ["hua_master_studis@listserv.uni-oldenburg.de"]
         )
 {
-    if header :contains ["List-Id"] "medi.listserv.uni-oldenburg.de" {
+    # it seems that Medi/StaMo Emails occasionally lack a List-Id header
+    if anyof(
+             header :contains ["List-Id"] "medi.listserv.uni-oldenburg.de",
+             address :is ["To", "Cc"] "medi.listserv.uni-oldenburg.de"
+            )
+    {
         fileinto "Studium/Medi";
         stop;
     }
-    # it seems that StaMo Emails do not necessarily contain List-Id headers
     elsif anyof(
                 header :contains ["List-Id"] ["stamo.listserv.uni-oldenburg.de"],
                 address :is ["To", "Cc"] ["stamo@listserv.uni-oldenburg.de"]
