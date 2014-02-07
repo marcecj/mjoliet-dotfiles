@@ -14,9 +14,9 @@
  (position . 9150))
 ("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
- (front-context-string . "\n\n- [ ] Theorie ")
- (rear-context-string . "- [ ] Einleitung")
- (position . 139424))
+ (front-context-string . "Lese die folgend")
+ (rear-context-string . "\n\n  - [-] [2/9] ")
+ (position . 140319))
 (".emacs"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)

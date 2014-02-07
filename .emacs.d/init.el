@@ -105,6 +105,17 @@
 (add-hook 'org-mode-hook
  (lambda () (load-library "ox-bibtex")))
 
+; override org-emphasis-regexp-components to allow footnotes after emphasis
+; markup
+(add-hook 'org-mode-hook
+ (lambda ()
+   (setcdr
+    (nthcdr 0 org-emphasis-regexp-components)
+    (cons
+     (concat (nth 1 org-emphasis-regexp-components) "[")
+     (nthcdr 2 org-emphasis-regexp-components)))
+   (org-reload)))
+
 ; define a helper function that calls org-latex-export-to-pdf with a
 ; modified process-environment where TMPDIR=., in order to prevent a
 ; bibtex2html error; this is because TeXLive is configured to not
