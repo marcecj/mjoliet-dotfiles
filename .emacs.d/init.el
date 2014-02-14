@@ -109,11 +109,9 @@
 ; markup
 (add-hook 'org-mode-hook
  (lambda ()
-   (setcdr
-    (nthcdr 0 org-emphasis-regexp-components)
-    (cons
-     (concat (nth 1 org-emphasis-regexp-components) "[")
-     (nthcdr 2 org-emphasis-regexp-components)))
+   (setcar
+    (cdr org-emphasis-regexp-components)
+    (concat (nth 1 org-emphasis-regexp-components) "["))
    (org-reload)))
 
 ; define a helper function that calls org-latex-export-to-pdf with a
