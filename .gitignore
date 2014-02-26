@@ -223,9 +223,11 @@
 .gEDA/gschem-recent-files
 .gnuplot_history
 .history
+.julia_history
 .lesshst
 .mtab.fuseiso
 .octave_hist
+.pylint-gui-history
 .pyxplot_history
 .reinteract/
 .tclsh-history
