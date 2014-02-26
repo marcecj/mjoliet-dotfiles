@@ -24,6 +24,7 @@
 .gEDA/logs/
 .log/
 .moc/cache/
+.moc/pid
 .moc/tags_cache
 .pip/
 .xsel.log
