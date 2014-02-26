@@ -227,6 +227,7 @@
 .lesshst
 .mtab.fuseiso
 .octave_hist
+.pylint-gui-history
 .pyxplot_history
 .reinteract/
 .tclsh-history
