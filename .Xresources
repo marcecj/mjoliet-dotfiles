@@ -158,14 +158,14 @@ URxvt.perl-ext-common: -default,-tabbed,selection,readline,searchable-scrollback
 ! Clears the scrollback buffer.
 ! URxvt.keysym.Control-s: command:\033]720;0\007
 ! Add a second larger font for "remote" work.
-URxvt.keysym.Control-Meta-1: command:\033]710;xft:dejavu sans mono:antialias=true:pixelsize=15\007
-URxvt.keysym.Control-Meta-2: command:\033]710;xft:dejavu sans mono:antialias=true:pixelsize=24\007
+URxvt.keysym.Control-Meta-1: command:\033]710;xft:dejavu sans mono:antialias=true:pixelsize=12\007
+URxvt.keysym.Control-Meta-2: command:\033]710;xft:dejavu sans mono:antialias=true:pixelsize=18\007
 
 ! Font settings
 ! URxvt uses UTF-8, so we don't need encoding-specific settings
 ! ---------------------------------------------------------------------------
 ! URxvt.font: xft:LiberationMono-Regular
-URxvt.font: xft:dejavu sans mono:antialias=true:pixelsize=15
+URxvt.font: xft:dejavu sans mono:antialias=true:pixelsize=12
 
 ! Colors similar to Linux console
 ! ---------------------------------------------------------------------------
