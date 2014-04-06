@@ -76,6 +76,9 @@
 ; find files in repository by default
 (global-set-key (kbd "C-x f") 'find-file-in-repository)
 
+; create nice keybindings for moving between windows
+(windmove-default-keybindings)
+
 ; activate octave-mode for m-Files
 (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
 
