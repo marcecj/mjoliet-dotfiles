@@ -39,6 +39,8 @@
 		     yasnippet
 		     ; version control tools
 		     find-file-in-repository
+		     magit
+		     magit-filenotify
 		     ; python related (python-mode is installed via portage)
 		     flymake-python-pyflakes
 		     ein
