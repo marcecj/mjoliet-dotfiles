@@ -25,6 +25,7 @@
 (package-initialize)
 
 (setq package-list '(; misc. packages
+		     autopair
 		     ido-ubiquitous
 		     ido-vertical-mode
 		     org-journal
@@ -69,6 +70,8 @@
 (ido-everywhere)
 (ido-ubiquitous-mode t)
 (ido-vertical-mode t)
+
+(autopair-global-mode)
 
 ; find files in repository by default
 (global-set-key (kbd "C-x f") 'find-file-in-repository)
