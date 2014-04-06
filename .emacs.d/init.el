@@ -25,6 +25,8 @@
 (package-initialize)
 
 (setq package-list '(; misc. packages
+		     ido-ubiquitous
+		     ido-vertical-mode
 		     org-journal
 		     undo-tree
 		     ; python related (python-mode is installed via portage)
@@ -55,6 +57,13 @@
 
 ; set up go mode
 (require 'go-mode-load)
+
+; set up IDO
+(ido-mode t)
+(setq ido-enable-flex-matching t)
+(ido-everywhere)
+(ido-ubiquitous-mode t)
+(ido-vertical-mode t)
 
 ; activate octave-mode for m-Files
 (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
