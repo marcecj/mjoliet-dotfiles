@@ -33,7 +33,6 @@
 		     ; version control tools
 		     find-file-in-repository
 		     ; python related (python-mode is installed via portage)
-		     ipython
 		     ein
 		     go-mode
 		     ; themes
