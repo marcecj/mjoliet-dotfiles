@@ -60,6 +60,9 @@
 ; set up go mode
 (require 'go-mode-load)
 
+; TODO: look at icicles, it looks more general, but also more complex
+;; (icy-mode t)
+
 ; set up IDO
 (ido-mode t)
 (setq ido-enable-flex-matching t)
