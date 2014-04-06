@@ -29,6 +29,8 @@
 		     ido-vertical-mode
 		     org-journal
 		     undo-tree
+		     ; version control tools
+		     find-file-in-repository
 		     ; python related (python-mode is installed via portage)
 		     ipython
 		     ein
@@ -64,6 +66,9 @@
 (ido-everywhere)
 (ido-ubiquitous-mode t)
 (ido-vertical-mode t)
+
+; find files in repository by default
+(global-set-key (kbd "C-x f") 'find-file-in-repository)
 
 ; activate octave-mode for m-Files
 (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
