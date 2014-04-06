@@ -14,6 +14,9 @@
 ; must find out how to set these
 (set-fill-column '80)
 
+; highlight trailing whitespace
+(setq-default show-trailing-whitespace t)
+
 ; add various package repositories
 (require 'package)
 (add-to-list 'package-archives
