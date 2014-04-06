@@ -24,12 +24,16 @@
       "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
-(setq package-list '(undo-tree
+(setq package-list '(; misc. packages
 		     org-journal
+		     undo-tree
+		     ; python related (python-mode is installed via portage)
 		     ipython
 		     ein
 		     go-mode
+		     ; themes
 		     solarized-theme
+		     ; spelling related
 		     rw-hunspell
 		     rw-language-and-country-codes))
 
