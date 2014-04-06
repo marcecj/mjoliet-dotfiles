@@ -34,7 +34,6 @@
 		     find-file-in-repository
 		     ; python related (python-mode is installed via portage)
 		     ein
-		     go-mode
 		     ; themes
 		     solarized-theme
 		     ; spelling related
@@ -53,9 +52,6 @@
 
 ; must be after (package-initialize)
 (global-undo-tree-mode)
-
-; set up go mode
-(require 'go-mode-load)
 
 ; TODO: look at icicles, it looks more general, but also more complex
 ;; (icy-mode t)
