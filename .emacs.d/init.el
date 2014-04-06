@@ -53,10 +53,7 @@
     (package-install package)))
 
 ; must be after (package-initialize)
-(require 'undo-tree)
 (global-undo-tree-mode)
-(require 'org-journal)
-(require 'ipython)
 
 ; set up go mode
 (require 'go-mode-load)
@@ -84,7 +81,6 @@
 
 ; set up spell checking, use hunspell instead of ispell
 (setq ispell-program-name "hunspell")
-(require 'rw-language-and-country-codes)
 (require 'rw-ispell)
 (require 'rw-hunspell)
 
