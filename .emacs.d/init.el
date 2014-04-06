@@ -14,6 +14,9 @@
 ; must find out how to set these
 (set-fill-column '80)
 
+; makes vertical splits make more sense
+(setq split-window-keep-point nil)
+
 ; highlight trailing whitespace
 (setq-default show-trailing-whitespace t)
 
