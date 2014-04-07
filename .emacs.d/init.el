@@ -96,10 +96,12 @@
 
 ; set up python-mode
 (require 'python-mode)
-(setq-default py-shell-name "ipython")
-(setq-default py-which-bufname "IPython")
-(setq py-force-py-shell-name-p t)
-(setq py-smart-indentation t)
+(setq-default
+ py-shell-name "ipython"
+ py-which-bufname "IPython")
+(setq
+ py-force-py-shell-name-p t
+ py-smart-indentation t)
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 (add-to-list 'interpreter-mode-alist '("ipython" . python-mode))
 ; flake8 errors out otherwise
