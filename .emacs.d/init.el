@@ -106,6 +106,11 @@
 ; create nice keybindings for moving between windows
 (windmove-default-keybindings)
 
+(require 'paren)
+(show-paren-mode t)
+(setq
+ show-paren-style 'mixed)
+
 ; set up python-mode
 (require 'python-mode)
 (setq-default
