@@ -61,6 +61,11 @@
     (message "Installing package \"%s\"" package)
     (package-install package)))
 
+; activate yasnippet globally, that is, activate the minor mode
+; automatically per buffer; this is more robust than per-mode hooks,
+; which would require (yas-reload-all) to load the snippets
+(yas-global-mode)
+
 ; activate undo-tree mode
 (global-undo-tree-mode t)
 
@@ -97,7 +102,6 @@
 (setq py-smart-indentation t)
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 (add-to-list 'interpreter-mode-alist '("ipython" . python-mode))
-(add-hook 'python-mode-hook 'yas-minor-mode)
 ; flake8 errors out otherwise
 (setq py-flake8-history nil)
 
