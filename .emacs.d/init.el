@@ -36,6 +36,7 @@
 (setq package-list '(; misc. packages
 		     auto-complete
 		     autopair
+		     fill-column-indicator
 		     ido-ubiquitous
 		     ido-vertical-mode
 		     org-journal
