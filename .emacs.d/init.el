@@ -2,8 +2,8 @@
 (require 'site-gentoo)
 
 ; minor modes I want on by default
-(column-number-mode)
-(size-indication-mode)
+(column-number-mode t)
+(size-indication-mode t)
 ; for some reason, I can't just start auto-fill mode, I have to add it
 ; as a hook
 (add-hook 'text-mode-hook 'auto-fill-mode)
@@ -60,8 +60,8 @@
     (message "Installing package \"%s\"" package)
     (package-install package)))
 
-; must be after (package-initialize)
-(global-undo-tree-mode)
+; activate undo-tree mode
+(global-undo-tree-mode t)
 
 ; TODO: look at icicles, it looks more general, but also more complex
 ;; (icy-mode t)
@@ -73,7 +73,7 @@
 (ido-ubiquitous-mode t)
 (ido-vertical-mode t)
 
-(autopair-global-mode)
+(autopair-global-mode t)
 
 ; find files in repository by default
 (global-set-key (kbd "C-x f") 'find-file-in-repository)
@@ -92,9 +92,12 @@
 (add-hook 'python-mode-hook 'yas-minor-mode)
 ; flake8 errors out otherwise
 (setq py-flake8-history nil)
+
 ; set up a flymake mode for flake8
 (add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
 (setq flymake-python-pyflakes-executable "flake8")
+
+; set up autopair mode to handle triple quotes in python-mode
 (add-hook 'python-mode-hook
 	  #'(lambda ()
 	      (setq autopair-handle-action-fns
