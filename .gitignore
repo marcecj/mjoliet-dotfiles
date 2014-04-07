@@ -81,6 +81,7 @@
 .dropbox/
 .dvdcss/
 .emacs.d/elpa/
+.emacs.d/request/
 .emacs.d/url/
 .fltk/
 .fluxbox/backgrounds/
