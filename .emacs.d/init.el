@@ -14,22 +14,39 @@
 ; must find out how to set these
 (set-fill-column '80)
 
+; makes vertical splits make more sense
+(setq split-window-keep-point nil)
+
+; highlight trailing whitespace
+(setq-default show-trailing-whitespace t)
+
 ; add various package repositories
 (require 'package)
-(add-to-list 'package-archives 
+(add-to-list 'package-archives
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives 
+(add-to-list 'package-archives
     '("melpa" .
       "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
-(setq package-list '(undo-tree
+(setq package-list '(; misc. packages
+		     autopair
+		     ido-ubiquitous
+		     ido-vertical-mode
 		     org-journal
-		     ipython
+		     undo-tree
+		     yasnippet
+		     ; version control tools
+		     find-file-in-repository
+		     magit
+		     magit-filenotify
+		     ; python related (python-mode is installed via portage)
+		     flymake-python-pyflakes
 		     ein
-		     go-mode
+		     ; themes
 		     solarized-theme
+		     ; spelling related
 		     rw-hunspell
 		     rw-language-and-country-codes))
 
@@ -44,20 +61,51 @@
     (package-install package)))
 
 ; must be after (package-initialize)
-(require 'undo-tree)
 (global-undo-tree-mode)
-(require 'org-journal)
-(require 'ipython)
 
-; set up go mode
-(require 'go-mode-load)
+; TODO: look at icicles, it looks more general, but also more complex
+;; (icy-mode t)
+
+; set up IDO
+(ido-mode t)
+(setq ido-enable-flex-matching t)
+(ido-everywhere)
+(ido-ubiquitous-mode t)
+(ido-vertical-mode t)
+
+(autopair-global-mode)
+
+; find files in repository by default
+(global-set-key (kbd "C-x f") 'find-file-in-repository)
+
+; create nice keybindings for moving between windows
+(windmove-default-keybindings)
+
+; set up python-mode
+(require 'python-mode)
+(setq-default py-shell-name "ipython")
+(setq-default py-which-bufname "IPython")
+(setq py-force-py-shell-name-p t)
+(setq py-smart-indentation t)
+(add-to-list 'interpreter-mode-alist '("python" . python-mode))
+(add-to-list 'interpreter-mode-alist '("ipython" . python-mode))
+(add-hook 'python-mode-hook 'yas-minor-mode)
+; flake8 errors out otherwise
+(setq py-flake8-history nil)
+; set up a flymake mode for flake8
+(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
+(setq flymake-python-pyflakes-executable "flake8")
+(add-hook 'python-mode-hook
+	  #'(lambda ()
+	      (setq autopair-handle-action-fns
+		    (list #'autopair-default-handle-action
+			  #'autopair-python-triple-quote-action))))
 
 ; activate octave-mode for m-Files
 (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
 
 ; set up spell checking, use hunspell instead of ispell
 (setq ispell-program-name "hunspell")
-(require 'rw-language-and-country-codes)
 (require 'rw-ispell)
 (require 'rw-hunspell)
 
@@ -66,6 +114,7 @@
  ; automatically save the bookmarks file when creating bookmarks
  '(bookmark-save-flag 1)
  '(ein:use-auto-complete t)
+ '(py-python-command-args (quote ("-i" "--gui=qt4")))
  '(rw-hunspell-default-dictionary "de_DE_myspell")
  '(rw-hunspell-dicpath-list (quote ("/usr/share/myspell")))
  '(rw-hunspell-make-dictionary-menu t)

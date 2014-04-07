@@ -22,6 +22,7 @@
 .config/newsbeuter/cache.db.lock
 .esd_auth
 .gEDA/logs/
+.ido.last
 .log/
 .moc/cache/
 .moc/pid
