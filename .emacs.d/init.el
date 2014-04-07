@@ -7,6 +7,8 @@
 ; for some reason, I can't just start auto-fill mode, I have to add it
 ; as a hook
 (add-hook 'text-mode-hook 'auto-fill-mode)
+; automatically reload unmodified files from disk
+(global-auto-revert-mode t)
 
 ; prefer UTF-8 encoding
 (prefer-coding-system 'utf-8)
