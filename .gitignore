@@ -220,6 +220,7 @@
 .config/ipython/**/*history*
 .config/newsbeuter/queue
 .config/newsbeuter/history.*
+.emacs.d/ac-comphist.dat
 .enthought/
 .fluxbox/fbrun_history
 .gEDA/gschem-recent-files

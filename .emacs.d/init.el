@@ -34,6 +34,7 @@
 (package-initialize)
 
 (setq package-list '(; misc. packages
+		     auto-complete
 		     autopair
 		     ido-ubiquitous
 		     ido-vertical-mode
@@ -90,6 +91,13 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 (autopair-global-mode t)
+
+; set up auto-complete-mode
+(global-auto-complete-mode t)
+(setq
+ ac-use-fuzzy t
+ ;ac-use-overriding-local-map t
+ ac-use-menu-map t)
 
 ; find files in repository by default
 (global-set-key (kbd "C-x f") 'find-file-in-repository)
