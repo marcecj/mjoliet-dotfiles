@@ -4,6 +4,7 @@
 ; minor modes I want on by default
 (column-number-mode t)
 (size-indication-mode t)
+(icomplete-mode t)
 ; for some reason, I can't just start auto-fill mode, I have to add it
 ; as a hook
 (add-hook 'text-mode-hook 'auto-fill-mode)
