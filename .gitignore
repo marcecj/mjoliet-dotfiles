@@ -81,6 +81,7 @@
 .dropbox/
 .dvdcss/
 .emacs.d/elpa/
+.emacs.d/request/
 .emacs.d/url/
 .fltk/
 .fluxbox/backgrounds/
@@ -219,6 +220,7 @@
 .config/ipython/**/*history*
 .config/newsbeuter/queue
 .config/newsbeuter/history.*
+.emacs.d/ac-comphist.dat
 .enthought/
 .fluxbox/fbrun_history
 .gEDA/gschem-recent-files
@@ -231,6 +233,7 @@
 .pylint-gui-history
 .pyxplot_history
 .reinteract/
+.smex-items
 .tclsh-history
 .vim/.netrwhist
 .vim/yankring_history_v2.txt

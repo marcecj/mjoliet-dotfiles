@@ -2,11 +2,14 @@
 (require 'site-gentoo)
 
 ; minor modes I want on by default
-(column-number-mode)
-(size-indication-mode)
+(column-number-mode t)
+(size-indication-mode t)
+(icomplete-mode t)
 ; for some reason, I can't just start auto-fill mode, I have to add it
 ; as a hook
 (add-hook 'text-mode-hook 'auto-fill-mode)
+; automatically reload unmodified files from disk
+(global-auto-revert-mode t)
 
 ; prefer UTF-8 encoding
 (prefer-coding-system 'utf-8)
@@ -31,10 +34,13 @@
 (package-initialize)
 
 (setq package-list '(; misc. packages
+		     auto-complete
 		     autopair
+		     fill-column-indicator
 		     ido-ubiquitous
 		     ido-vertical-mode
 		     org-journal
+		     smex
 		     undo-tree
 		     yasnippet
 		     ; version control tools
@@ -60,8 +66,13 @@
     (message "Installing package \"%s\"" package)
     (package-install package)))
 
-; must be after (package-initialize)
-(global-undo-tree-mode)
+; activate yasnippet globally, that is, activate the minor mode
+; automatically per buffer; this is more robust than per-mode hooks,
+; which would require (yas-reload-all) to load the snippets
+(yas-global-mode)
+
+; activate undo-tree mode
+(global-undo-tree-mode t)
 
 ; TODO: look at icicles, it looks more general, but also more complex
 ;; (icy-mode t)
@@ -73,7 +84,21 @@
 (ido-ubiquitous-mode t)
 (ido-vertical-mode t)
 
-(autopair-global-mode)
+; set up smex, which completes commands with IDO, but also keep the
+; old M-x around just in case
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+(autopair-global-mode t)
+
+; set up auto-complete-mode
+(global-auto-complete-mode t)
+(setq
+ ac-use-fuzzy t
+ ;ac-use-overriding-local-map t
+ ac-use-menu-map t)
 
 ; find files in repository by default
 (global-set-key (kbd "C-x f") 'find-file-in-repository)
@@ -81,20 +106,29 @@
 ; create nice keybindings for moving between windows
 (windmove-default-keybindings)
 
+(require 'paren)
+(show-paren-mode t)
+(setq
+ show-paren-style 'mixed)
+
 ; set up python-mode
 (require 'python-mode)
-(setq-default py-shell-name "ipython")
-(setq-default py-which-bufname "IPython")
-(setq py-force-py-shell-name-p t)
-(setq py-smart-indentation t)
+(setq-default
+ py-shell-name "ipython"
+ py-which-bufname "IPython")
+(setq
+ py-force-py-shell-name-p t
+ py-smart-indentation t)
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 (add-to-list 'interpreter-mode-alist '("ipython" . python-mode))
-(add-hook 'python-mode-hook 'yas-minor-mode)
 ; flake8 errors out otherwise
 (setq py-flake8-history nil)
+
 ; set up a flymake mode for flake8
 (add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
 (setq flymake-python-pyflakes-executable "flake8")
+
+; set up autopair mode to handle triple quotes in python-mode
 (add-hook 'python-mode-hook
 	  #'(lambda ()
 	      (setq autopair-handle-action-fns
