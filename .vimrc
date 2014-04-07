@@ -23,7 +23,7 @@ set timeoutlen=500
 set ttimeoutlen=200
 " NOTE: alternative would be ":folddoopen s/.../.../...
 " TODO: Should I just omit textwidth, or set it to something higher?
-set textwidth=80                 " set the max line length to 80 chars
+set textwidth=79                 " set the max line length to 79 chars
 set linebreak					 " visually break long lines between words
 set shiftwidth=4                 " Sets indent length (<<, >>, (auto-)indent).
 set tabstop=4                    " How many spaces a <Tab> takes up (viewing a file).
