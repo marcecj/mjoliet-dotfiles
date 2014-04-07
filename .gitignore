@@ -232,6 +232,7 @@
 .pylint-gui-history
 .pyxplot_history
 .reinteract/
+.smex-items
 .tclsh-history
 .vim/.netrwhist
 .vim/yankring_history_v2.txt

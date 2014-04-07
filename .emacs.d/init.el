@@ -35,6 +35,7 @@
 		     ido-ubiquitous
 		     ido-vertical-mode
 		     org-journal
+		     smex
 		     undo-tree
 		     yasnippet
 		     ; version control tools
@@ -72,6 +73,13 @@
 (ido-everywhere)
 (ido-ubiquitous-mode t)
 (ido-vertical-mode t)
+
+; set up smex, which completes commands with IDO, but also keep the
+; old M-x around just in case
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 (autopair-global-mode t)
 
