@@ -1,0 +1,42 @@
+# outputs
+audio_output {
+        type			"pulse"
+        name			"MPD Pulse Output"
+}
+audio_output {
+        type			"jack"
+        name			"MPD JACK Output"
+}
+
+# inputs
+input {
+        plugin "curl"
+}
+
+# listen on localhost and my LAN
+bind_to_address "localhost"
+bind_to_address "marcec.marcnet"
+port "6600"
+
+# configure logging
+log_file "syslog"
+log_level "default"
+
+# configure directories
+music_directory "/var/db/music"
+playlist_directory "~/.mpd/playlists"
+
+# files representing state
+db_file "~/.mpd/database"
+pid_file "~/.mpd/pid"
+state_file "~/.mpd/state"
+
+# miscellaneous settings
+metadata_to_use "artist,album,title,track,name,genre,date,composer,performer,disc"
+replaygain "album"
+filesystem_charset "UTF-8"
+default_permissions "read,add,control,admin"
+
+# zeroconf
+zeroconf_enabled "yes"
+zeroconf_name "MPD"
