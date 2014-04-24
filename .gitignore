@@ -265,6 +265,7 @@
 .dovecot.sieve.log
 .dovecot.svbin
 .mpd/
+.mpdconf
 .spicec/
 .virsh/
 .virt-manager/
