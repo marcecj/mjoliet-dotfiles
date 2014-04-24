@@ -72,6 +72,11 @@ load-module module-echo-cancel
 #load-module module-null-sink sink_name=rtp format=s16be channels=2 rate=44100 sink_properties="device.description='RTP Multicast Sink'"
 #load-module module-rtp-send source=rtp.monitor
 
+### set up a tunnel sink to my desktop
+.ifexists module-tunnel-sink-new.so
+load-module module-tunnel-sink-new sink_name=marcec server=172.16.0.1 sink=alsa_output.pci-0000_01_07.0.analog-stereo
+.endif
+
 ### Load additional modules from GConf settings. This can be configured with the paprefs tool.
 ### Please keep in mind that the modules configured by paprefs might conflict with manually
 ### loaded modules.
