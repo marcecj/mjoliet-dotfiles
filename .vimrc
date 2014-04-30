@@ -411,7 +411,7 @@ let g:notes_tagsindex   = '~/Documents/Notes/tags.txt'
 
 " make clang_complete use libclang
 let g:clang_use_library  = 1
-let g:clang_library_path = '/usr/lib/llvm'
+let g:clang_library_path = '/usr/lib'
 
 " for Mex programming
 let g:clang_user_options = '-I/usr/local/matlab/extern/include'
