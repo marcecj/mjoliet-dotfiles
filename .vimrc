@@ -101,6 +101,8 @@ ActivateAddons surround
 ActivateAddons repeat
 ActivateAddons searchfold
 ActivateAddons NrrwRgn
+ActivateAddons wildfire
+ActivateAddons bufexplorer.zip
 
 " programming related add-ons
 ActivateAddons a                " alternate.vim
