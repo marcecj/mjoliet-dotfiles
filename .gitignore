@@ -241,6 +241,9 @@
 .viminfo
 .w3m/
 
+# source packages created by Tox (a testing automation tool)
+.tox/
+
 # don't make sense to centralise for various reasons
 .asunder
 .asunder_album_artist
