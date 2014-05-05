@@ -53,6 +53,7 @@
 .config/newsbeuter/cache.db
 .cache/
 .dmenu_cache
+.gnotero.sqlite
 .zcompcache/
 
 # system dependent or auto-generated files
