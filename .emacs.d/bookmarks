@@ -14,9 +14,9 @@
  (position . 9150))
 ("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
- (front-context-string . "Lese die folgend")
- (rear-context-string . "\n\n  - [-] [2/9] ")
- (position . 140319))
+ (front-context-string . "CLOCK: [2014-03-")
+ (rear-context-string . "03-04 Di 14:05]\n")
+ (position . 140191))
 (".emacs"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)
