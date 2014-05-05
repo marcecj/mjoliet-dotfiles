@@ -53,6 +53,7 @@
 .config/newsbeuter/cache.db
 .cache/
 .dmenu_cache
+.gnotero.sqlite
 .zcompcache/
 
 # system dependent or auto-generated files
@@ -239,6 +240,9 @@
 .vim/yankring_history_v2.txt
 .viminfo
 .w3m/
+
+# source packages created by Tox (a testing automation tool)
+.tox/
 
 # don't make sense to centralise for various reasons
 .asunder
