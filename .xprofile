@@ -29,8 +29,9 @@ urxvtd -q -o -f
 # variables for other process to connect to {gpg,ssh}-agent
 urxvtc -e sh -c "eval \$(keychain --nogui --eval id_rsa 2C8878F4 </dev/null)" &
 
-# udisks based automounter
-udisks-glue -p ~/.udisks-glue.pid &
+# udisks based automounter; udiskie exits with the X session even without the
+# tray icon, so keep "-t"
+udiskie -t &
 
 # misc
 pulseaudio --check || pulseaudio --start &
