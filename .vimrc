@@ -201,6 +201,7 @@ endif
 augroup noundofiles
     au BufWritePre /tmp/* setlocal noundofile
     au BufWritePre /var/tmp/* setlocal noundofile
+    au BufWritePre ~/Other/* setlocal undodir=.
 augroup END
 
 "}}}
