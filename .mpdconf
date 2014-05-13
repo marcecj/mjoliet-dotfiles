@@ -23,7 +23,7 @@ log_file "syslog"
 log_level "default"
 
 # configure directories
-music_directory "/var/db/music"
+music_directory "~/Music"
 playlist_directory "~/.mpd/playlists"
 
 # files representing state
