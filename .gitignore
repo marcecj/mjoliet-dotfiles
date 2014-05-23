@@ -15,22 +15,22 @@
 .XSMlock-Default
 .Xauthority
 .bugz_cookie
-.config/ipython/db/
-.config/ipython/profile_*/db/
-.config/ipython/profile_*/log/
-.config/ipython/profile_*/security/
 .config/newsbeuter/cache.db.lock
 .esd_auth
 .gEDA/logs/
 .ido.last
+.ipython/db/
+.ipython/profile_*/db/
+.ipython/profile_*/log/
+.ipython/profile_*/security/
 .log/
 .moc/cache/
 .moc/pid
 .moc/tags_cache
-.pip/
-.xsel.log
 .ncmpcpp/*.log
 .ncmpcpp/config.*
+.pip/
+.xsel.log
 .xsession-errors*
 
 # Pulseaudio configuration
@@ -48,9 +48,9 @@
 .kdb
 
 # cache files
+.cache/
 .config/matplotlib/*.cache
 .config/newsbeuter/cache.db
-.cache/
 .dmenu_cache
 .gnotero.sqlite
 .zcompcache/
@@ -121,10 +121,10 @@
 .vim/doc/
 .vim/sessions/
 .vim/tags/
-.vim/vim-addons/
 .vim/undofiles/
 # vim does not automatically create the undodir
 !.vim/undofiles/.keep
+.vim/vim-addons/
 .vimperator/
 .xbindkeysrc
 .zcompdump
@@ -133,9 +133,9 @@
 .config/unity3d/
 
 # auto-generated configuration of FAUST programs
+.dattorro_*rc
 .mbstereophony*rc
 .rmfb*rc
-.dattorro_*rc
 .stream_looperrc
 
 # games, don't care
@@ -217,15 +217,15 @@
 .config/Skype/
 .config/fish/fish_history
 .config/fish/fishd.*
-.config/ipython/**/*history*
-.config/newsbeuter/queue
 .config/newsbeuter/history.*
+.config/newsbeuter/queue
 .emacs.d/ac-comphist.dat
 .enthought/
 .fluxbox/fbrun_history
 .gEDA/gschem-recent-files
 .gnuplot_history
 .history
+.ipython/**/*history*
 .julia_history
 .lesshst
 .mtab.fuseiso
@@ -309,9 +309,9 @@
 .config/icons/
 .config/inkscape/
 .config/jack/
-.config/mcomix/
 .config/kde.org/
 .config/linuxsampler.org/
+.config/mcomix/
 .config/menus/
 .config/mime/
 .config/pavucontrol.ini
