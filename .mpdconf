@@ -14,6 +14,7 @@ input {
 }
 
 # listen on localhost and my LAN
+# NOTE: locahost is IPv6
 bind_to_address "localhost"
 bind_to_address "marcec.marcnet"
 port "6600"
