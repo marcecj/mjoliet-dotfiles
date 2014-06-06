@@ -55,7 +55,6 @@ load-module module-jackdbus-detect
 .fail
 .endif
 
-
 ### Load several protocols
 .ifexists module-esound-protocol-unix.so
 load-module module-esound-protocol-unix
