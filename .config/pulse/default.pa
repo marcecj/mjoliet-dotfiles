@@ -42,6 +42,12 @@ load-module module-udev-detect
 # load-module module-detect
 # .endif
 
+### Automatically restore the default sink/source when changed by the user
+### during runtime
+### NOTE: This should be loaded as early as possible so that subsequent modules
+### that look up the default sink/source get the right value
+load-module module-default-device-restore
+
 ### Automatically connect sink and source if JACK server is present
 .ifexists module-jackdbus-detect.so
 .nofail
@@ -93,12 +99,6 @@ load-module module-loopback sink=alsa_output.pci-0000_01_07.0.analog-stereo sour
 load-module module-gconf
 .fail
 .endif
-
-### Automatically restore the default sink/source when changed by the user
-### during runtime
-### NOTE: This should be loaded as early as possible so that subsequent modules
-### that look up the default sink/source get the right value
-load-module module-default-device-restore
 
 ### Automatically restore the volume of streams and devices
 load-module module-device-restore
