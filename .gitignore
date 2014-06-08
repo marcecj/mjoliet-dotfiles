@@ -78,6 +78,8 @@
 .designer/
 .docpointer/workfile.*
 .drirc
+.dropbox-dist/
+.dropbox-master/
 .dropbox/
 .dvdcss/
 .emacs.d/elpa/
