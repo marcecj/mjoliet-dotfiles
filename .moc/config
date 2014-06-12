@@ -103,7 +103,7 @@
 #                     documentation for more information.)
 #
 #FormatString = "%(n:%n :)%(a:%a - :)%(t:%t:)%(A: \(%A\):)"
-FormatString  = "%(n:%n :)%(a:%a :)%(A:\(%A\) - :)%(t:%t:)"
+FormatString = "%(n:%n :)%(a:%a :)%(A:\(%A\) - :)%(t:%t:)"
 
 # Input and output buffer sizes (in kilobytes).
 InputBuffer = 512
@@ -125,7 +125,7 @@ OutputBuffer = 2048
 # Sound driver - OSS, ALSA, JACK, SNDIO (on OpenBSD) or null (only for
 # debugging).  You can enter more than one driver as a colon-separated
 # list.  The first working driver will be used.
-SoundDriver		= ALSA
+SoundDriver = ALSA
 
 # Jack output settings.
 #JackClientName = "moc"
