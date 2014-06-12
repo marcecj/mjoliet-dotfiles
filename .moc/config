@@ -61,7 +61,7 @@
 # within which it was originally started.
 
 # Show file titles (title, author, album) instead of file names?
-ReadTags		= yes
+ReadTags = yes
 
 # In which directory do you store your music files?  If you specify it
 # you will be able to jump straight to this directory with the '-m'
@@ -74,22 +74,22 @@ ReadTags		= yes
 # Start in the music directory by default?  If set to 'no', start
 # in the current directory by default.  A single directory on
 # the command line takes precedence.
-StartInMusicDir		= no
+StartInMusicDir = no
 
 # How to sort?  FileName is the option's only value for now.
-Sort			= FileName
+Sort = FileName
 
 # Show errors in the streams (for example, broken frames in MP3 files)?
-ShowStreamErrors	= no
+ShowStreamErrors = no
 
 # Ignore CRC errors in MP3 files?  Most players do that, so the default
 # value is 'yes'.
-Mp3IgnoreCRCErrors	= yes
+MP3IgnoreCRCErrors = yes
 
 # Set playback toggles.
-Repeat			= no
-Shuffle			= no
-AutoNext		= yes
+Repeat = no
+Shuffle = no
+AutoNext = yes
 
 # Default FormatString:
 #
@@ -103,17 +103,17 @@ AutoNext		= yes
 #                     documentation for more information.)
 #
 #FormatString = "%(n:%n :)%(a:%a - :)%(t:%t:)%(A: \(%A\):)"
-FormatString		= "%(n:%n :)%(a:%a :)%(A:\(%A\) - :)%(t:%t:)"
+FormatString  = "%(n:%n :)%(a:%a :)%(A:\(%A\) - :)%(t:%t:)"
 
 # Input and output buffer sizes (in kilobytes).
-InputBuffer		= 512
-OutputBuffer		= 2048
+InputBuffer = 512
+OutputBuffer = 2048
 
 # How much to fill the input buffer before playing (in kilobytes)?
 # This can't be greater than the value of InputBuffer.  While this has
 # a positive effect for network streams, it also causes the broadcast
 # audio to be delayed.
-Prebuffering		= 64
+Prebuffering = 64
 
 # Use this HTTP proxy server for internet streams.  If not set, the
 # environment variables http_proxy and ALL_PROXY will be used if present.
@@ -130,14 +130,14 @@ SoundDriver		= ALSA
 # Jack output settings.
 #JackClientName = "moc"
 #JackStartServer = no
-JackOutLeft		= "alsa_pcm:playback_1"
-JackOutRight		= "alsa_pcm:playback_2"
+JackOutLeft = "alsa_pcm:playback_1"
+JackOutRight = "alsa_pcm:playback_2"
 
 # OSS output settings.
-OSSDevice		= /dev/dsp
-OSSMixerDevice		= /dev/mixer
-OSSMixerChannel1		= pcm
-OSSMixerChannel2	= master
+OSSDevice = /dev/dsp
+OSSMixerDevice = /dev/mixer
+OSSMixerChannel1 = pcm             # 'pcm', 'master' or 'speaker'
+OSSMixerChannel2 = master          # 'pcm', 'master' or 'speaker'
 
 # ALSA output settings.  If you need to dump the audio produced by MOC
 # to a file for diagnostic purposes, the following setting of 'ALSADevice'
@@ -145,9 +145,9 @@ OSSMixerChannel2	= master
 #
 #    ALSADevice=tee:hw,'/tmp/out.wav',wav
 #
-AlsaDevice		= default
-AlsaMixer1		= Soft
-AlsaMixer2		= Master
+ALSADevice = default
+ALSAMixer1 = Soft
+ALSAMixer2 = Master
 
 # Save software mixer state?
 # If enabled, a file 'softmixer' will be created in '~/.moc/' storing the
@@ -167,21 +167,21 @@ Softmixer_SaveState = yes
 #Equalizer_SaveState = yes
 
 # Show files with dot at the beginning?
-ShowHiddenFiles		= no
+ShowHiddenFiles = no
 
 # Hide file name extensions?
-HideFileExtension	= no
+HideFileExtension = no
 
 # Show file format in menu?
-ShowFormat		= yes
+ShowFormat = yes
 
 # Show file time in menu?  Possible values: 'yes', 'no' and 'IfAvailable'
 # (meaning show the time only when it is already known, which often works
 # faster).
-ShowTime		= IfAvailable
+ShowTime = IfAvailable
 
 # Show time played as a percentage in the time progress bar.
-#ShowTimePercent	= no
+#ShowTimePercent = no
 
 # Values of the TERM environment variable which are deemed to be xterms.
 XTerms = xterm
@@ -197,7 +197,7 @@ XTerms += eterm
 #
 # Example:    Theme = laras_theme
 #
-Theme			= yellow_red_theme
+Theme = yellow_red_theme
 
 # The theme used when running on an xterm.
 #
@@ -208,14 +208,14 @@ Theme			= yellow_red_theme
 # Should MOC try to autoload the default lyrics file for an audio?  (The
 # default lyrics file is a text file with the same file name as the audio
 # file name with any trailing "extension" removed.)
-# AutoLoadLyrics	= yes
+#AutoLoadLyrics = yes
 
 # MOC directory (where pid file, socket and state files are stored).
 # You can use ~ at the beginning.
 #MOCDir = ~/.moc
 
 # Use mmap() to read files.  mmap() is much slower on NFS.
-UseMmap			= no
+UseMMap = no
 
 # Use MIME to identify audio files.  This can make for slower loading
 # of playlists but is more accurate than using "extensions".
@@ -245,11 +245,11 @@ UseMmap			= no
 #NonUTFXterm = no
 
 # Remember the playlist after exit?
-SavePlaylist		= yes
+SavePlaylist = yes
 
 # When using more than one client (interface) at a time, do they share
 # the playlist?
-SyncPlaylist		= yes
+SyncPlaylist = yes
 
 # Choose a keymap file (relative to '~/.moc/' or using an absolute path).
 # An annotated example keymap file is included ('keymap.example').
@@ -260,7 +260,7 @@ SyncPlaylist		= yes
 
 # Use ASCII rather than graphic characters for drawing lines.  This
 # helps on some terminals.
-ASCIILines		= no
+ASCIILines = no
 
 # FastDirs, these allow you to jump directly to a directory, the key
 # bindings are in the keymap file.
@@ -381,7 +381,7 @@ ASCIILines		= no
 #    ZeroOrderHold - really poor quality, but it's really fast.
 #    Linear - a bit better and a bit slower.
 #
-ResampleMethod		= SincFastest
+ResampleMethod = SincFastest
 
 # Always use this sample rate (in Hz) when opening the audio device (and
 # resample the sound if necessary).  When set to 0 the device is opened
@@ -393,7 +393,7 @@ ResampleMethod		= SincFastest
 # to use 24bit output.  (The MP3 decoder, for example, uses this format.)
 # This is disabled by default because there were reports that it prevents
 # MP3 files from playing on some soundcards.
-Allow24bitOutput	= yes
+Allow24bitOutput = yes
 
 # Use realtime priority for output buffer thread.  This will prevent gaps
 # while playing even with heavy load.  The user who runs MOC must have
@@ -407,7 +407,7 @@ Allow24bitOutput	= yes
 # zero.  Note that if you decrease the cache size below the number of items
 # currently in the cache, the number will not decrease immediately (if at
 # all).
-TagsCacheSize		= 256
+TagsCacheSize = 256
 
 # Number items in the playlist.
 #PlaylistNumbering = yes
@@ -460,13 +460,13 @@ Layout2		= directory(0,0,50%,100%):playlist(50%,0,50%,100%)
 
 # When the song changes, should the menu be scrolled so that the currently
 # played file is visible?
-FollowPlayedFile	= yes
+FollowPlayedFile = yes
 
 # What to do if the interface was started and the server is already playing
 # something from the playlist?  If CanStartInPlaylist is set to 'yes', the
 # interface will switch to the playlist.  When set to 'no' it will start
 # from the last directory.
-CanStartInPlaylist	= yes
+CanStartInPlaylist = yes
 
 # Executing external commands (1 - 10) invoked with key commands (F1 - F10
 # by default).
@@ -518,13 +518,13 @@ CanStartInPlaylist	= yes
 #UseCursorSelection = no
 
 # Set the terminal title when running under xterm.
-SetXtermTitle		= yes
+SetXtermTitle = yes
 
 # Set the terminal title when running under screen.
-SetScreenTitle		= yes
+SetScreenTitle = yes
 
 # Display full paths instead of just file names in the playlist.
-PlaylistFullPaths	= no
+PlaylistFullPaths = no
 
 # The following setting describes how block markers are displayed in
 # the play time progress bar.  Its value is a string of exactly three
