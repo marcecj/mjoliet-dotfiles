@@ -147,6 +147,8 @@ http://www.mezzacotta.net/garfield/rss.xml "comics"
 http://betweenfailures.com/feed "comics"
 http://www.bloomingfaeries.com/feed/ "comics"
 http://news.thedevilbear.com/feeds/posts/default "comics"
+http://www.riversidecomics.co/rss/ "comics"
+http://www.doomsdaymydear.com/rss/ "comics"
 
 http://syndication.thedailywtf.com/TheDailyWtf "humor"
 http://feeds.theonion.com/theonion/daily "humor"
@@ -212,6 +214,7 @@ http://bastibe.de/rss.xml "misc" "blog"
 http://feeds.feedburner.com/blogspot/onehungrychef "misc"
 http://feeds.feedburner.com/ChiliUndCiabatta "misc"
 http://data-n-demagogues.blogspot.com/feeds/posts/default "misc"
+http://stilldrinking.org/rss/feed.xml "blog" "tech blog" "misc"
 
 # http://www.willdrawanything.com/?feed=rss2 "misc"
 # replaced by:
