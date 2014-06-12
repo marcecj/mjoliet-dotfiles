@@ -61,7 +61,7 @@
 # within which it was originally started.
 
 # Show file titles (title, author, album) instead of file names?
-ReadTags = yes
+#ReadTags = yes
 
 # In which directory do you store your music files?  If you specify it
 # you will be able to jump straight to this directory with the '-m'
@@ -74,22 +74,22 @@ ReadTags = yes
 # Start in the music directory by default?  If set to 'no', start
 # in the current directory by default.  A single directory on
 # the command line takes precedence.
-StartInMusicDir = no
+#StartInMusicDir = no
 
 # How to sort?  FileName is the option's only value for now.
-Sort = FileName
+#Sort = FileName
 
 # Show errors in the streams (for example, broken frames in MP3 files)?
-ShowStreamErrors = no
+#ShowStreamErrors = no
 
 # Ignore CRC errors in MP3 files?  Most players do that, so the default
 # value is 'yes'.
-MP3IgnoreCRCErrors = yes
+#MP3IgnoreCRCErrors = yes
 
 # Set playback toggles.
-Repeat = no
-Shuffle = no
-AutoNext = yes
+#Repeat = no
+#Shuffle = no
+#AutoNext = yes
 
 # Default FormatString:
 #
@@ -113,7 +113,7 @@ OutputBuffer = 2048
 # This can't be greater than the value of InputBuffer.  While this has
 # a positive effect for network streams, it also causes the broadcast
 # audio to be delayed.
-Prebuffering = 64
+#Prebuffering = 64
 
 # Use this HTTP proxy server for internet streams.  If not set, the
 # environment variables http_proxy and ALL_PROXY will be used if present.
@@ -134,10 +134,10 @@ JackOutLeft = "alsa_pcm:playback_1"
 JackOutRight = "alsa_pcm:playback_2"
 
 # OSS output settings.
-OSSDevice = /dev/dsp
-OSSMixerDevice = /dev/mixer
-OSSMixerChannel1 = pcm             # 'pcm', 'master' or 'speaker'
-OSSMixerChannel2 = master          # 'pcm', 'master' or 'speaker'
+#OSSDevice = /dev/dsp
+#OSSMixerDevice = /dev/mixer
+#OSSMixerChannel1 = pcm             # 'pcm', 'master' or 'speaker'
+#OSSMixerChannel2 = master          # 'pcm', 'master' or 'speaker'
 
 # ALSA output settings.  If you need to dump the audio produced by MOC
 # to a file for diagnostic purposes, the following setting of 'ALSADevice'
@@ -155,7 +155,7 @@ ALSAMixer2 = Master
 # Note that there is a "hidden" 'Amplification' setting in that file.
 # Amplification (0-200) is used to scale the mixer setting (0-100).  This
 # results in a higher signal amplitude but may also produce clipping.
-Softmixer_SaveState = yes
+#Softmixer_SaveState = yes
 
 # Save equalizer state?
 # If enabled, a file 'equalizer' will be created in '~/.moc/' storing the
@@ -167,29 +167,29 @@ Softmixer_SaveState = yes
 #Equalizer_SaveState = yes
 
 # Show files with dot at the beginning?
-ShowHiddenFiles = no
+#ShowHiddenFiles = no
 
 # Hide file name extensions?
-HideFileExtension = no
+#HideFileExtension = no
 
 # Show file format in menu?
-ShowFormat = yes
+#ShowFormat = yes
 
 # Show file time in menu?  Possible values: 'yes', 'no' and 'IfAvailable'
 # (meaning show the time only when it is already known, which often works
 # faster).
-ShowTime = IfAvailable
+#ShowTime = IfAvailable
 
 # Show time played as a percentage in the time progress bar.
 #ShowTimePercent = no
 
 # Values of the TERM environment variable which are deemed to be xterms.
-XTerms = xterm
-XTerms += xterm-colour:xterm-color
-XTerms += xterm-256colour:xterm-256color
-XTerms += rxvt:rxvt-unicode
-XTerms += rxvt-unicode-256colour:rxvt-unicode-256color
-XTerms += eterm
+#XTerms = xterm
+#XTerms + = xterm-colour:xterm-color
+#XTerms + = xterm-256colour:xterm-256color
+#XTerms + = rxvt:rxvt-unicode
+#XTerms + = rxvt-unicode-256colour:rxvt-unicode-256color
+#XTerms + = eterm
 
 # Theme file to use.  This can be absolute path or relative to
 # /usr/share/moc/themes/ (depends on installation prefix) or
@@ -215,7 +215,7 @@ Theme = yellow_red_theme
 #MOCDir = ~/.moc
 
 # Use mmap() to read files.  mmap() is much slower on NFS.
-UseMMap = no
+#UseMMap = no
 
 # Use MIME to identify audio files.  This can make for slower loading
 # of playlists but is more accurate than using "extensions".
@@ -245,11 +245,11 @@ UseMMap = no
 #NonUTFXterm = no
 
 # Remember the playlist after exit?
-SavePlaylist = yes
+#SavePlaylist = yes
 
 # When using more than one client (interface) at a time, do they share
 # the playlist?
-SyncPlaylist = yes
+#SyncPlaylist = yes
 
 # Choose a keymap file (relative to '~/.moc/' or using an absolute path).
 # An annotated example keymap file is included ('keymap.example').
@@ -260,7 +260,7 @@ SyncPlaylist = yes
 
 # Use ASCII rather than graphic characters for drawing lines.  This
 # helps on some terminals.
-ASCIILines = no
+#ASCIILines = no
 
 # FastDirs, these allow you to jump directly to a directory, the key
 # bindings are in the keymap file.
@@ -407,7 +407,7 @@ Allow24bitOutput = yes
 # zero.  Note that if you decrease the cache size below the number of items
 # currently in the cache, the number will not decrease immediately (if at
 # all).
-TagsCacheSize = 256
+#TagsCacheSize = 256
 
 # Number items in the playlist.
 #PlaylistNumbering = yes
@@ -460,13 +460,13 @@ Layout2		= directory(0,0,50%,100%):playlist(50%,0,50%,100%)
 
 # When the song changes, should the menu be scrolled so that the currently
 # played file is visible?
-FollowPlayedFile = yes
+#FollowPlayedFile = yes
 
 # What to do if the interface was started and the server is already playing
 # something from the playlist?  If CanStartInPlaylist is set to 'yes', the
 # interface will switch to the playlist.  When set to 'no' it will start
 # from the last directory.
-CanStartInPlaylist = yes
+#CanStartInPlaylist = yes
 
 # Executing external commands (1 - 10) invoked with key commands (F1 - F10
 # by default).
@@ -518,10 +518,10 @@ CanStartInPlaylist = yes
 #UseCursorSelection = no
 
 # Set the terminal title when running under xterm.
-SetXtermTitle = yes
+#SetXtermTitle = yes
 
 # Set the terminal title when running under screen.
-SetScreenTitle = yes
+#SetScreenTitle = yes
 
 # Display full paths instead of just file names in the playlist.
 PlaylistFullPaths = no
@@ -553,7 +553,7 @@ PlaylistFullPaths = no
 #ErrorMessagesQueued = "!"
 
 # Self-describing ModPlug options (with 'yes' or 'no' values).
-ModPlug_Oversampling = yes
+#ModPlug_Oversampling = yes
 ModPlug_NoiseReduction = no
 #ModPlug_Reverb = no
 #ModPlug_MegaBass = no
@@ -567,12 +567,12 @@ ModPlug_NoiseReduction = no
 #     LINEAR -   Linear interpolation (fast, good quality)
 #     NEAREST -  No interpolation (very fast, extremely bad sound quality)
 #
-ModPlug_ResamplingMode = FIR
+#ModPlug_ResamplingMode = FIR
 
 # Other self-describing ModPlug audio characteristic options.
 # (Note that the 32 bit sample size seems to be buggy.)
-ModPlug_Channels = 2               # 1 or 2 channels
-ModPlug_Bits = 16                  # 8, 16 or 32 bits
+#ModPlug_Channels = 2               # 1 or 2 channels
+#ModPlug_Bits = 16                  # 8, 16 or 32 bits
 ModPlug_Frequency = 48000          # 11025, 22050, 44100 or 48000 Hz
 #ModPlug_ReverbDepth = 0            # 0 (quiet) to 100 (loud)
 #ModPlug_ReverbDelay = 0            # Delay in ms (usually 40-200ms)
