@@ -9,14 +9,14 @@
  (position . 5978))
 ("arbeit.org"
  (filename . "~/Dropbox/master/master_arbeit/arbeit.org")
- (front-context-string . "-11-14 Do 20:46>")
- (rear-context-string . "ts.\n\n    - <2013")
- (position . 9150))
+ (front-context-string . " man einfach die")
+ (rear-context-string . "n.\n\n  - [ ] Kann")
+ (position . 19597))
 ("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
- (front-context-string . "CLOCK: [2014-03-")
- (rear-context-string . "03-04 Di 14:05]\n")
- (position . 140191))
+ (front-context-string . "- [ ] Berechne d")
+ (rear-context-string . "geholt werden.\n\n")
+ (position . 153535))
 (".emacs"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)
