@@ -208,6 +208,14 @@ bibtex2html does not fail."
   (let ((process-environment (cons "TMPDIR=." process-environment)))
 	 (org-latex-export-to-pdf)))
 
+; the same for orb-beamer-export-to-pdf (see previous defun)
+(defun org-beamer-export-to-pdf-with-bibtex ()
+  "Runs org-beamer-export-to-pdf with TMPDIR=., so that
+bibtex2html does not fail."
+  (interactive)
+  (let ((process-environment (cons "TMPDIR=." process-environment)))
+	 (org-beamer-export-to-pdf)))
+
 ; customize the theme
 (load-theme 'solarized t t)
 (enable-theme 'solarized-dark)

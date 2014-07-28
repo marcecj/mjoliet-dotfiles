@@ -1,0 +1,5 @@
+mount_options:              # the first matching entry is used:
+- id_type: btrfs
+  options: noatime
+- id_type: ext4
+  options: noatime

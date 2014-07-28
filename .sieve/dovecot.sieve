@@ -63,6 +63,15 @@ if address :matches "From" "bugzilla*@gentoo.org" {
     stop;
 }
 
+if anyof(
+         address :matches ["To", "Cc"] ["linux-btrfs@vger.kernel.org"],
+         header :contains ["List-Id"] ["linux-btrfs.vger.kernel.org"]
+        )
+{
+    fileinto "BTRFS";
+    stop;
+}
+
 if address :domain ["To", "Cc"] ["gentoo.org", "lists.gentoo.org"]
 {
     if header :contains ["List-Id"] "gentoo-amd64" {
