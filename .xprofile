@@ -61,7 +61,6 @@ case "$DESKTOP_SESSION" in
   fbpanel &
   ;;
   "awesome")
-  export AWT_TOOLKIT="MToolkit" # fixes Java applications
   export wpsetters=xsri # set wallpaper setter for awsetbg
   ;;
   "KDE-Awesome")
