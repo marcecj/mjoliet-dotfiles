@@ -34,7 +34,7 @@ urxvtc -e sh -c "eval \$(keychain --nogui --eval id_rsa 2C8878F4 </dev/null)" &
 udiskie -t &
 
 # misc
-pulseaudio --check || pulseaudio --start &
+pulseaudio --start &
 mpd &
 #fbsetbg -l &   # set the background wallpaper
 #conky &		# an alternative system monitor to gkrellm
