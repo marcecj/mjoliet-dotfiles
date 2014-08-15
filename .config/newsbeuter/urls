@@ -113,7 +113,8 @@ http://ler0c.tumblr.com/rss "comics"
 # it'll come back.  The artist has a tumblr here:
 # http://themermaidmachine.tumblr.com/.
 # http://www.rsspect.com/rss/ps.xml "comics"
-http://www.rsspect.com/rss/riceboycomics.xml "comics"
+# http://www.rsspect.com/rss/riceboycomics.xml "comics"
+http://feed43.com/2023102361452841.xml
 http://feeds.feedburner.com/oatmealfeed "comics"
 http://www.shiftylook.com/comics/rss/galaga "comics"
 http://www.girlswithslingshots.com/feed/ "comics"
@@ -152,6 +153,10 @@ http://www.riversidecomics.co/rss/ "comics"
 http://www.doomsdaymydear.com/rss/ "comics"
 http://locusgodslayer.com/feed/ "comics"
 http://backcomic.com/rss.xml "comics"
+http://www.skindeepcomic.com/feed/ "comics"
+http://www.melaniegillman.com/?feed=rss2 "comics" "queer"
+http://www.lutherlevy.com/?feed=rss2 "comics"
+http://www.zebragirl.net/rss.php "comics"
 
 http://syndication.thedailywtf.com/TheDailyWtf "humor"
 http://feeds.theonion.com/theonion/daily "humor"
