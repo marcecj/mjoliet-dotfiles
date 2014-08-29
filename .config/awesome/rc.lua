@@ -189,6 +189,8 @@ mymembar    = awful.widget.progressbar({ height = 18, width = 60})
 mycpugraph  = awful.widget.graph({ height = 18, width = 60})
 mynetgraph  = awful.widget.graph({ height = 18, width = 60})
 mynetinfo   = widget({ type = "textbox" })
+mybatgraph  = awful.widget.graph({ height = 18, width = 60})
+mybatinfo   = widget({ type = "textbox" })
 
 -- some text to go with some widgets
 mytextbox.text = "<b><small> " .. awesome.release .. " </small></b>"
@@ -217,12 +219,19 @@ mynetgraph:set_scale(true)
 mynetgraph:set_stack(false)
 -- mynetgraph:set_stack_colors({ '{wan0 down_kb}'="red", '{wan0 up_kb}'="blue" })
 
+mybatgraph:set_background_color( '#333333' )
+mybatgraph:set_border_color( '#0a0a0a' )
+mybatgraph:set_gradient_colors({ "#285577", "#285577", "#AEC6D8" })
+mybatgraph:set_gradient_angle(180)
+
 vicious.register(mymembar, vicious.widgets.mem, "$1", 1)
 vicious.register(mycpugraph, vicious.widgets.cpu, '$1', 1)
 -- TODO: in awesome git HEAD there is a "stacked" version allowing multiple
 -- graphs in a single widget
 vicious.register(mynetgraph, vicious.widgets.net, '${wlp3s0 down_kb}', 1)
 -- vicious.register(mynetgraph, vicious.widgets.net, '${wan0 down_kb} ${wan0 up_kb}', 1)
+vicious.register(mybatgraph, vicious.widgets.bat, "$2", 5, "BAT1")
+vicious.register(mybatinfo, vicious.widgets.bat, " BAT: $1 ($3 left)", 5, "BAT1")
 
 -- Create a systray
 mysystray = widget({ type = "systray" })
@@ -304,6 +313,8 @@ for s = 1, screen.count() do
         s == 1 and mysystray or nil,
         mylayoutbox[s],
         mytextclock,
+        mybatgraph.widget,
+        mybatinfo,
         mynetgraph.widget,
         mynetinfo,
         mycpugraph.widget,
