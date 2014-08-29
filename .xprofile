@@ -37,7 +37,6 @@ udiskie -t &
 pulseaudio --start &
 # wicd-gtk &
 nm-applet &
-batti &
 #fbsetbg -l &   # set the background wallpaper
 #conky &		# an alternative system monitor to gkrellm
 
