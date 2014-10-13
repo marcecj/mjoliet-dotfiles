@@ -1,4 +1,4 @@
-function matlab -d "Starts MATLAB sanely."
+function matlab -d 'Starts MATLAB sanely.'
 
     # override some of MATLAB's bundled libraries with those from the system in
     # order to prevent annoying run-time problems (such as portaudio not
