@@ -18,6 +18,7 @@
 .config/newsbeuter/cache.db.lock
 .esd_auth
 .gEDA/logs/
+.gpg-agent-info
 .ido.last
 .ipython/db/
 .ipython/nbextensions/
