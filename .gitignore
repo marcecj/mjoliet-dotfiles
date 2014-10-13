@@ -20,6 +20,7 @@
 .gEDA/logs/
 .ido.last
 .ipython/db/
+.ipython/nbextensions/
 .ipython/profile_*/db/
 .ipython/profile_*/log/
 .ipython/profile_*/security/
