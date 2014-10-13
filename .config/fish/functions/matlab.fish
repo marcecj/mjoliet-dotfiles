@@ -1,4 +1,5 @@
 function matlab -d "Starts MATLAB sanely."
+
     # override some of MATLAB's bundled libraries with those from the system in
     # order to prevent annoying run-time problems (such as portaudio not
     # supporting JACK)
@@ -13,4 +14,5 @@ function matlab -d "Starts MATLAB sanely."
     set -lx SHELL /bin/bash
 
     command matlab $argv
+
 end
