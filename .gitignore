@@ -18,8 +18,10 @@
 .config/newsbeuter/cache.db.lock
 .esd_auth
 .gEDA/logs/
+.gpg-agent-info
 .ido.last
 .ipython/db/
+.ipython/nbextensions/
 .ipython/profile_*/db/
 .ipython/profile_*/log/
 .ipython/profile_*/security/
@@ -304,7 +306,7 @@
 .config/gegl-0.1/
 .config/gegl-0.2/
 .config/gsmartcontrol/
-.config/gtk-2.0/
+.config/gtk-*/
 .config/harmonyseq/
 .config/htop/
 .config/icons/

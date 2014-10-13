@@ -1,5 +1,6 @@
 # define my own fish prompt
 function fish_prompt
+
     # save the status of the command run from the last prompt
     set last_status $status
 
@@ -13,4 +14,5 @@ function fish_prompt
     printf "-($lightblue%s$defcolor)\n" (prompt_pwd)
     # second line
     printf ">> ($last_status) %% "
+
 end
