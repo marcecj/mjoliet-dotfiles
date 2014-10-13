@@ -303,7 +303,7 @@
 .config/gegl-0.1/
 .config/gegl-0.2/
 .config/gsmartcontrol/
-.config/gtk-2.0/
+.config/gtk-*/
 .config/harmonyseq/
 .config/htop/
 .config/icons/
