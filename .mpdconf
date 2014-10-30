@@ -17,6 +17,7 @@ input {
 # NOTE: locahost is IPv6
 bind_to_address "localhost"
 bind_to_address "marcec.marcnet"
+bind_to_address "marcec.fritz.box"
 port "6600"
 
 # configure logging
