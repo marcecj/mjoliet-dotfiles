@@ -1,8 +1,0 @@
-" This is the gvim configuration loaded by the Eclipse vimplugin. As noted by
-" ':help gui-init', this is read *after* ~/.vimrc, so options there are honored.
-
-set guioptions-=m
-set guioptions-=T
-colorscheme blacklight
-
-" vim:ft=vim
