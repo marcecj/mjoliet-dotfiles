@@ -670,7 +670,7 @@ elseif &t_Co == 8
     " colorscheme simple_b
 endif
 
-" set background=dark              " Default. Some colors set bg manually...
+set background=dark              " Default. Some colors set bg manually...
 
 " Set comments to (bold) italic. This of course only works if the terminal
 " emulator supports it (konsole doesn't, for instance)!
