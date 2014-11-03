@@ -103,6 +103,7 @@ ActivateAddons searchfold
 ActivateAddons NrrwRgn
 ActivateAddons wildfire
 ActivateAddons bufexplorer.zip
+ActivateAddons ag
 
 " programming related add-ons
 ActivateAddons a                " alternate.vim
