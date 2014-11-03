@@ -1,4 +1,4 @@
-edit editor "gvim %s &";
+EDITOR("gvim %s &");
 edit mode async;
 edit license bsd;
 edit author "Marc Joliet";
