@@ -1,7 +1,5 @@
 " Damn, that's slow. I should check for directories I can exclude.
-setlocal tags+=~/.vim/tags/Cpp.tag
 setlocal tags+=~/.vim/tags/C.tag
-" nmap ,t :!(cd %:p:h;ctags *.[ch])&
 
 " Custom options, making it more compatible to other peoples style
 setlocal shiftwidth=4                 " Sets indent length (<<, >>, autoindent).
