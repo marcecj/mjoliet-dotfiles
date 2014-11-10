@@ -4,7 +4,6 @@ setlocal tags+=~/.vim/tags/C.tag
 " Custom options, making it more compatible to other peoples style
 setlocal shiftwidth=4                 " Sets indent length (<<, >>, autoindent).
 setlocal softtabstop=4                " How many spaces a <Tab> takes up (edit mode)
-setlocal noexpandtab                  " Converts tabs to spaces
 
 " override .vimrc setting
 set cinkeys+=0#
