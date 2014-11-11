@@ -65,7 +65,7 @@ load-module module-native-protocol-unix auth-anonymous=1 auth-group=pulse-access
 ### Network access (may be configured with paprefs, so leave this commented
 ### here if you plan to use paprefs)
 #load-module module-esound-protocol-tcp
-load-module module-native-protocol-tcp listen=0.0.0.0 auth-ip-acl=::1;172.16.0.0/24;2001:470:d138:d909::0/64
+load-module module-native-protocol-tcp listen=0.0.0.0 auth-ip-acl=::1;172.16.0.0/24;192.168.178.0/24;2001:470:d138:d909::0/64
 
 # .ifexists module-zeroconf-publish.so
 # load-module module-zeroconf-publish
