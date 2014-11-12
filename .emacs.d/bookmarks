@@ -9,9 +9,9 @@
  (position . 5978))
 ("arbeit.org"
  (filename . "~/Dropbox/master/master_arbeit/arbeit.org")
- (front-context-string . " man einfach die")
- (rear-context-string . "n.\n\n  - [ ] Kann")
- (position . 19597))
+ (front-context-string . "- [ ] Webcam-Bil")
+ (rear-context-string . " Plot umkehren.\n")
+ (position . 39525))
 ("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
  (front-context-string . "- [ ] Berechne d")
