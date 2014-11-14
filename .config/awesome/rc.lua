@@ -128,14 +128,6 @@ layouts =
     awful.layout.suit.max.fullscreen,
     awful.layout.suit.magnifier
 }
-
-trans_apps =
-{
-    ["urxvt"]            = { true, opacity = 0.8 },
-    ["Conky"]            = { true, opacity = 0.5 },
-    ["multitail-syslog"] = { true, opacity = 0.8 },
-    ["htop-sys"]         = { true, opacity = 0.8 }
-}
 -- }}}
 
 -- {{{ Tags
