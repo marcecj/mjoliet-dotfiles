@@ -70,27 +70,6 @@ function tag_client_by_group_window(c)
     -- naughty.notify({text = tostring(group_member:tags()[1].name),
     --                 title = "Client info:"})
 end
-
--- TODO: would this ever be useful?
--- function tag_client_by_leader_id(c)
---     group_member = nil
---     for s=1, screen.count() do
---         for i=1, #tags[s] do
---             clients = tags[s][i]:clients()
---             for k,v in pairs(clients) do
---                 if v.window ~= c.window and v.leader_id == c.leader_id then
---                     group_member = v
---                     break
---                 end
---             end
---         end
---     end
---     -- should work, but doesn't
---     -- c.tags(group_member:tags())
---     awful.client.movetotag(group_member:tags()[1], c)
---     naughty.notify({text = tostring(group_member:tags()[1].name),
---                     title = "Client info:"})
--- end
 -- }}}
 
 -- {{{ Variable definitions
@@ -189,7 +168,6 @@ mymeminfo.text = " MEM:"
 mynetinfo.text = " NET:"
 
 -- TODO: figure out how to center widgets vertically
--- mymembar.height = 0.85
 mymembar:set_vertical(false)
 mymembar:set_border_color('#0a0a0a')
 mymembar:set_background_color("#333333")
@@ -393,11 +371,6 @@ globalkeys = awful.util.table.join(
                                 title = "XAutolock started"})
                 screensaver_active = true
             end
-            --[[
-               [ os.execute("xscreensaver-command -exit")
-               [ naughty.notify({text = "Don't forget to restart xscreensaver!",
-               [                 title = "xscreensaver stopped"})
-               ]]
         end),
     awful.key({ modkey,         }, "s",
         function ()
@@ -499,7 +472,6 @@ awful.rules.rules = {
     { rule = { class = "gimp" }                , properties = { floating = true } }      ,
     { rule = { class = "Wine" }                , properties = { floating = true } }      ,
     { rule = { class = "K3b" }                 , properties = { floating = false } }     ,
-    -- { rule = { class = "Okular" }              , properties = { floating = false } }     ,
     { rule = { class = "JACK" }                , properties = { floating = true } }      ,
     { rule = { class = "gv" }                  , properties = { floating = true } }      ,
     { rule = { class = "mocp" }                , properties = { floating = true } }      ,
