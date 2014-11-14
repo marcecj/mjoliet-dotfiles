@@ -85,7 +85,7 @@ terminal = "urxvtc"
 editor = os.getenv("EDITOR") or "vi"
 editor_cmd = terminal .. " -e " .. editor
 -- helper variable to give appropriate messages on activation/deactivation
-screensaver_active = true
+local screensaver_active = true
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
