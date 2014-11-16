@@ -88,7 +88,7 @@ c.TerminalIPythonApp.ignore_old_config = True
 
 # A list of dotted module names of IPython extensions to load.
 c.TerminalIPythonApp.extensions = [
-    "octavemagic"
+    "oct2py.ipython"
 ]
 
 # Whether to install the default config files into the profile dir. If a new

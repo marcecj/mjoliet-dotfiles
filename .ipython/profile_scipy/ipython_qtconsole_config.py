@@ -182,7 +182,7 @@ c.IPKernelApp.pylab_import_all = True
 
 # A list of dotted module names of IPython extensions to load.
 c.IPKernelApp.extensions = [
-    "octavemagic",
+    "oct2py.ipython",
 ]
 
 # redirect stderr to the null device
