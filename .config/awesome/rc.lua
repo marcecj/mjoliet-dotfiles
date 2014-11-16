@@ -197,17 +197,12 @@ mynetgraph:set_border_color( '#0a0a0a' )
 mynetgraph:set_color({type = "linear", from = {0, 18}, to = {0, 0}, stops = { { 0, "#285577" }, { 0.6, "#6885B7" }, { 0.9, "#AEC6D8" } }})
 mynetgraph:set_scale(true)
 mynetgraph:set_stack(false)
--- mynetgraph:set_stack_colors({ '{wan0 down_kb}'="red", '{wan0 up_kb}'="blue" })
 
 vicious.register(mymembar, vicious.widgets.mem, "$1", 1)
 vicious.register(mycpugraph, vicious.widgets.cpu, '$1', 1)
 -- TODO: in awesome git HEAD there is a "stacked" version allowing multiple
 -- graphs in a single widget
 vicious.register(mynetgraph, vicious.widgets.net, '${wan0 down_kb}', 1)
--- vicious.register(mynetgraph, vicious.widgets.net, '${wan0 down_kb} ${wan0 up_kb}', 1)
-
--- Create a systray
-mysystray = wibox.widget.systray()
 
 -- Create a wibox for each screen and add it
 mywibox = {}
