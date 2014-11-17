@@ -80,7 +80,6 @@
 .docpointer/workfile.*
 .drirc
 .dropbox-dist/
-.dropbox-master/
 .dropbox/
 .dvdcss/
 .emacs.d/elpa/
@@ -156,7 +155,6 @@
 .mednafen/
 .mupen64plus/
 .neverball/
-.nwn/
 .q3a/
 .sauerbraten/
 .sdlmame/
@@ -229,7 +227,6 @@
 .gnuplot_history
 .history
 .ipython/**/*history*
-.julia_history
 .lesshst
 .mtab.fuseiso
 .octave_hist
