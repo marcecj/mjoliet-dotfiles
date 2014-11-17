@@ -115,9 +115,7 @@ local layouts =
 -- {{{ Wallpaper
 beautiful.wallpaper = os.getenv("HOME") .. "/Wallpapers/astronomy/newrings_cassini_big_1080p_screenshot.png"
 if beautiful.wallpaper then
-    for s = 1, screen.count() do
-        gears.wallpaper.maximized(beautiful.wallpaper, s)
-    end
+    gears.wallpaper.maximized(beautiful.wallpaper)
 end
 -- }}}
 
