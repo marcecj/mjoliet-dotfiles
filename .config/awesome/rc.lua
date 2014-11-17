@@ -113,7 +113,7 @@ local layouts =
 -- }}}
 
 -- {{{ Wallpaper
-beautiful.wallpaper = os.getenv("HOME") .. "/Wallpapers/astronomy/newrings_cassini_big_1080p_screenshot.png"
+beautiful.wallpaper = os.getenv("HOME") .. "/Wallpapers/mandelbrot-blue-from-codegolf.png"
 if beautiful.wallpaper then
     gears.wallpaper.maximized(beautiful.wallpaper)
 end
