@@ -14,6 +14,7 @@
 .XSM-Default
 .XSMlock-Default
 .Xauthority
+.awesome-errors
 .bugz_cookie
 .config/newsbeuter/cache.db.lock
 .esd_auth
