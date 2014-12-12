@@ -9,9 +9,9 @@
  (position . 5978))
 ("arbeit.org"
  (filename . "~/Dropbox/master/master_arbeit/arbeit.org")
- (front-context-string . "- [ ] Webcam-Bil")
- (rear-context-string . " Plot umkehren.\n")
- (position . 39525))
+ (front-context-string . "x-Achse linear k")
+ (rear-context-string . "m sind.\n  - [X] ")
+ (position . 43697))
 ("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
  (front-context-string . "- [ ] Berechne d")
