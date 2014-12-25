@@ -14,3 +14,5 @@
 	standup = log --since yesterday --author="marcec" --pretty=oneline --branches=* --decorate
 [merge]
 	tool = vimdiff2
+[mergetool]
+	keepbackup = false
