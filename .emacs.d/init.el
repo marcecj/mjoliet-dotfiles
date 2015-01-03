@@ -217,6 +217,6 @@ bibtex2html does not fail."
 	 (org-beamer-export-to-pdf)))
 
 ; customize the theme
-(load-theme 'solarized t t)
+(load-theme 'solarized-dark t t)
 (enable-theme 'solarized-dark)
 (set-background-color "black")
