@@ -228,8 +228,6 @@ browser_display_mode = "columns" #(classic/columns)
 #
 default_space_mode = "add" #(add/select)
 #
-default_tag_editor_left_col = "albums" #(albums/dirs)
-#
 default_tag_editor_pattern = "%n-%t"
 #
 #header_visibility = "yes"
