@@ -346,10 +346,6 @@ command! -bang -nargs=* -complete=tag S call SearchMultiLine(<bang>0, <f-args>)|
 
 " {{{ Misc. Commands
 
-" convience commands for starting an internal Matlab shell
-command MatlabShell ConqueTermSplit matlab -nodesktop -nosplash
-command MatlabShellBelow botright split | ConqueTerm matlab -nodesktop -nosplash
-
 " modified from Vim-ML
 command SearchIgnoreLines let @/=substitute(@/, '<bslash>s', '<bslash><bslash>_s<bslash><bslash>+', 'g') | normal n
 command SearchNoIgnoreLines let @/=substitute(@/, '<bslash><bslash>_s<bslash><bslash>+', '<bslash>s', 'g') | normal n
