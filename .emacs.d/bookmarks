@@ -9,14 +9,14 @@
  (position . 5978))
 ("arbeit.org"
  (filename . "~/Dropbox/master/master_arbeit/arbeit.org")
- (front-context-string . "x-Achse linear k")
- (rear-context-string . "m sind.\n  - [X] ")
- (position . 43697))
+ (front-context-string . ".\n- [ ] Überprüf")
+ (rear-context-string . "emente zu setzen")
+ (position . 51945))
 ("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
- (front-context-string . "- [ ] Berechne d")
- (rear-context-string . "geholt werden.\n\n")
- (position . 153535))
+ (front-context-string . "\n\n- Verschiedene")
+ (rear-context-string . "ersuch I\n\n    - ")
+ (position . 15631))
 (".emacs"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)
