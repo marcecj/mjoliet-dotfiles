@@ -16,7 +16,7 @@ $HOME/.monicarc   #monitor calibration
 # uncomment when starting via "startx" in an ssh session
 xrdb -merge .Xresources
 
-# required by uzbl
+# required by newsbeuter
 export XDG_DATA_HOME="$HOME/.config"
 
 # binds keys to shell commands
