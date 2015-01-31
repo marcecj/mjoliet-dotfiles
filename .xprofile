@@ -27,7 +27,8 @@ urxvtd -q -o -f
 
 # start a terminal that runs keychain, which will set the necessary environment
 # variables for other process to connect to {gpg,ssh}-agent
-urxvtc -e sh -c "eval \$(keychain --agents ssh,gpg --nogui --eval id_rsa 2C8878F4)" &
+eval $(export SHELL=sh; keychain --agents ssh,gpg --nogui --eval)
+urxvtc -e sh -c "keychain --agents ssh,gpg --nogui id_rsa 2C8878F4" &
 
 # udisks based automounter
 udiskie &
