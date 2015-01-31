@@ -1,4 +1,4 @@
-setlocal tags+=~/.vim/tags/latex.tag
+setlocal tags+=~/.vim/tags/tex.tag
 setlocal spelllang=de,en
 setlocal spell
 set iskeyword+=:
