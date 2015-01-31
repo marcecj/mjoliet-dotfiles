@@ -37,10 +37,8 @@ udiskie &
 pulseaudio --start &
 nm-applet &
 #fbsetbg -l &   # set the background wallpaper
-#conky &		# an alternative system monitor to gkrellm
 
 # who can live without a screensaver?
-#xscreensaver &
 xautolock &  # configuration in .Xresources
 
 # sets monitor color temp according to daytime
