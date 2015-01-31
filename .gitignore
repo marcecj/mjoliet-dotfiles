@@ -120,6 +120,7 @@
 .recently-used
 .renpy/
 .scons/
+.texlive/
 .thumbnails/
 .vim-fuf-data/
 .vim/.VimballRecord
