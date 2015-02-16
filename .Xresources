@@ -2,7 +2,7 @@
 ! Written by: Maciej Delmanowski <harnir@post.pl>
 ! Put this file as ~/.Xresources in your home directory
 !
-! Adapted by Marc Joliet (mainly URxvt stuff) for personal use. 
+! Adapted by Marc Joliet (mainly URxvt stuff) for personal use.
 
 ! Global resource, to make X look for default color files for certain apps
 ! (like xfig).
