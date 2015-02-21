@@ -5,7 +5,7 @@
 # Set aliases like bash
 alias grep='grep --colour=auto'
 alias ls='ls --color=auto'
-set -o vi
+set -o emacs
 
 # Enable Portage completion and Gentoo prompt
 autoload -U compinit promptinit
