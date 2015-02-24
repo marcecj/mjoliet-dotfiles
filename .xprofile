@@ -35,7 +35,6 @@ udiskie &
 
 # misc
 pulseaudio --start &
-mpd &
 #fbsetbg -l &   # set the background wallpaper
 
 # who can live without a screensaver?
@@ -50,7 +49,7 @@ redshift &
 pidgin &
 
 # some terminals to always start
-urxvtc -name "multitail-syslog" -e sh -c "sudo multitail -n 300 --retry -f /var/log/messages" &
+urxvtc -name "syslog" -e sh -c "sudo journalctl -n 300 -f" &
 urxvtc -name "htop-sys" -e sh -c "htop" &
 
 # start specified session or safe default

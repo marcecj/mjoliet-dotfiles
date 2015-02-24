@@ -15,9 +15,7 @@ input {
 
 # listen on localhost and my LAN
 # NOTE: locahost is IPv6
-bind_to_address "localhost"
-bind_to_address "marcec.marcnet"
-bind_to_address "marcec.fritz.box"
+bind_to_address "any"
 port "6600"
 
 # configure logging
