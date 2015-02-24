@@ -74,6 +74,7 @@
 .config/fish/generated_completions/
 .config/fontconfig/
 .config/laditools/ladi-system-log.conf
+.config/systemd/user/*.wants/
 .conkyrc
 .dbus/
 # NOTE: I think this is from the Qt Designer
