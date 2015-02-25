@@ -152,7 +152,7 @@ URxvt.scrollWithBuffer: true
 URxvt.scrollTtyKeypress: true
 URxvt.secondaryscroll: true
 URxvt.saveLines: 8192
-! don't tab, since tmux does the job better
+! do not tab, since tmux does the job better
 URxvt.perl-ext-common: -default,-tabbed,selection,readline,searchable-scrollback
 
 ! Clears the scrollback buffer.
@@ -162,7 +162,7 @@ URxvt.keysym.Control-Meta-1: command:\033]710;xft:dejavu sans mono:antialias=tru
 URxvt.keysym.Control-Meta-2: command:\033]710;xft:dejavu sans mono:antialias=true:pixelsize=18\007
 
 ! Font settings
-! URxvt uses UTF-8, so we don't need encoding-specific settings
+! URxvt uses UTF-8, so we do not need encoding-specific settings
 ! ---------------------------------------------------------------------------
 ! URxvt.font: xft:LiberationMono-Regular
 URxvt.font: xft:dejavu sans mono:antialias=true:pixelsize=12
