@@ -529,7 +529,7 @@ awful.rules.rules = {
     { rule = { class = "Claws-mail" }          , properties = { tag = tags[1][8] } }     ,
     { rule = { class = "Gajim.py" }            , properties = { tag = tags[1][7] } }     ,
     { rule = { class = "Pidgin" }              , properties = { tag = tags[1][7] } }     ,
-    { rule = { instance = "multitail-syslog" } , properties = { tag = tags[1][9] } }     ,
+    { rule = { instance = "syslog" }           , properties = { tag = tags[1][9] } }     ,
     { rule = { instance = "htop-sys" }         , properties = { tag = tags[1][9] } }     ,
     { rule = { class =  "com.mathworks" }      , callback = tag_client_by_group_window } ,
 }

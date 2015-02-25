@@ -638,7 +638,10 @@ autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/ containedin=ALL
 
 " These work (mostly) equally well in Vim *and* Gvim!
 " t_Co gets set automatically depending on the terminal used.
-if &t_Co == 256
+if &term == "screen-256color"
+    " solarized does not work well in tmux
+    colorscheme desert-warm-256
+elseif &t_Co == 256
     " colorscheme inkpot
     colorscheme solarized
     " colorscheme 256-grayvim
