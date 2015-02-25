@@ -148,6 +148,7 @@
  ; automatically save the bookmarks file when creating bookmarks
  '(bookmark-save-flag 1)
  '(ein:use-auto-complete t)
+ '(org-agenda-files (quote ("~/Dropbox/master/master_arbeit/arbeit.org")))
  '(py-python-command-args (quote ("-i" "--gui=qt4")))
  '(rw-hunspell-default-dictionary "de_DE_myspell")
  '(rw-hunspell-dicpath-list (quote ("/usr/share/myspell")))
