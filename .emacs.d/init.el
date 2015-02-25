@@ -148,16 +148,17 @@
  ; automatically save the bookmarks file when creating bookmarks
  '(bookmark-save-flag 1)
  '(ein:use-auto-complete t)
+ '(org-agenda-files (quote ("~/Dropbox/master/master_arbeit/arbeit.org")))
  '(py-python-command-args (quote ("-i" "--gui=qt4")))
  '(rw-hunspell-default-dictionary "de_DE_myspell")
  '(rw-hunspell-dicpath-list (quote ("/usr/share/myspell")))
  '(rw-hunspell-make-dictionary-menu t)
  '(rw-hunspell-use-rw-ispell t)
  '(rw-ispell-language-pdict-alist
-    (quote
-      (("^en" . "~/.emacs.d/pdict_english")
-       ("^de" . "~/.emacs.d/pdict_deutsch")
-       ("" . "~/.emacs.d/pdict_default"))))
+   (quote
+    (("^en" . "~/.emacs.d/pdict_english")
+     ("^de" . "~/.emacs.d/pdict_deutsch")
+     ("" . "~/.emacs.d/pdict_default"))))
  ; in addition to the clipboard (used by default), also use the primary selection
  '(x-select-enable-primary t))
 (custom-set-faces
