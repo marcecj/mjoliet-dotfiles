@@ -154,10 +154,10 @@
  '(rw-hunspell-make-dictionary-menu t)
  '(rw-hunspell-use-rw-ispell t)
  '(rw-ispell-language-pdict-alist
-    (quote
-      (("^en" . "~/.emacs.d/pdict_english")
-       ("^de" . "~/.emacs.d/pdict_deutsch")
-       ("" . "~/.emacs.d/pdict_default"))))
+   (quote
+    (("^en" . "~/.emacs.d/pdict_english")
+     ("^de" . "~/.emacs.d/pdict_deutsch")
+     ("" . "~/.emacs.d/pdict_default"))))
  ; in addition to the clipboard (used by default), also use the primary selection
  '(x-select-enable-primary t))
 (custom-set-faces
