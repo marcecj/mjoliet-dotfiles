@@ -1,0 +1,6 @@
+[Unit]
+Description=Run newsbeuter -x reload
+
+[Service]
+Environment=XDG_DATA_HOME=%h/.config
+ExecStart=/usr/bin/newsbeuter -x reload

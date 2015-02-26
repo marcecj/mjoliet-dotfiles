@@ -1,0 +1,12 @@
+[Unit]
+Description=Run getmail for Uni (timer)
+Wants=network-online.target
+After=network-online.target
+
+[Timer]
+OnBootSec=1m
+OnUnitInactiveSec=5m
+Unit=getmail@uni.service
+
+[Install]
+WantedBy=default.target

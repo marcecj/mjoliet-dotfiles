@@ -1,0 +1,12 @@
+[Unit]
+Description=Run getmail for gmx.de (timer)
+Wants=network-online.target
+After=network-online.target
+
+[Timer]
+OnBootSec=1m
+OnUnitInactiveSec=5m
+Unit=getmail@gmx.service
+
+[Install]
+WantedBy=default.target

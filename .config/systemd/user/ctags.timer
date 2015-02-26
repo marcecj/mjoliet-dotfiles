@@ -1,0 +1,9 @@
+[Unit]
+Description=Regenerate ctags files (timer)
+
+[Timer]
+OnCalendar=Sat *-*-* 03:00
+Persistent=true
+
+[Install]
+WantedBy=default.target
