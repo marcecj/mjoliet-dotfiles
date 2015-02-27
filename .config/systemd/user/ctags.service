@@ -1,0 +1,5 @@
+[Unit]
+Description=Regenerate ctags files
+
+[Service]
+ExecStart=/home/marcec/bin/gen_ctags.sh

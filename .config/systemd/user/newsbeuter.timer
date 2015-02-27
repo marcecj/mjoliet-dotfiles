@@ -1,0 +1,10 @@
+[Unit]
+Description=Run newsbeuter -x reload (timer)
+After=network.target
+
+[Timer]
+OnBootSec=10m
+OnUnitInactiveSec=1h
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,5 @@
+[Unit]
+Description=Run getmail with configuration file getmailrc.%I
+
+[Service]
+ExecStart=/usr/bin/getmail -n -q --rcfile=getmailrc.%I

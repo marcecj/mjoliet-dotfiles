@@ -1,0 +1,11 @@
+[Unit]
+Description=Run getmail for web.de (timer)
+After=network.target
+
+[Timer]
+OnBootSec=1m
+OnUnitInactiveSec=20m
+Unit=getmail@webde.pop.service
+
+[Install]
+WantedBy=default.target
