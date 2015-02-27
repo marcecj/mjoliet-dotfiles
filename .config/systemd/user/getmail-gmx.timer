@@ -1,6 +1,5 @@
 [Unit]
 Description=Run getmail for gmx.de (timer)
-Wants=network.target
 After=network.target
 
 [Timer]

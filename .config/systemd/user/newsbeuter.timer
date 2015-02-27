@@ -1,6 +1,5 @@
 [Unit]
 Description=Run newsbeuter -x reload (timer)
-Wants=network.target
 After=network.target
 
 [Timer]
