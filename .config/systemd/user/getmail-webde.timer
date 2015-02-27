@@ -1,7 +1,7 @@
 [Unit]
 Description=Run getmail for web.de (timer)
-Wants=network-online.target
-After=network-online.target
+Wants=network.target
+After=network.target
 
 [Timer]
 OnBootSec=1m
