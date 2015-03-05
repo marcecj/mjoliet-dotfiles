@@ -5,9 +5,6 @@ set fish_greeting
 
 set PATH $PATH "$HOME/bin/" "$HOME/.local/bin/"
 
-# set the default MPD host to my desktop machine
-set -x MPD_HOST marcec.fritz.box
-
 # override $JAVA_HOME if java-config exists (i.e., a Java runtime is installed);
 # this is for MATLAB, so that the GUI can start without crashing
 if test -x (which java-config);
@@ -19,8 +16,8 @@ end
 #    set -x PATH "/usr/lib/colorgcc/bin/" $PATH
 #fi
 
-## mpc tries localhost, which is ipv6
-#set -x MPD_HOST ::1
+# set the default MPD host to my desktop machine
+set -x MPD_HOST marcec.fritz.box
 
 ## File ledger uses
 #set -x LEDGER_FILE $HOME/finances.dat
