@@ -19,6 +19,9 @@ xrdb -merge .Xresources
 # required by newsbeuter
 export XDG_DATA_HOME="$HOME/.config"
 
+# set the default MPD host to my desktop machine
+export MPD_HOST=::1
+
 # binds keys to shell commands
 xbindkeys &
 
