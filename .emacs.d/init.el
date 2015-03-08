@@ -93,6 +93,9 @@
 
 (autopair-global-mode t)
 
+; load fci-mode in text-mode derivatives
+(add-hook 'text-mode-hook 'fci-mode)
+
 ; set up auto-complete-mode
 (global-auto-complete-mode t)
 (setq
