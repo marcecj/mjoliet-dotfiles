@@ -167,17 +167,11 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Create a textclock widget
 mytextclock = awful.widget.textclock(" %a %b %d, %H:%M ", 10)
 mytextbox   = wibox.widget.textbox()
-mybatgraph  = awful.widget.graph({ height = 18, width = 60})
 mybatinfo   = wibox.widget.textbox()
 
 -- some text to go with some widgets
 mytextbox:set_markup("<b><small> " .. awesome.release .. " </small></b>")
 
-mybatgraph:set_background_color( '#333333' )
-mybatgraph:set_border_color( '#0a0a0a' )
-mybatgraph:set_color({type = "linear", from = {0, 18}, to = {0, 0}, stops = { { 0, "#285577" }, { 0.6, "#6885B7" }, { 0.9, "#AEC6D8" } }})
-
-vicious.register(mybatgraph, vicious.widgets.bat, "$2", 5, "BAT1")
 vicious.register(mybatinfo, vicious.widgets.bat, " BAT: $1 ($3 left)", 5, "BAT1")
 
 -- Create a wibox for each screen and add it
@@ -256,15 +250,9 @@ for s = 1, screen.count() do
     left_layout:add(mytaglist[s])
     left_layout:add(mypromptbox[s])
 
-    -- Widgets that are mirrored
-    local batgraph_layout = wibox.layout.mirror()
-    batgraph_layout:set_widget(mybatgraph)
-    batgraph_layout:set_reflection({horizontal = false, vertical = true})
-
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     right_layout:add(mybatinfo)
-    right_layout:add(batgraph_layout)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
     if s == 1 then right_layout:add(wibox.widget.systray()) end
