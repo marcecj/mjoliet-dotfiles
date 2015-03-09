@@ -167,46 +167,16 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Create a textclock widget
 mytextclock = awful.widget.textclock(" %a %b %d, %H:%M ", 10)
 mytextbox   = wibox.widget.textbox()
-mycpuinfo   = wibox.widget.textbox()
-mymeminfo   = wibox.widget.textbox()
-mymembar    = awful.widget.progressbar({ height = 18, width = 60})
-mycpugraph  = awful.widget.graph({ height = 18, width = 60})
-mynetgraph  = awful.widget.graph({ height = 18, width = 60})
-mynetinfo   = wibox.widget.textbox()
 mybatgraph  = awful.widget.graph({ height = 18, width = 60})
 mybatinfo   = wibox.widget.textbox()
 
 -- some text to go with some widgets
 mytextbox:set_markup("<b><small> " .. awesome.release .. " </small></b>")
-mycpuinfo:set_text(" CPU:")
-mymeminfo:set_text(" MEM:")
-mynetinfo:set_text(" NET:")
-
--- TODO: figure out how to center widgets vertically
-mymembar:set_vertical(false)
-mymembar:set_border_color('#0a0a0a')
-mymembar:set_background_color("#333333")
-mymembar:set_color({type = "linear", from = {0, 0}, to = {60, 0}, stops = { { 0, "#285577" }, { 0.6, "#6885B7" }, { 0.9, "#AEC6D8" } }})
-
-mycpugraph:set_background_color( '#333333' )
-mycpugraph:set_border_color( '#0a0a0a' )
-mycpugraph:set_color({type = "linear", from = {0, 18}, to = {0, 0}, stops = { { 0, "#285577" }, { 0.6, "#6885B7" }, { 0.9, "#AEC6D8" } }})
-
-mynetgraph:set_background_color( '#333333' )
-mynetgraph:set_border_color( '#0a0a0a' )
-mynetgraph:set_color({type = "linear", from = {0, 18}, to = {0, 0}, stops = { { 0, "#285577" }, { 0.6, "#6885B7" }, { 0.9, "#AEC6D8" } }})
-mynetgraph:set_scale(true)
-mynetgraph:set_stack(false)
 
 mybatgraph:set_background_color( '#333333' )
 mybatgraph:set_border_color( '#0a0a0a' )
 mybatgraph:set_color({type = "linear", from = {0, 18}, to = {0, 0}, stops = { { 0, "#285577" }, { 0.6, "#6885B7" }, { 0.9, "#AEC6D8" } }})
 
-vicious.register(mymembar, vicious.widgets.mem, "$1", 1)
-vicious.register(mycpugraph, vicious.widgets.cpu, '$1', 1)
--- TODO: in awesome git HEAD there is a "stacked" version allowing multiple
--- graphs in a single widget
-vicious.register(mynetgraph, vicious.widgets.net, '${wlp3s0 down_kb}', 1)
 -- vicious.register(mynetgraph, vicious.widgets.net, '${wan0 down_kb} ${wan0 up_kb}', 1)
 vicious.register(mybatgraph, vicious.widgets.bat, "$2", 5, "BAT1")
 vicious.register(mybatinfo, vicious.widgets.bat, " BAT: $1 ($3 left)", 5, "BAT1")
@@ -288,24 +258,12 @@ for s = 1, screen.count() do
     left_layout:add(mypromptbox[s])
 
     -- Widgets that are mirrored
-    local cpugraph_layout = wibox.layout.mirror()
-    local netgraph_layout = wibox.layout.mirror()
     local batgraph_layout = wibox.layout.mirror()
-    cpugraph_layout:set_widget(mycpugraph)
-    netgraph_layout:set_widget(mynetgraph)
     batgraph_layout:set_widget(mybatgraph)
-    cpugraph_layout:set_reflection({horizontal = false, vertical = true})
-    netgraph_layout:set_reflection({horizontal = false, vertical = true})
     batgraph_layout:set_reflection({horizontal = false, vertical = true})
 
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
-    right_layout:add(mymeminfo)
-    right_layout:add(mymembar)
-    right_layout:add(mycpuinfo)
-    right_layout:add(cpugraph_layout)
-    right_layout:add(mynetinfo)
-    right_layout:add(netgraph_layout)
     right_layout:add(mybatinfo)
     right_layout:add(batgraph_layout)
     right_layout:add(mytextclock)
