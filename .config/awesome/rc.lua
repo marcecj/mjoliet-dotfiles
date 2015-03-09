@@ -172,7 +172,7 @@ mybatinfo   = wibox.widget.textbox()
 -- some text to go with some widgets
 mytextbox:set_markup("<b><small> " .. awesome.release .. " </small></b>")
 
-vicious.register(mybatinfo, vicious.widgets.bat, " BAT: $1 ($3 left)", 5, "BAT1")
+vicious.register(mybatinfo, vicious.widgets.bat, " BAT: $1 ($3 left) ◆", 5, "BAT1")
 
 -- Create a wibox for each screen and add it
 mywibox = {}
