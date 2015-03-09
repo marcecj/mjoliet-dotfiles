@@ -177,7 +177,6 @@ mybatgraph:set_background_color( '#333333' )
 mybatgraph:set_border_color( '#0a0a0a' )
 mybatgraph:set_color({type = "linear", from = {0, 18}, to = {0, 0}, stops = { { 0, "#285577" }, { 0.6, "#6885B7" }, { 0.9, "#AEC6D8" } }})
 
--- vicious.register(mynetgraph, vicious.widgets.net, '${wan0 down_kb} ${wan0 up_kb}', 1)
 vicious.register(mybatgraph, vicious.widgets.bat, "$2", 5, "BAT1")
 vicious.register(mybatinfo, vicious.widgets.bat, " BAT: $1 ($3 left)", 5, "BAT1")
 
