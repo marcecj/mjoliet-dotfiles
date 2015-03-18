@@ -10,10 +10,6 @@
 *customization: -color
 
 ! ===========================================================================
-! xpdf resources
-! xpdf*fontList: -misc-dejavu sans-medium-r-*
-
-! ===========================================================================
 ! xautolock resources
 Xautolock.time: 5
 ! Xautolock.locker: dm-tool lock
@@ -32,19 +28,6 @@ XLock.lockdelay: 10
 XLock.dpmsstandby: 600
 XLock.dpmssuspend: 900
 XLock.dpmsoff: 1200
-
-! ===========================================================================
-! XFig resources
-
-! Fig*inches: false
-! Fig*startgridmode: 1
-! Fig*userunit: cm
-! Fig*papersize: A4
-! Fig*image_editor: gimp
-! Fig*pdfviewer: xpdf %f
-! Fig*spellcheckcommand: hunspell
-! Fig*showlengths: on
-! Fig*shownums: on
 
 ! ===========================================================================
 ! XTerm resources
@@ -111,18 +94,6 @@ XTerm*color15: rgb:ff/ff/ff
 !XTerm*color13: magenta
 !XTerm*color14: cyan
 !XTerm*color15: white
-
-! Specific settings for QuakeConsole (Alt+`), to get better effect
-! ---------------------------------------------------------------------------
-! 800x600
-!QuakeConsoleNeedsUniqueName*internalBorder: 0
-! 1024x768
-!QuakeConsoleNeedsUniqueName*internalBorder: 0
-! 1152x864
-!QuakeConsoleNeedsUniqueName*internalBorder: 1
-! 1280x1024
-!QuakeConsoleNeedsUniqueName*internalBorder: 0
-
 
 ! ===========================================================================
 ! URxvt resources
@@ -204,8 +175,3 @@ URxvt.color15: rgb:ff/ff/ff
 !URxvt.color13: magenta
 !URxvt.color14: cyan
 !URxvt.color15: white
-
-! Specific settings for QuakeConsole
-! ---------------------------------------------------------------------------
-! 1280x1024
-!QuakeConsoleNeedsUniqueName.font: xft:Monospace:pixelsize=12
