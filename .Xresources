@@ -1,17 +1,7 @@
-! X resources used in FVWM-Crystal project (http://fvwm-crystal.berlios.de/)
-! Written by: Maciej Delmanowski <harnir@post.pl>
-! Put this file as ~/.Xresources in your home directory
-!
-! Adapted by Marc Joliet (mainly URxvt stuff) for personal use.
-
 ! Global resource, to make X look for default color files for certain apps
 ! (like xfig).
 
 *customization: -color
-
-! ===========================================================================
-! xpdf resources
-! xpdf*fontList: -misc-dejavu sans-medium-r-*
 
 ! ===========================================================================
 ! xautolock resources
@@ -25,7 +15,6 @@ Xautolock.locker: xlock
 ! standby : 10 min
 ! suspend : 15 min
 ! off     : 20 min
-! XLock.mode: sierpinski3d
 XLock.mode: blank
 XLock.resetsaver: 0
 XLock.lockdelay: 10
@@ -34,116 +23,16 @@ XLock.dpmssuspend: 900
 XLock.dpmsoff: 1200
 
 ! ===========================================================================
-! XFig resources
-
-! Fig*inches: false
-! Fig*startgridmode: 1
-! Fig*userunit: cm
-! Fig*papersize: A4
-! Fig*image_editor: gimp
-! Fig*pdfviewer: xpdf %f
-! Fig*spellcheckcommand: hunspell
-! Fig*showlengths: on
-! Fig*shownums: on
-
-! ===========================================================================
-! XTerm resources
-
-! Look similar to the Linux Console
-! ---------------------------------------------------------------------------
-XTerm*background: black
-XTerm*foreground: white
-XTerm*cursorColor: yellow
-XTerm*Title: XTerm
-XTerm*scrollBar: false
-XTerm*saveLines: 5000
-
-! Fonts for different resolutions and character encodings
-! By default English encoding is set. How to set different encodings:
-! - Polish encoding: apply "-iso8859-2" at the end of the font string
-! ---------------------------------------------------------------------------
-! Englsh encoding
-! 640x480
-!XTerm*font: -misc-fixed-medium-r-normal-*-12-*
-! 800x600
-!XTerm*font: -misc-fixed-medium-r-normal-*-13-*
-! 1024x768
-! XTerm*font: -misc-fixed-medium-r-normal-*-14-*
-! 1152x864
-!XTerm*font: -misc-fixed-medium-r-normal-*-14-*
-! 1280x1024
-XTerm*font: -misc-fixed-medium-r-normal-*-18-*
-
-! Colors similar to those used in Linux Console (ttyX)
-! ---------------------------------------------------------------------------
-XTerm*color0: rgb:0/0/0
-XTerm*color1: rgb:cc/00/00
-XTerm*color2: rgb:00/cc/00
-XTerm*color3: #bd5e01
-XTerm*color4: rgb:00/00/cc
-XTerm*color5: rgb:cc/00/cc
-XTerm*color6: rgb:00/cc/cc
-XTerm*color7: rgb:aa/aa/aa
-XTerm*color8: rgb:33/33/33
-XTerm*color9: rgb:ff/00/00
-XTerm*color10: rgb:00/ff/00
-XTerm*color11: rgb:ff/ff/00
-XTerm*color12: rgb:00/00/ff
-XTerm*color13: rgb:ff/00/ff
-XTerm*color14: rgb:00/ff/ff
-XTerm*color15: rgb:ff/ff/ff
-
-! Default XTerm colors
-! ---------------------------------------------------------------------------
-!XTerm*color0: black
-!XTerm*color1: red3
-!XTerm*color2: green3
-!XTerm*color3: brown
-!XTerm*color4: blue3
-!XTerm*color5: magenta3
-!XTerm*color6: cyan3
-!XTerm*color7: gray90
-!XTerm*color8: gray30
-!XTerm*color9: red
-!XTerm*color10: green
-!XTerm*color11: yellow
-!XTerm*color12: blue
-!XTerm*color13: magenta
-!XTerm*color14: cyan
-!XTerm*color15: white
-
-! Specific settings for QuakeConsole (Alt+`), to get better effect
-! ---------------------------------------------------------------------------
-! 800x600
-!QuakeConsoleNeedsUniqueName*internalBorder: 0
-! 1024x768
-!QuakeConsoleNeedsUniqueName*internalBorder: 0
-! 1152x864
-!QuakeConsoleNeedsUniqueName*internalBorder: 1
-! 1280x1024
-!QuakeConsoleNeedsUniqueName*internalBorder: 0
-
-
-! ===========================================================================
 ! URxvt resources
 ! Escape sequences use octal numbers like \033 for ESC (0x1B).
 ! See "man console_codes" for more information.
 ! ---------------------------------------------------------------------------
-! URxvt.termName: rxvt-unicode
-! URxvt.termName: rxvt-unicode-256color
 URxvt.urgentOnBell: true
-! URxvt.depth: 32
-! URxvt.background: rgba:0000/0000/2222/cccc
 URxvt.background: black
 URxvt.foreground: white
-! transparency (percent?)
-URxvt.shading: 20
-URxvt.tintColor: white
 ! Not really good over VNC
 URxvt.fading: 40
-! URxvt.fading: 0
 URxvt.fadecolor: #71C5F4
-URxvt.transparent: false
 URxvt.scrollBar: true
 URxvt.scrollstyle: plain
 URxvt.scrollBar_right: true
@@ -152,11 +41,8 @@ URxvt.scrollWithBuffer: true
 URxvt.scrollTtyKeypress: true
 URxvt.secondaryscroll: true
 URxvt.saveLines: 8192
-! do not tab, since tmux does the job better
-URxvt.perl-ext-common: -default,-tabbed,selection,readline,searchable-scrollback
+URxvt.perl-ext-common: default,selection-to-clipboard
 
-! Clears the scrollback buffer.
-! URxvt.keysym.Control-s: command:\033]720;0\007
 ! Add a second larger font for "remote" work.
 URxvt.keysym.Control-Meta-1: command:\033]710;xft:dejavu sans mono:antialias=true:pixelsize=12\007
 URxvt.keysym.Control-Meta-2: command:\033]710;xft:dejavu sans mono:antialias=true:pixelsize=18\007
@@ -166,46 +52,3 @@ URxvt.keysym.Control-Meta-2: command:\033]710;xft:dejavu sans mono:antialias=tru
 ! ---------------------------------------------------------------------------
 ! URxvt.font: xft:LiberationMono-Regular
 URxvt.font: xft:dejavu sans mono:antialias=true:pixelsize=12
-
-! Colors similar to Linux console
-! ---------------------------------------------------------------------------
-URxvt.color0: rgb:0/0/0
-URxvt.color1: rgb:cc/00/00
-URxvt.color2: rgb:00/cc/00
-URxvt.color3: #bd5e01
-URxvt.color4: rgb:00/00/cc
-URxvt.color5: rgb:cc/00/cc
-URxvt.color6: rgb:00/cc/cc
-URxvt.color7: rgb:aa/aa/aa
-URxvt.color8: rgb:33/33/33
-URxvt.color9: rgb:ff/00/00
-URxvt.color10: rgb:00/ff/00
-URxvt.color11: rgb:ff/ff/00
-URxvt.color12: rgb:00/00/ff
-URxvt.color13: rgb:ff/00/ff
-URxvt.color14: rgb:00/ff/ff
-URxvt.color15: rgb:ff/ff/ff
-
-! Default URxvt colors
-! ---------------------------------------------------------------------------
-!URxvt.color0: black
-!URxvt.color1: red3
-!URxvt.color2: green3
-!URxvt.color3: brown
-!URxvt.color4: blue3
-!URxvt.color5: magenta3
-!URxvt.color6: cyan3
-!URxvt.color7: gray90
-!URxvt.color8: gray30
-!URxvt.color9: red
-!URxvt.color10: green
-!URxvt.color11: yellow
-!URxvt.color12: blue
-!URxvt.color13: magenta
-!URxvt.color14: cyan
-!URxvt.color15: white
-
-! Specific settings for QuakeConsole
-! ---------------------------------------------------------------------------
-! 1280x1024
-!QuakeConsoleNeedsUniqueName.font: xft:Monospace:pixelsize=12
