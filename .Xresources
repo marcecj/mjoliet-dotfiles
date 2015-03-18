@@ -37,14 +37,10 @@ URxvt.urgentOnBell: true
 ! URxvt.background: rgba:0000/0000/2222/cccc
 URxvt.background: black
 URxvt.foreground: white
-! transparency (percent?)
-URxvt.shading: 20
-URxvt.tintColor: white
 ! Not really good over VNC
 URxvt.fading: 40
 ! URxvt.fading: 0
 URxvt.fadecolor: #71C5F4
-URxvt.transparent: false
 URxvt.scrollBar: true
 URxvt.scrollstyle: plain
 URxvt.scrollBar_right: true
