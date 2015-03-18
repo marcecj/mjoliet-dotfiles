@@ -41,8 +41,7 @@ URxvt.scrollWithBuffer: true
 URxvt.scrollTtyKeypress: true
 URxvt.secondaryscroll: true
 URxvt.saveLines: 8192
-! do not tab, since tmux does the job better
-URxvt.perl-ext-common: -default,-tabbed,selection,readline,searchable-scrollback
+URxvt.perl-ext-common: default,selection-to-clipboard
 
 ! Add a second larger font for "remote" work.
 URxvt.keysym.Control-Meta-1: command:\033]710;xft:dejavu sans mono:antialias=true:pixelsize=15\007
