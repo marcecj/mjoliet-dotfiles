@@ -21,7 +21,6 @@ Xautolock.locker: xlock
 ! standby : 10 min
 ! suspend : 15 min
 ! off     : 20 min
-! XLock.mode: sierpinski3d
 XLock.mode: blank
 XLock.resetsaver: 0
 XLock.lockdelay: 10
@@ -34,10 +33,7 @@ XLock.dpmsoff: 1200
 ! Escape sequences use octal numbers like \033 for ESC (0x1B).
 ! See "man console_codes" for more information.
 ! ---------------------------------------------------------------------------
-! URxvt.termName: rxvt-unicode
-! URxvt.termName: rxvt-unicode-256color
 URxvt.urgentOnBell: true
-! URxvt.depth: 32
 ! URxvt.background: rgba:0000/0000/2222/cccc
 URxvt.background: black
 URxvt.foreground: white
@@ -60,8 +56,6 @@ URxvt.saveLines: 8192
 ! do not tab, since tmux does the job better
 URxvt.perl-ext-common: -default,-tabbed,selection,readline,searchable-scrollback
 
-! Clears the scrollback buffer.
-! URxvt.keysym.Control-s: command:\033]720;0\007
 ! Add a second larger font for "remote" work.
 URxvt.keysym.Control-Meta-1: command:\033]710;xft:dejavu sans mono:antialias=true:pixelsize=15\007
 URxvt.keysym.Control-Meta-2: command:\033]710;xft:dejavu sans mono:antialias=true:pixelsize=24\007
