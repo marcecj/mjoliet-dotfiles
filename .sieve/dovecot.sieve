@@ -149,19 +149,7 @@ if header :contains "List-Id" "iha-verein" {
 
 if address :domain :contains "From" ["marcec", "localhost"]
 {
-    if header :contains "Subject" "eix-sync" {
-        fileinto "Computer/eix-sync";
-        stop;
-    }
-    elsif header :contains "Subject" "eclean" {
-        fileinto "Computer/Eclean";
-        stop;
-    }
-    elsif header :contains "From" "fcron" {
-        fileinto "Computer/Cron";
-        stop;
-    }
-    elsif address :localpart "From" "portage" {
+    if address :localpart "From" "portage" {
         fileinto "Computer/Portage elog";
         stop;
     }
