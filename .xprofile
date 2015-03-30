@@ -41,7 +41,7 @@ pulseaudio --start &
 #fbsetbg -l &   # set the background wallpaper
 
 # who can live without a screensaver?
-light-locker --lock-on-suspend &
+light-locker &
 
 # sets monitor color temp according to daytime
 pgrep redshift && killall -TERM redshift
