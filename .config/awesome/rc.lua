@@ -333,7 +333,6 @@ globalkeys = awful.util.table.join(
     -- lock screen / deactivate xscreensaver
     awful.key({ modkey, "Shift" }, "x",
         function ()
-            -- os.execute("xscreensaver-command -lock")
             os.execute("xautolock -locknow")
         end),
     awful.key({ modkey, "Control" }, "x",
