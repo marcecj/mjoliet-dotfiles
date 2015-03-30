@@ -85,7 +85,6 @@ terminal = "urxvtc"
 editor = os.getenv("EDITOR") or "vi"
 editor_cmd = terminal .. " -e " .. editor
 -- helper variable to give appropriate messages on activation/deactivation
-local screensaver_active = true
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -333,19 +332,19 @@ globalkeys = awful.util.table.join(
     -- lock screen / deactivate xscreensaver
     awful.key({ modkey, "Shift" }, "x",
         function ()
-            os.execute("xautolock -locknow")
+            os.execute("light-locker-command -l")
         end),
     awful.key({ modkey, "Control" }, "x",
         function ()
-            os.execute("xautolock -toggle")
+            screensaver_active = os.execute('pidof light-locker-command') ~= 0
             if screensaver_active then
+                os.execute('light-locker-command -i &')
                 naughty.notify({text = "The screensaver has been deactivated!",
-                                title = "XAutolock stopped"})
-                screensaver_active = false
+                                title = "Locker stopped"})
             else
+                os.execute('killall -TERM light-locker-command')
                 naughty.notify({text = "The screensaver has been reactivated!",
-                                title = "XAutolock started"})
-                screensaver_active = true
+                                title = "Locker started"})
             end
         end),
     awful.key({ modkey,         }, "s",
