@@ -1,0 +1,2 @@
+XF86Audio{Play,Stop,Next,Prev}
+    mpc -q {toggle,stop,next,prev}
