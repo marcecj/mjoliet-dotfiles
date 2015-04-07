@@ -1,2 +1,6 @@
 XF86Audio{Play,Stop,Next,Prev}
     mpc -q {toggle,stop,next,prev}
+
+# work around the fact that my current keyboard has no stop button
+mod4 + XF86AudioPlay
+    mpc -q stop
