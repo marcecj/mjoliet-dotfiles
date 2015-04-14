@@ -72,15 +72,6 @@ if anyof(
     stop;
 }
 
-if anyof(
-         address :matches ["To", "Cc"] ["linux-usb@vger.kernel.org"],
-         header :contains ["List-Id"] ["linux-usb.vger.kernel.org"]
-        )
-{
-    fileinto "Linux-USB";
-    stop;
-}
-
 if address :domain ["To", "Cc"] ["gentoo.org", "lists.gentoo.org"]
 {
     if header :contains ["List-Id"] "gentoo-amd64" {
