@@ -17,10 +17,10 @@
 .awesome-errors
 .bugz_cookie
 .config/newsbeuter/cache.db.lock
+.emacs.d/ido.last
 .esd_auth
 .gEDA/logs/
 .gpg-agent-info
-.ido.last
 .ipython/db/
 .ipython/nbextensions/
 .ipython/profile_*/db/
