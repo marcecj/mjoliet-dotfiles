@@ -39,24 +39,6 @@ if address :domain ["From", "Sender"] ["sourceforge.net", "newsletters.sourcefor
     stop;
 }
 
-# Psycle ML
-if address :is "Reply-To" "psycle-devel@lists.sourceforge.net"
-{
-    if anyof(
-            header :contains "Subject" "psycle-bugs",
-            header :contains "Subject" "psycle-qsycle"
-            )
-    {
-        fileinto "Psycle-devel/Bugs";
-        stop;
-    }
-    else
-    {
-        fileinto "Psycle-devel";
-        stop;
-    }
-}
-
 # Gentoo bugs
 if address :matches "From" "bugzilla*@gentoo.org" {
     fileinto "Gentoo/BugZilla";
@@ -127,12 +109,6 @@ if header :contains "List-Id" "scons-users.scons.org" {
 # FAUST-Users ML
 if header :contains "List-Id" "faudiostream-users.lists.sourceforge.net" {
     fileinto "FAUST/User";
-    stop;
-}
-
-# VST IHA ML
-if address :is ["To", "Sender"] "vst_iha@googlegroups.com" {
-    fileinto "VST IHA";
     stop;
 }
 
