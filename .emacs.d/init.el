@@ -23,6 +23,9 @@
 ; highlight trailing whitespace
 (setq-default show-trailing-whitespace t)
 
+; prevent a message from being shown on every Emacs startup
+(setq magit-last-seen-setup-instructions "1.4.0")
+
 ; add various package repositories
 (require 'package)
 (add-to-list 'package-archives
