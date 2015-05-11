@@ -32,8 +32,8 @@
     '("marmalade" .
       "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
-    '("melpa" .
-      "http://melpa.milkbox.net/packages/"))
+    '("melpa-stable" .
+      "http://stable.melpa.org/packages/") t)
 (package-initialize)
 
 (setq package-list '(; misc. packages
