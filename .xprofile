@@ -37,7 +37,6 @@ urxvtc -e sh -c "keychain --agents ssh,gpg --nogui id_rsa 2C8878F4" &
 udiskie &
 
 # misc
-pulseaudio --start &
 #fbsetbg -l &   # set the background wallpaper
 
 # who can live without a screensaver?
