@@ -104,6 +104,7 @@ ActivateAddons NrrwRgn
 ActivateAddons wildfire
 ActivateAddons bufexplorer.zip
 ActivateAddons ag
+ActivateAddons vim-addon-local-vimrc
 
 " programming related add-ons
 ActivateAddons a                " alternate.vim
@@ -183,12 +184,6 @@ augroup END
 augroup faust
     au! BufEnter *.fst setfiletype faust
     au! BufEnter *.dsp setfiletype faust
-augroup END
-
-" rule to source project local vimrc files
-augroup vimrc_local
-    au!
-    autocmd BufEnter * if filereadable(expand('%:p:h') . '/.vimlocalrc') | source %:p:h/.vimlocalrc | endif
 augroup END
 
 " When switching buffers, preserve window view.
