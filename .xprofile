@@ -37,7 +37,7 @@ urxvtc -e sh -c "keychain --agents ssh,gpg --nogui id_rsa 2C8878F4" &
 udiskie &
 
 # misc
-nm-applet &
+wpa_gui -t &
 
 # who can live without a screensaver?
 light-locker &
