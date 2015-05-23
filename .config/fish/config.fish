@@ -7,8 +7,8 @@ set PATH $PATH "$HOME/bin/" "$HOME/.local/bin/"
 
 # override $JAVA_HOME if java-config exists (i.e., a Java runtime is installed);
 # this is for MATLAB, so that the GUI can start without crashing
-if test -x (which java-config);
-    set -x JAVA_HOME (java-config -g JAVA_HOME)
+if test -x (which java-config-2);
+    set -x JAVA_HOME (java-config-2 -g JAVA_HOME)
 end
 
 ## activate colorgcc - colorized gcc output
