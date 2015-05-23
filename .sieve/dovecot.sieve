@@ -123,16 +123,10 @@ if header :contains "List-Id" "iha-verein" {
     stop;
 }
 
-if address :domain :contains "From" ["marcec", "localhost"]
+if address :is ["To"] ["root"]
 {
-    if address :localpart "From" "portage" {
-        fileinto "Computer/Portage elog";
-        stop;
-    }
-    else {
-        fileinto "Computer";
-        stop;
-    }
+    fileinto "Computer";
+    stop;
 }
 
 # emails related to studies
