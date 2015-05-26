@@ -44,7 +44,6 @@ pgrep redshift && killall -TERM redshift
 redshift &
 
 # chat program
-#gajim &
 pidgin &
 
 # some terminals to always start
