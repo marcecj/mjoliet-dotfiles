@@ -20,7 +20,7 @@ xrdb -merge .Xresources
 export XDG_DATA_HOME="$HOME/.config"
 
 # set the default MPD host to my desktop machine
-export MPD_HOST="marcec.fritz.box"
+export MPD_HOST="thetick.fritz.box"
 
 # binds keys to shell commands
 # sxhkd &

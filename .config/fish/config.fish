@@ -17,7 +17,7 @@ end
 #fi
 
 # set the default MPD host to my desktop machine
-set -x MPD_HOST marcec.fritz.box
+set -x MPD_HOST thetick.fritz.box
 
 ## File ledger uses
 #set -x LEDGER_FILE $HOME/finances.dat
