@@ -134,7 +134,6 @@
 !.vim/undofiles/.keep
 .vim/vim-addons/
 .vim_local_rc_cache
-.vimperator/
 .xbindkeysrc
 .zcompdump
 
