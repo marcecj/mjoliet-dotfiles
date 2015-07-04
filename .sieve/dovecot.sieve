@@ -139,7 +139,7 @@ if anyof(
     # it seems that Medi/Idem/StaMo Emails occasionally lack a List-Id header
     if anyof(
              header :contains ["List-Id"] "medi.listserv.uni-oldenburg.de",
-             address :is ["To", "Cc"] "medi@listserv.uni-oldenburg.de"
+             address :matches ["To", "Cc"] "medi@listserv.uni-oldenburg.de"
             )
     {
         fileinto "Studium/Medi";
@@ -147,7 +147,7 @@ if anyof(
     }
     elsif anyof(
                 header :contains ["List-Id"] ["idem.listserv.uni-oldenburg.de"],
-                address :is ["To", "Cc"] ["idem@listserv.uni-oldenburg.de"]
+                address :matches ["To", "Cc"] ["idem@listserv.uni-oldenburg.de"]
                )
     {
         fileinto "Studium/Idem";
@@ -155,7 +155,7 @@ if anyof(
     }
     elsif anyof(
                 header :contains ["List-Id"] ["stamo.listserv.uni-oldenburg.de"],
-                address :is ["To", "Cc"] ["stamo@listserv.uni-oldenburg.de"]
+                address :matches ["To", "Cc"] ["stamo@listserv.uni-oldenburg.de"]
                )
     {
         fileinto "Studium/StaMo";
