@@ -271,7 +271,7 @@
 # stuff that only runs on my main machine
 .aqemu/
 .dovecot.sieve
-.dovecot.sieve.log
+.dovecot.sieve.log*
 .dovecot.svbin
 .mpd/
 .spicec/
