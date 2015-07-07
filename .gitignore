@@ -76,6 +76,7 @@
 .config/fontconfig/
 .config/laditools/ladi-system-log.conf
 .config/systemd/user/*.wants/
+.config/user-places.xbel*
 .conkyrc
 .dbus/
 # NOTE: I think this is from the Qt Designer
