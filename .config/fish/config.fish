@@ -11,17 +11,6 @@ if test -x (which java-config-2);
     set -x JAVA_HOME (java-config-2 -g JAVA_HOME)
 end
 
-## activate colorgcc - colorized gcc output
-#if [[ -z $(echo $PATH | grep colorgcc) && -d "/usr/lib/colorgcc/bin/" ]]; then
-#    set -x PATH "/usr/lib/colorgcc/bin/" $PATH
-#fi
-
-## mpc tries localhost, which is ipv6
-#set -x MPD_HOST ::1
-
-## File ledger uses
-#set -x LEDGER_FILE $HOME/finances.dat
-
 # setup a directory for finished python modules
 set -x PYTHONPATH $HOME/python
 
