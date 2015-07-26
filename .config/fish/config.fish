@@ -18,4 +18,4 @@ set -x PYTHONPATH $HOME/python
 set -x R600_ENABLE_S3TC 1
 
 # used by FISH's help system
-set -x BROWSER /usr/bin/dwb
+set -x BROWSER /usr/bin/rekonq
