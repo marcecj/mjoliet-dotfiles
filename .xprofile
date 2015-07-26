@@ -8,8 +8,6 @@ export LANG="de_DE.UTF-8"
 # is fixed.  This appears to retain all other settings from xorg.conf.d.
 setxkbmap -layout "de, us" -variant "nodeadkeys,"
 
-#. .xinitrc
-
 #  Start whatever program I want at X startup (via startx or slim)
 $HOME/.monicarc   #monitor calibration
 
