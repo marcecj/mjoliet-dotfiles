@@ -15,8 +15,8 @@
 ("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
  (front-context-string . "\n\n- Verschiedene")
- (rear-context-string . "ersuch I\n\n    - ")
- (position . 15631))
+ (rear-context-string . "ägers:\n\n      - ")
+ (position . 20707))
 (".emacs"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)
