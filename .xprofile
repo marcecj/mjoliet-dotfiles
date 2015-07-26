@@ -25,19 +25,9 @@ export MPD_HOST=::1
 # binds keys to shell commands
 sxhkd &
 
-# start a urxvt daemon, will quit with the X server
-urxvtd -q -o -f
-
-# start a terminal that runs keychain, which will set the necessary environment
-# variables for other process to connect to {gpg,ssh}-agent
+# Go ahead and start {ssh,gpg}-agent so that graphical applications can see the
+# correct environment variables, too.
 eval $(export SHELL=sh; keychain --agents ssh,gpg --nogui --eval)
-urxvtc -e sh -c "keychain --agents ssh,gpg --nogui id_rsa 2C8878F4" &
-
-# udisks based automounter
-udiskie &
-
-# who can live without a screensaver?
-light-locker &
 
 # sets monitor color temp according to daytime
 pgrep redshift && killall -TERM redshift
@@ -46,9 +36,28 @@ redshift &
 # chat program
 pidgin &
 
-# some terminals to always start
-urxvtc -name "syslog" -e sh -c "sudo journalctl -n 300 -f" &
-urxvtc -name "htop-sys" -e sh -c "htop" &
+# These should not be run under KDE, either because it has its own mechanisms
+# for achieving the same things, or because I don't think it's a good idea.
+if [ "$DESKTOP_SESSION" != "KDE-4" ]; then
+    # udisks based automounter
+    udiskie &
+
+    # who can live without a screensaver?
+    light-locker &
+
+    # start a urxvt daemon, will quit with the X server
+    urxvtd -q -o -f
+
+    # start a terminal that runs keychain, which will set the necessary environment
+    # variables for other process to connect to {gpg,ssh}-agent
+    urxvtc -e sh -c "keychain --agents ssh,gpg --nogui id_rsa 2C8878F4" &
+
+    # some terminals to always start
+    urxvtc -name "syslog" -e sh -c "sudo journalctl -n 300 -f" &
+    urxvtc -name "htop-sys" -e sh -c "htop" &
+else
+    konsole -e sh -c "keychain --agents ssh,gpg --nogui id_rsa 2C8878F4" &
+fi
 
 # start specified session or safe default
 case "$DESKTOP_SESSION" in
