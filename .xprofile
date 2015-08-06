@@ -27,10 +27,6 @@ sxhkd &
 # correct environment variables, too.
 eval $(export SHELL=sh; keychain --agents ssh,gpg --nogui --eval)
 
-# sets monitor color temp according to daytime
-pgrep redshift && killall -TERM redshift
-redshift &
-
 # chat program
 pidgin &
 
@@ -42,6 +38,10 @@ if [ "$DESKTOP_SESSION" != "KDE-4" ]; then
 
     # who can live without a screensaver?
     light-locker &
+
+    # sets monitor color temp according to daytime
+    pgrep redshift && killall -TERM redshift
+    redshift &
 
     # start a urxvt daemon, will quit with the X server
     urxvtd -q -o -f
