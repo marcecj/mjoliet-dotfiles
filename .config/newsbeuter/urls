@@ -286,7 +286,7 @@ http://blog.freesound.org/?feed=rss2 "audio"
 https://sites.google.com/site/neilsequencer/news/posts.xml "audio"
 http://feeds.feedburner.com/FLStudioMania?format=xml  "audio"
 http://www.earlevel.com/main/feed/ "dsp"
-http://faust.grame.fr/index.php?format=feed&type=atom "dsp"
+http://faust.grame.fr/feed.xml "dsp"
 
 http://vimcasts.org/feeds/ogg "podcast"
 http://www.awaretek.com/python/index.xml "podcast"
