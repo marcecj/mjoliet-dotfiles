@@ -14,9 +14,9 @@
  (position . 51945))
 ("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
- (front-context-string . "\n\n- Verschiedene")
- (rear-context-string . "ultate\n\n      - ")
- (position . 25642))
+ (front-context-string . "\n\n** TODO Wang a")
+ (rear-context-string . "intergrund\n\n  - ")
+ (position . 44239))
 (".emacs"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)
