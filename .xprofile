@@ -30,14 +30,16 @@ eval $(export SHELL=sh; keychain --agents ssh,gpg --nogui --eval)
 # chat program
 pidgin &
 
+# who can live without a screensaver?
+# FIXME: this is supposed to start with the desktop session automatically, but
+# KDE isn't starting it.
+light-locker &
+
 # These should not be run under KDE, either because it has its own mechanisms
 # for achieving the same things, or because I don't think it's a good idea.
 if [ "$DESKTOP_SESSION" != "KDE-4" ]; then
     # udisks based automounter
     udiskie &
-
-    # who can live without a screensaver?
-    light-locker &
 
     # sets monitor color temp according to daytime
     pgrep redshift && killall -TERM redshift
