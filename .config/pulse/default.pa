@@ -15,7 +15,6 @@
 .ifexists module-mmkbd-evdev.so
 # volume_limit is uint32_t, with 1.0 corresponding to 2^16
 load-module module-mmkbd-evdev device=/dev/input/by-id/usb-Logitech_USB_Receiver-if02-event-kbd sink=alsa_output.pci-0000_01_07.0.analog-stereo volume_limit=65536
-# load-module module-mmkbd-evdev device=/dev/input/by-id/usb-Logitech_USB_Receiver-event-mouse sink=alsa_output.pci-0000_01_07.0.analog-stereo
 .endif
 
 ### Automatically augment property information from .desktop files
