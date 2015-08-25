@@ -12,9 +12,12 @@
 .fail
 
 # allow volume to be set via multimedia keys
-.ifexists module-mmkbd-evdev.so
-load-module module-mmkbd-evdev device=/dev/input/by-path/platform-i8042-serio-0-event-kbd
-.endif
+# NOTE: This module gets in the way when using KDE (e.g., KMix reacts only
+# after repeated keypresses), so don't load it then.
+#.ifexists module-mmkbd-evdev.so
+## volume_limit is uint32_t, with 1.0 corresponding to 2^16
+#load-module module-mmkbd-evdev device=/dev/input/by-path/platform-i8042-serio-0-event-kbd
+#.endif
 
 ### Automatically augment property information from .desktop files
 ### stored in /usr/share/application
@@ -111,8 +114,8 @@ load-module module-suspend-on-idle
 
 ### If autoexit on idle is enabled we want to make sure we only quit
 ### when no local session needs us anymore.
-.ifexists module-console-kit.so
-load-module module-console-kit
+.ifexists module-systemd-login.so
+load-module module-systemd-login
 .endif
 
 ### Enable positioned event sounds
