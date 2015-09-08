@@ -34,12 +34,8 @@ load-module module-switch-on-port-available
 ### Load audio drivers statically
 ### (it's probably better to not load these drivers manually, but instead
 ### use module-udev-detect -- see below -- for doing this automatically)
-# load-module module-alsa-sink device=hw:0 sink_name="out_phase22"
-# set-default-sink out_phase22
-# load-module module-alsa-source device=hw:0 source_name="in_phase22"
-# set-default-source in_phase22
-# load-module module-alsa-sink device=hw:1 sink_name="out_HDA_Nvidia"
-# load-module module-alsa-source device=hw:1 source_name="in_HDA_Nvidia"
+#load-module module-alsa-sink
+#load-module module-alsa-source device=hw:1,0
 #load-module module-null-sink
 #load-module module-pipe-sink
 
