@@ -276,7 +276,8 @@
 .dovecot.sieve
 .dovecot.sieve.log*
 .dovecot.svbin
-.mpd/
+.config/mpd/
+!.config/mpd/mpd.conf
 .spicec/
 .virsh/
 .virt-manager/
