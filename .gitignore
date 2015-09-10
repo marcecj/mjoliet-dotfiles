@@ -191,7 +191,7 @@
 .gitk
 .gsview.ini
 .gtklickrc
-.gtkrc-2.0
+.gtkrc-2.0*
 .hplip/
 .hydrogen/
 .jackbeat/
