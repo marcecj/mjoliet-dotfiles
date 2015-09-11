@@ -4,12 +4,17 @@
 .nofail
 
 ### Load something into the sample cache
-#load-sample-lazy x11-bell /usr/share/sounds/gtk-events/activate.wav
-#load-sample-lazy pulse-hotplug /usr/share/sounds/startup3.wav
-#load-sample-lazy pulse-coldplug /usr/share/sounds/startup3.wav
-#load-sample-lazy pulse-access /usr/share/sounds/generic.wav
+#load-sample-lazy x11-bell /usr/share/sounds/freedesktop/stereo/bell.oga
+#load-sample-lazy pulse-hotplug /usr/share/sounds/freedesktop/stereo/device-added.oga
+#load-sample-lazy pulse-coldplug /usr/share/sounds/freedesktop/stereo/device-added.oga
+#load-sample-lazy pulse-access /usr/share/sounds/freedesktop/stereo/message.oga
 
 .fail
+
+### Automatically restore the volume of streams and devices
+load-module module-device-restore
+load-module module-stream-restore
+load-module module-card-restore
 
 # allow volume to be set via multimedia keys
 # NOTE: This module gets in the way when using KDE (e.g., KMix reacts only
@@ -23,15 +28,14 @@
 ### stored in /usr/share/application
 load-module module-augment-properties
 
+### Should be after module-*-restore but before module-*-detect
+load-module module-switch-on-port-available
+
 ### Load audio drivers statically
 ### (it's probably better to not load these drivers manually, but instead
 ### use module-udev-detect -- see below -- for doing this automatically)
-# load-module module-alsa-sink device=hw:0 sink_name="out_phase22"
-# set-default-sink out_phase22
-# load-module module-alsa-source device=hw:0 source_name="in_phase22"
-# set-default-source in_phase22
-# load-module module-alsa-sink device=hw:1 sink_name="out_HDA_Nvidia"
-# load-module module-alsa-source device=hw:1 source_name="in_HDA_Nvidia"
+#load-module module-alsa-sink
+#load-module module-alsa-source device=hw:1,0
 #load-module module-null-sink
 #load-module module-pipe-sink
 
@@ -39,22 +43,17 @@ load-module module-augment-properties
 .ifexists module-udev-detect.so
 load-module module-udev-detect
 .else
-### Use the static hardware detection module (for systems that lack udev/hal support)
-# load-module module-detect
-# .endif
-
-### Automatically restore the default sink/source when changed by the user
-### during runtime
-### NOTE: This should be loaded as early as possible so that subsequent modules
-### that look up the default sink/source get the right value
-load-module module-default-device-restore
+### Use the static hardware detection module (for systems that lack udev support)
+load-module module-detect
+.endif
 
 ### Automatically connect sink and source if JACK server is present
 .ifexists module-jackdbus-detect.so
 .nofail
-load-module module-jackdbus-detect
+load-module module-jackdbus-detect channels=2
 .fail
 .endif
+
 
 ### Load several protocols
 .ifexists module-esound-protocol-unix.so
@@ -65,6 +64,7 @@ load-module module-native-protocol-unix auth-group=pulse-access
 ### Network access (may be configured with paprefs, so leave this commented
 ### here if you plan to use paprefs)
 #load-module module-esound-protocol-tcp
+# load-module module-zeroconf-publish
 
 # .ifexists module-zeroconf-publish.so
 # load-module module-zeroconf-discover
@@ -94,10 +94,11 @@ load-module module-gconf
 .fail
 .endif
 
-### Automatically restore the volume of streams and devices
-load-module module-device-restore
-load-module module-stream-restore
-load-module module-card-restore
+### Automatically restore the default sink/source when changed by the user
+### during runtime
+### NOTE: This should be loaded as early as possible so that subsequent modules
+### that look up the default sink/source get the right value
+load-module module-default-device-restore
 
 ### Automatically move streams to the default sink if the sink they are
 ### connected to dies, similar for sources
@@ -114,6 +115,9 @@ load-module module-suspend-on-idle
 
 ### If autoexit on idle is enabled we want to make sure we only quit
 ### when no local session needs us anymore.
+# .ifexists module-console-kit.so
+# load-module module-console-kit
+# .endif
 .ifexists module-systemd-login.so
 load-module module-systemd-login
 .endif
@@ -121,8 +125,8 @@ load-module module-systemd-login
 ### Enable positioned event sounds
 load-module module-position-event-sounds
 
-### Cork music streams when a phone stream is active
-# load-module module-cork-music-on-phone
+### Cork music/video streams when a phone stream is active
+load-module module-role-cork
 
 ### Modules to allow autoloading of filters (such as echo cancellation)
 ### on demand. module-filter-heuristics tries to determine what filters
@@ -131,16 +135,11 @@ load-module module-position-event-sounds
 load-module module-filter-heuristics
 load-module module-filter-apply
 
-### Load DBus protocol
-.ifexists module-dbus-protocol.so
-load-module module-dbus-protocol
-.endif
-
 # X11 modules should not be started from default.pa so that one daemon
 # can be shared by multiple sessions.
 
 ### Load X11 bell module
-#load-module module-x11-bell sample=bell-windowing-system
+#load-module module-x11-bell sample=x11-bell
 
 ### Register ourselves in the X11 session manager
 #load-module module-x11-xsmp
