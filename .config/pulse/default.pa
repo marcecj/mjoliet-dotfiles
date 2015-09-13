@@ -52,7 +52,7 @@ load-module module-jackdbus-detect channels=2
 load-module module-esound-protocol-unix
 .endif
 # auth-anonymous required due to mismatch in 32bit/64bit pulseaudio libs?
-load-module module-native-protocol-unix auth-anonymous=1 auth-group=pulse-access
+load-module module-native-protocol-unix auth-anonymous=1
 
 ### Network access (may be configured with paprefs, so leave this commented
 ### here if you plan to use paprefs)
