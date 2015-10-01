@@ -39,17 +39,4 @@ light-locker &
 # variables for other process to connect to {gpg,ssh}-agent
 konsole -e sh -c "keychain --agents ssh,gpg --nogui id_rsa 2C8878F4" &
 
-# start specified session or safe default
-case "$DESKTOP_SESSION" in
-  "fluxbox")
-  fbpanel &
-  ;;
-  "awesome")
-  export wpsetters=xsri # set wallpaper setter for awsetbg
-  ;;
-  "KDE-Awesome")
-  export KDEWM=awesome
-  ;;
-esac
-
 # vim:nospell
