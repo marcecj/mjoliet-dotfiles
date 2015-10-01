@@ -11,9 +11,6 @@ setxkbmap -layout "de, us" -variant "nodeadkeys,"
 #  Start whatever program I want at X startup (via startx or slim)
 $HOME/.monicarc   #monitor calibration
 
-# uncomment when starting via "startx" in an ssh session
-xrdb -merge .Xresources
-
 # required by newsbeuter
 export XDG_DATA_HOME="$HOME/.config"
 
