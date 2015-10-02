@@ -4,15 +4,8 @@
 
 export LANG="de_DE.UTF-8"
 
-# Workaround until https://bugs.launchpad.net/ubuntu/+source/lightdm/+bug/919200
-# is fixed.  This appears to retain all other settings from xorg.conf.d.
-setxkbmap -layout "de, us" -variant "nodeadkeys,"
-
 #  Start whatever program I want at X startup (via startx or slim)
 $HOME/.monicarc   #monitor calibration
-
-# uncomment when starting via "startx" in an ssh session
-xrdb -merge .Xresources
 
 # required by newsbeuter
 export XDG_DATA_HOME="$HOME/.config"
@@ -30,49 +23,8 @@ eval $(export SHELL=sh; keychain --agents ssh,gpg --nogui --eval)
 # chat program
 pidgin &
 
-# who can live without a screensaver?
-# FIXME: this is supposed to start with the desktop session automatically, but
-# KDE isn't starting it.
-light-locker &
-
-# These should not be run under KDE, either because it has its own mechanisms
-# for achieving the same things, or because I don't think it's a good idea.
-if [ "$DESKTOP_SESSION" != "KDE-4" ]; then
-    # udisks based automounter
-    udiskie &
-
-    # misc
-    wpa_gui -t &
-
-    # sets monitor color temp according to daytime
-    pgrep redshift && killall -TERM redshift
-    redshift &
-
-    # start a urxvt daemon, will quit with the X server
-    urxvtd -q -o -f
-
-    # start a terminal that runs keychain, which will set the necessary environment
-    # variables for other process to connect to {gpg,ssh}-agent
-    urxvtc -e sh -c "keychain --agents ssh,gpg --nogui id_rsa 2C8878F4" &
-
-    # some terminals to always start
-    urxvtc -name "syslog" -e sh -c "sudo journalctl -n 300 -f" &
-    urxvtc -name "htop-sys" -e sh -c "htop" &
-else
-    konsole -e sh -c "keychain --agents ssh,gpg --nogui id_rsa 2C8878F4" &
-fi
-
-# start specified session or safe default
-case "$DESKTOP_SESSION" in
-  "fluxbox")
-  fbpanel &
-  ;;
-  "awesome")
-  export wpsetters=xsri # set wallpaper setter for awsetbg
-  ;;
-  "KDE-Awesome")
-  export KDEWM=awesome
-  ;;
-esac
+# start a terminal that runs keychain, which will set the necessary environment
+# variables for other process to connect to {gpg,ssh}-agent
+konsole -e sh -c "keychain --agents ssh,gpg --nogui id_rsa 2C8878F4" &
 
 # vim:nospell
