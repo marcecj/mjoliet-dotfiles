@@ -3,7 +3,7 @@ set fish_greeting
 
 # TODO: it seems fish is not started as a login shell. Why?
 
-set PATH "$HOME/anaconda3/bin" $PATH "$HOME/bin/" "$HOME/.local/bin/"
+set PATH "$HOME/anaconda3/bin/" $PATH "$HOME/bin/" "$HOME/.local/bin/"
 
 # override $JAVA_HOME if java-config exists (i.e., a Java runtime is installed);
 # this is for MATLAB, so that the GUI can start without crashing
