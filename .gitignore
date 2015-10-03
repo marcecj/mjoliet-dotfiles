@@ -221,10 +221,7 @@
 .gnupg/
 .lyrics/
 .service_proxy_dir/
-.signature
-.signature_mst3k_01
-.signature_naked_gun
-.signature_stroustrup
+.signature*
 
 # stuff that only runs on my main machine
 .dovecot.sieve
