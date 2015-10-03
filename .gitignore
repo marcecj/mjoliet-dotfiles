@@ -14,7 +14,6 @@
 .bugz_cookie
 .config/newsbeuter/cache.db.lock
 .emacs.d/ido.last
-.gEDA/logs/
 .gpg-agent-info
 .ipython/db/
 .ipython/nbextensions/
@@ -164,7 +163,6 @@
 .dia/
 .din/
 .djvurc
-.gEDA/gschem-dialog-geometry
 .gconf/
 .giada/
 .gimp-2.8/
@@ -204,7 +202,6 @@
 .config/newsbeuter/history.*
 .config/newsbeuter/queue
 .emacs.d/ac-comphist.dat
-.gEDA/gschem-recent-files
 .gnuplot_history
 .history
 .ipython/**/*history*
