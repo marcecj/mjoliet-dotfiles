@@ -123,6 +123,8 @@
 # auto-generated configuration of FAUST programs
 .dattorro_*rc
 .mbstereophony*rc
+.nvbaprc
+.panpotrc
 .rmfb*rc
 .stream_looperrc
 
@@ -218,8 +220,6 @@
 .covers/
 .gnupg/
 .lyrics/
-.nvbaprc
-.panpotrc
 .service_proxy_dir/
 .signature
 .signature_mst3k_01
