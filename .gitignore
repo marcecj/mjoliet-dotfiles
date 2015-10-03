@@ -69,6 +69,7 @@
 .dbus/
 # NOTE: I think this is from the Qt Designer
 .designer/
+.dmrc
 .docpointer/workfile.*
 .drirc
 .dropbox-dist/
