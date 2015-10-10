@@ -429,8 +429,7 @@ set grepprg=grep\ -nH\ $*
 
 let g:Tex_ViewRuleComplete_dvi = 'okular $*.dvi &>/dev/null &'
 let g:Tex_ViewRuleComplete_ps  = 'okular $*.ps  &>/dev/null &'
-" let g:Tex_ViewRuleComplete_pdf = 'okular $*.pdf &>/dev/null &'
-let g:Tex_ViewRuleComplete_pdf = 'zathura $*.pdf --fork &>/dev/null &'
+let g:Tex_ViewRuleComplete_pdf = 'okular $*.pdf &>/dev/null &'
 let g:Tex_MultipleCompileFormats = 'pdf'
 
 let g:Tex_DefaultTargetFormat = 'pdf'
