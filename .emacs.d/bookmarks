@@ -15,8 +15,8 @@
 ("paper_notizen.org"
  (filename . "~/Dropbox/master/master_arbeit/paper_notizen.org")
  (front-context-string . "\n\n** TODO Wang a")
- (rear-context-string . "chtheit\"\n\n    - ")
- (position . 61826))
+ (rear-context-string . "rozesses\n\n    - ")
+ (position . 68671))
 (".emacs"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)
