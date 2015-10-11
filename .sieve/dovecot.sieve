@@ -112,9 +112,9 @@ if header :contains "List-Id" "faudiostream-users.lists.sourceforge.net" {
     stop;
 }
 
-# BCU SDK (eibd) ML
-if header :contains "List-Id" "bcusdk-list" {
-    fileinto "BCU SDK";
+# knxd ML
+if header :contains "List-Id" "knxd.googlegroups.com" {
+    fileinto "KNXD";
     stop;
 }
 
