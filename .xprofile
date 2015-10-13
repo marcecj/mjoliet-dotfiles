@@ -20,9 +20,6 @@ sxhkd &
 # correct environment variables, too.
 eval $(export SHELL=sh; keychain --agents ssh,gpg --nogui --eval)
 
-# chat program
-pidgin &
-
 # start a terminal that runs keychain, which will set the necessary environment
 # variables for other process to connect to {gpg,ssh}-agent
 konsole -e sh -c "keychain --agents ssh,gpg --nogui id_rsa 2C8878F4" &
