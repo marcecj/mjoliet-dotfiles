@@ -23,6 +23,6 @@ sxhkd &
 eval $(export SHELL=sh; keychain --agents ssh,gpg --nogui --eval)
 
 # Run keychain in a terminal window in order to enter the passphrases.
-konsole -e sh -c "keychain --agents ssh,gpg --nogui id_rsa 2C8878F4" &
+konsole -e sh -c "keychain --agents ssh,gpg id_rsa 2C8878F4" &
 
 # vim:nospell
