@@ -1,11 +1,12 @@
 #!/usr/bin/env sh
 #
-# this file is called by most display managers, including lightdm
+# This file is called by most display managers, including lightdm, kdm, and
+# sddm (the latter only under X, though).
 
 export LANG="de_DE.UTF-8"
 
-#  Start whatever program I want at X startup (via startx or slim)
-$HOME/.monicarc   #monitor calibration
+# monitor calibration
+$HOME/.monicarc
 
 # required by newsbeuter
 export XDG_DATA_HOME="$HOME/.config"
@@ -16,12 +17,12 @@ export MPD_HOST=::1
 # binds keys to shell commands
 sxhkd &
 
-# Go ahead and start {ssh,gpg}-agent so that graphical applications can see the
-# correct environment variables, too.
+# Run keychain, which will export the necessary environment variables for other
+# processes to connect to {gpg,ssh}-agent.  Do it here so that graphical
+# applications can see them, too.
 eval $(export SHELL=sh; keychain --agents ssh,gpg --nogui --eval)
 
-# start a terminal that runs keychain, which will set the necessary environment
-# variables for other process to connect to {gpg,ssh}-agent
+# Run keychain in a terminal window in order to enter the passphrases.
 konsole -e sh -c "keychain --agents ssh,gpg --nogui id_rsa 2C8878F4" &
 
 # vim:nospell
