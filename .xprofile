@@ -20,7 +20,7 @@ sxhkd &
 # Run keychain, which will export the necessary environment variables for other
 # processes to connect to {gpg,ssh}-agent.  Do it here so that graphical
 # applications can see them, too.
-eval $(export SHELL=sh; keychain --agents ssh,gpg --nogui --eval)
+eval $(export SHELL=sh; keychain --agents ssh,gpg --nogui --eval --quiet)
 
 # Run keychain in a terminal window in order to enter the passphrases.
 konsole -e sh -c "keychain --agents ssh,gpg id_rsa 2C8878F4" &
