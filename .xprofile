@@ -3,8 +3,6 @@
 # This file is called by most display managers, including lightdm, kdm, and
 # sddm (the latter only under X, though).
 
-export LANG="de_DE.UTF-8"
-
 # monitor calibration
 $HOME/.monicarc
 
