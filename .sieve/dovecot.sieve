@@ -28,14 +28,13 @@ if anyof(
     stop;
 }
 
-# Heise newsletters
-if header :contains ["From", "Sender"] "newsletter@listserv.heise.de" {
-    fileinto "Newsletters/Heise";
-    stop;
-}
-
-if address :domain ["From", "Sender"] ["sourceforge.net", "newsletters.sourceforge.net"] {
-    fileinto "Newsletters/SourceForge";
+# various newsletters
+if anyof(
+        header :contains ["From", "Sender"] "newsletter@listserv.heise.de",
+        address :domain ["From", "Sender"] ["sourceforge.net", "newsletters.sourceforge.net"]
+        )
+{
+    fileinto "Newsletters";
     stop;
 }
 
