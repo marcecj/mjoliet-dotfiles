@@ -31,7 +31,10 @@ if anyof(
 # various newsletters
 if anyof(
         header :contains ["From", "Sender"] "newsletter@listserv.heise.de",
-        address :domain ["From", "Sender"] ["sourceforge.net", "newsletters.sourceforge.net"]
+        address :domain ["From", "Sender"] ["sourceforge.net", "newsletters.sourceforge.net"],
+        address :is ["From", "Sender"] "aaversa@gmail.com", # zircon
+        address :is ["From", "Sender"] "info.austinwintory@gmail.com",
+        address :domain :contains ["From", "Sender"] ["bandcamp.com", "kamizdat.si", "singersplayersclub.de", "jpc.de"]
         )
 {
     fileinto "Newsletters";
