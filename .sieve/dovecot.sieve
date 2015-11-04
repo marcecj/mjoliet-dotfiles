@@ -56,6 +56,12 @@ if anyof(
     stop;
 }
 
+# Gentoo proaudio overlay
+if header :contains ["List-Id"] "proaudio.lists.tuxfamily.org" {
+    fileinto "Gentoo/Proaudio-Overlay";
+    stop;
+}
+
 if address :domain ["To", "Cc"] ["gentoo.org", "lists.gentoo.org"]
 {
     if header :contains ["List-Id"] "gentoo-amd64" {
