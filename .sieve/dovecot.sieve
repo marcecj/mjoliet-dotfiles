@@ -28,14 +28,16 @@ if anyof(
     stop;
 }
 
-# Heise newsletters
-if header :contains ["From", "Sender"] "newsletter@listserv.heise.de" {
-    fileinto "Newsletters/Heise";
-    stop;
-}
-
-if address :domain ["From", "Sender"] ["sourceforge.net", "newsletters.sourceforge.net"] {
-    fileinto "Newsletters/SourceForge";
+# various newsletters
+if anyof(
+        header :contains ["From", "Sender"] "newsletter@listserv.heise.de",
+        address :domain ["From", "Sender"] ["sourceforge.net", "newsletters.sourceforge.net"],
+        address :is ["From", "Sender"] "aaversa@gmail.com", # zircon
+        address :is ["From", "Sender"] "info.austinwintory@gmail.com",
+        address :domain :contains ["From", "Sender"] ["bandcamp.com", "kamizdat.si", "singersplayersclub.de", "jpc.de"]
+        )
+{
+    fileinto "Newsletters";
     stop;
 }
 
@@ -51,6 +53,12 @@ if anyof(
         )
 {
     fileinto "BTRFS";
+    stop;
+}
+
+# Gentoo proaudio overlay
+if header :contains ["List-Id"] "proaudio.lists.tuxfamily.org" {
+    fileinto "Gentoo/Proaudio-Overlay";
     stop;
 }
 
